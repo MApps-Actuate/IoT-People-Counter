@@ -1,0 +1,17 @@
+body {
+	background-image: url("images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	color: white;
+	background-color: black;
+}
+
+table {
+	border-spacing: 25px;
+}
+
+tr, th {
+	width: 250px;
+	text-align: center;
+}
