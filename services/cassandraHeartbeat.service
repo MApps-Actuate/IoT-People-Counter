@@ -1,0 +1,11 @@
+[Unit]
+Description=Cassandra heartbeat script
+Requires=cassandra.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/skynet/python/heartbeatCassandra.py
+User=skynet
+
+[Install]
+WantedBy=multi-user.target

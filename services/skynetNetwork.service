@@ -1,0 +1,10 @@
+[Unit]
+Description=Skynet Network Connection
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nmcli con up id skynet
+User=skynet
+
+[Install]
+WantedBy=multi-user.target

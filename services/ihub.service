@@ -1,0 +1,13 @@
+[Unit]
+Description=iHub
+
+[Service]
+ExecStart=/home/skynet/BIRTiHubVisualization/modules/BIRTiHub/startiHub.sh
+ExecStop=/home/skynet/BIRTiHubVisualization/modules/BIRTiHub/stopiHub.sh -t 0
+PIDFile=/home/skynet/BIRTiHubVisualization/modules/BIRTiHub/iHub/etc/ihubd.pid
+User=skynet
+TimeoutSec=300
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

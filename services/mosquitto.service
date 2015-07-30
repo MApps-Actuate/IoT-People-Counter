@@ -1,0 +1,11 @@
+[Unit]
+Description=Mosquitto MQTT Broker
+Requires=skynetNetwork.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/mosquitto
+User=skynet
+
+[Install]
+WantedBy=multi-user.target
