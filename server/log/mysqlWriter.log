@@ -1,0 +1,1289 @@
+ERROR:root:31/07/2015 21:22:23: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:23: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:28: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:28: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:33: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:33: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:38: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:38: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:43: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:43: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:48: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:48: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:53: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:53: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:58: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:22:58: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:23:03: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:23:03: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:23:08: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:23:08: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:23:13: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:23:13: Something went wrong with the database INSERT: Not all parameters were used in the SQL statement
+ERROR:root:31/07/2015 21:28:43: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:28:43: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:28:48: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:28:48: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:28:53: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:28:53: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:28:58: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:28:58: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:03: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:03: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:08: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:08: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:13: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:13: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:18: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:18: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:23: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:23: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:43: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:43: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:48: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:48: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:53: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:53: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:58: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:29:58: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:03: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:03: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:08: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:08: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:13: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:13: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:18: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:18: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:23: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:23: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:28: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:28: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:33: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:33: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:38: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:38: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:43: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:43: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:48: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:30:48: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:31:03: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:31:03: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:31:08: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:31:08: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:31:13: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:31:13: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:31:18: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+ERROR:root:31/07/2015 21:31:18: Something went wrong with the database INSERT: 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+INFO:root:INSERT completed successfully 21:36:04
+INFO:root:INSERT completed successfully 21:36:04
+INFO:root:INSERT completed successfully 21:36:09
+INFO:root:INSERT completed successfully 21:36:09
+INFO:root:INSERT completed successfully 21:36:14
+INFO:root:INSERT completed successfully 21:36:14
+INFO:root:INSERT completed successfully 21:36:19
+INFO:root:INSERT completed successfully 21:36:19
+INFO:root:INSERT completed successfully 21:36:24
+INFO:root:INSERT completed successfully 21:36:24
+INFO:root:INSERT completed successfully 21:36:29
+INFO:root:INSERT completed successfully 21:36:29
+INFO:root:INSERT completed successfully 21:36:34
+INFO:root:INSERT completed successfully 21:36:34
+INFO:root:INSERT completed successfully 21:36:39
+INFO:root:INSERT completed successfully 21:36:39
+INFO:root:INSERT completed successfully 21:36:44
+INFO:root:INSERT completed successfully 21:36:44
+INFO:root:INSERT completed successfully 21:36:49
+INFO:root:INSERT completed successfully 21:36:49
+INFO:root:INSERT completed successfully 21:36:54
+INFO:root:INSERT completed successfully 21:36:54
+INFO:root:INSERT completed successfully 21:36:59
+INFO:root:INSERT completed successfully 21:36:59
+INFO:root:INSERT completed successfully 21:37:04
+INFO:root:INSERT completed successfully 21:37:04
+INFO:root:INSERT completed successfully 21:37:09
+INFO:root:INSERT completed successfully 21:37:09
+INFO:root:INSERT completed successfully 21:37:14
+INFO:root:INSERT completed successfully 21:37:14
+INFO:root:INSERT completed successfully 21:37:19
+INFO:root:INSERT completed successfully 21:37:19
+INFO:root:INSERT completed successfully 21:37:24
+INFO:root:INSERT completed successfully 21:37:24
+INFO:root:INSERT completed successfully 21:37:29
+INFO:root:INSERT completed successfully 21:37:29
+INFO:root:INSERT completed successfully 21:37:34
+INFO:root:INSERT completed successfully 21:37:34
+INFO:root:INSERT completed successfully 21:37:39
+INFO:root:INSERT completed successfully 21:37:39
+INFO:root:INSERT completed successfully 21:37:44
+INFO:root:INSERT completed successfully 21:37:44
+INFO:root:INSERT completed successfully 21:37:49
+INFO:root:INSERT completed successfully 21:37:49
+INFO:root:INSERT completed successfully 21:37:54
+INFO:root:INSERT completed successfully 21:37:54
+INFO:root:INSERT completed successfully 21:37:59
+INFO:root:INSERT completed successfully 21:37:59
+INFO:root:INSERT completed successfully 21:38:04
+INFO:root:INSERT completed successfully 21:38:04
+INFO:root:INSERT completed successfully 21:38:09
+INFO:root:INSERT completed successfully 21:38:09
+INFO:root:INSERT completed successfully 21:38:14
+INFO:root:INSERT completed successfully 21:38:14
+INFO:root:INSERT completed successfully 21:38:19
+INFO:root:INSERT completed successfully 21:38:19
+INFO:root:INSERT completed successfully 21:38:24
+INFO:root:INSERT completed successfully 21:38:24
+INFO:root:INSERT completed successfully 21:38:29
+INFO:root:INSERT completed successfully 21:38:29
+INFO:root:INSERT completed successfully 21:38:34
+INFO:root:INSERT completed successfully 21:38:34
+INFO:root:INSERT completed successfully 21:38:39
+INFO:root:INSERT completed successfully 21:38:39
+INFO:root:INSERT completed successfully 21:38:44
+INFO:root:INSERT completed successfully 21:38:44
+INFO:root:INSERT completed successfully 21:38:49
+INFO:root:INSERT completed successfully 21:38:49
+INFO:root:INSERT completed successfully 21:38:54
+INFO:root:INSERT completed successfully 21:38:54
+INFO:root:INSERT completed successfully 21:38:59
+INFO:root:INSERT completed successfully 21:38:59
+INFO:root:31/07/2015 22:04:49: Something went wrong with the database connection: 2003: Can't connect to MySQL server on '127.0.0.1:3306' (111 Connection refused)
+INFO:root:INSERT completed successfully 22:04:59
+INFO:root:INSERT completed successfully 22:04:59
+INFO:root:INSERT completed successfully 22:05:00
+INFO:root:INSERT completed successfully 22:05:00
+INFO:root:INSERT completed successfully 22:05:04
+INFO:root:INSERT completed successfully 22:05:04
+INFO:root:INSERT completed successfully 22:05:05
+INFO:root:INSERT completed successfully 22:05:05
+INFO:root:INSERT completed successfully 22:05:09
+INFO:root:INSERT completed successfully 22:05:09
+INFO:root:INSERT completed successfully 22:05:10
+INFO:root:INSERT completed successfully 22:05:10
+INFO:root:INSERT completed successfully 22:05:14
+INFO:root:INSERT completed successfully 22:05:14
+INFO:root:INSERT completed successfully 22:05:15
+INFO:root:INSERT completed successfully 22:05:15
+INFO:root:INSERT completed successfully 22:05:19
+INFO:root:INSERT completed successfully 22:05:19
+INFO:root:INSERT completed successfully 22:05:20
+INFO:root:INSERT completed successfully 22:05:20
+INFO:root:INSERT completed successfully 22:05:24
+INFO:root:INSERT completed successfully 22:05:24
+INFO:root:INSERT completed successfully 22:05:25
+INFO:root:INSERT completed successfully 22:05:25
+INFO:root:INSERT completed successfully 22:05:29
+INFO:root:INSERT completed successfully 22:05:29
+INFO:root:INSERT completed successfully 22:05:30
+INFO:root:INSERT completed successfully 22:05:30
+INFO:root:INSERT completed successfully 22:05:34
+INFO:root:INSERT completed successfully 22:05:34
+INFO:root:INSERT completed successfully 22:05:35
+INFO:root:INSERT completed successfully 22:05:35
+INFO:root:INSERT completed successfully 22:05:39
+INFO:root:INSERT completed successfully 22:05:39
+INFO:root:INSERT completed successfully 22:05:40
+INFO:root:INSERT completed successfully 22:05:40
+INFO:root:INSERT completed successfully 22:05:44
+INFO:root:INSERT completed successfully 22:05:44
+INFO:root:INSERT completed successfully 22:05:45
+INFO:root:INSERT completed successfully 22:05:45
+INFO:root:INSERT completed successfully 22:05:49
+INFO:root:INSERT completed successfully 22:05:49
+INFO:root:INSERT completed successfully 22:05:50
+INFO:root:INSERT completed successfully 22:05:50
+INFO:root:INSERT completed successfully 22:05:54
+INFO:root:INSERT completed successfully 22:05:54
+INFO:root:INSERT completed successfully 22:05:55
+INFO:root:INSERT completed successfully 22:05:55
+INFO:root:INSERT completed successfully 22:05:59
+INFO:root:INSERT completed successfully 22:05:59
+INFO:root:INSERT completed successfully 22:06:00
+INFO:root:INSERT completed successfully 22:06:00
+INFO:root:INSERT completed successfully 22:06:04
+INFO:root:INSERT completed successfully 22:06:04
+INFO:root:INSERT completed successfully 22:06:05
+INFO:root:INSERT completed successfully 22:06:05
+INFO:root:INSERT completed successfully 22:06:09
+INFO:root:INSERT completed successfully 22:06:09
+INFO:root:INSERT completed successfully 22:06:10
+INFO:root:INSERT completed successfully 22:06:10
+INFO:root:INSERT completed successfully 22:06:14
+INFO:root:INSERT completed successfully 22:06:14
+INFO:root:INSERT completed successfully 22:06:15
+INFO:root:INSERT completed successfully 22:06:15
+INFO:root:INSERT completed successfully 22:06:19
+INFO:root:INSERT completed successfully 22:06:19
+INFO:root:INSERT completed successfully 22:06:20
+INFO:root:INSERT completed successfully 22:06:20
+INFO:root:INSERT completed successfully 22:06:24
+INFO:root:INSERT completed successfully 22:06:24
+INFO:root:INSERT completed successfully 22:06:25
+INFO:root:INSERT completed successfully 22:06:25
+INFO:root:INSERT completed successfully 22:06:29
+INFO:root:INSERT completed successfully 22:06:29
+INFO:root:INSERT completed successfully 22:06:30
+INFO:root:INSERT completed successfully 22:06:30
+INFO:root:INSERT completed successfully 22:06:34
+INFO:root:INSERT completed successfully 22:06:34
+INFO:root:INSERT completed successfully 22:06:35
+INFO:root:INSERT completed successfully 22:06:35
+INFO:root:INSERT completed successfully 22:06:39
+INFO:root:INSERT completed successfully 22:06:40
+INFO:root:INSERT completed successfully 22:06:40
+INFO:root:INSERT completed successfully 22:06:40
+INFO:root:INSERT completed successfully 22:06:44
+INFO:root:INSERT completed successfully 22:06:45
+INFO:root:INSERT completed successfully 22:06:45
+INFO:root:INSERT completed successfully 22:06:45
+INFO:root:INSERT completed successfully 22:06:50
+INFO:root:INSERT completed successfully 22:06:50
+INFO:root:INSERT completed successfully 22:06:50
+ERROR:root:31/07/2015 22:06:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:06:50' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:06:55
+INFO:root:INSERT completed successfully 22:06:55
+ERROR:root:31/07/2015 22:06:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:06:55' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:06:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:06:55' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:00
+INFO:root:INSERT completed successfully 22:07:00
+ERROR:root:31/07/2015 22:07:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:00' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:00' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:05
+INFO:root:INSERT completed successfully 22:07:05
+ERROR:root:31/07/2015 22:07:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:05' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:05' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:10
+INFO:root:INSERT completed successfully 22:07:10
+ERROR:root:31/07/2015 22:07:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:10' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:10' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:15
+INFO:root:INSERT completed successfully 22:07:15
+ERROR:root:31/07/2015 22:07:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:15' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:15' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:20
+INFO:root:INSERT completed successfully 22:07:20
+ERROR:root:31/07/2015 22:07:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:20' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:20' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:25
+INFO:root:INSERT completed successfully 22:07:25
+ERROR:root:31/07/2015 22:07:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:25' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:25' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:30
+INFO:root:INSERT completed successfully 22:07:30
+ERROR:root:31/07/2015 22:07:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:30' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:30' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:35
+INFO:root:INSERT completed successfully 22:07:35
+ERROR:root:31/07/2015 22:07:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:35' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:35' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:40
+INFO:root:INSERT completed successfully 22:07:40
+ERROR:root:31/07/2015 22:07:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:40' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:40' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:45
+INFO:root:INSERT completed successfully 22:07:45
+ERROR:root:31/07/2015 22:07:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:45' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:45' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:50
+INFO:root:INSERT completed successfully 22:07:50
+ERROR:root:31/07/2015 22:07:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:50' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:50' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:07:55
+INFO:root:INSERT completed successfully 22:07:55
+ERROR:root:31/07/2015 22:07:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:07:55' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:07:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:07:55' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:00
+INFO:root:INSERT completed successfully 22:08:00
+ERROR:root:31/07/2015 22:08:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:00' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:00' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:05
+INFO:root:INSERT completed successfully 22:08:05
+ERROR:root:31/07/2015 22:08:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:05' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:05' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:10
+INFO:root:INSERT completed successfully 22:08:10
+ERROR:root:31/07/2015 22:08:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:10' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:10' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:15
+INFO:root:INSERT completed successfully 22:08:15
+ERROR:root:31/07/2015 22:08:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:15' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:15' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:20
+INFO:root:INSERT completed successfully 22:08:20
+ERROR:root:31/07/2015 22:08:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:20' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:20' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:25
+INFO:root:INSERT completed successfully 22:08:25
+ERROR:root:31/07/2015 22:08:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:25' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:25' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:30
+INFO:root:INSERT completed successfully 22:08:30
+ERROR:root:31/07/2015 22:08:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:30' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:30' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:35
+INFO:root:INSERT completed successfully 22:08:35
+ERROR:root:31/07/2015 22:08:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:35' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:35' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:40
+INFO:root:INSERT completed successfully 22:08:40
+ERROR:root:31/07/2015 22:08:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:40' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:40' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:45
+INFO:root:INSERT completed successfully 22:08:45
+ERROR:root:31/07/2015 22:08:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:45' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:45' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:50
+INFO:root:INSERT completed successfully 22:08:50
+ERROR:root:31/07/2015 22:08:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:50' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:50' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:08:55
+INFO:root:INSERT completed successfully 22:08:55
+ERROR:root:31/07/2015 22:08:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:08:55' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:08:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:08:55' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:00
+INFO:root:INSERT completed successfully 22:09:00
+ERROR:root:31/07/2015 22:09:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:00' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:00' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:05
+INFO:root:INSERT completed successfully 22:09:05
+ERROR:root:31/07/2015 22:09:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:05' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:05' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:10
+INFO:root:INSERT completed successfully 22:09:10
+ERROR:root:31/07/2015 22:09:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:10' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:10' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:15
+INFO:root:INSERT completed successfully 22:09:15
+ERROR:root:31/07/2015 22:09:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:15' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:15' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:20
+INFO:root:INSERT completed successfully 22:09:20
+ERROR:root:31/07/2015 22:09:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:20' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:20' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:25
+INFO:root:INSERT completed successfully 22:09:25
+ERROR:root:31/07/2015 22:09:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:25' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:25' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:30
+INFO:root:INSERT completed successfully 22:09:30
+ERROR:root:31/07/2015 22:09:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:30' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:30' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:35
+INFO:root:INSERT completed successfully 22:09:35
+ERROR:root:31/07/2015 22:09:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:35' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:35' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:40
+INFO:root:INSERT completed successfully 22:09:40
+ERROR:root:31/07/2015 22:09:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:40' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:40' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:45
+INFO:root:INSERT completed successfully 22:09:45
+ERROR:root:31/07/2015 22:09:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:45' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:45' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:50
+INFO:root:INSERT completed successfully 22:09:50
+ERROR:root:31/07/2015 22:09:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:50' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:50' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:09:55
+INFO:root:INSERT completed successfully 22:09:55
+ERROR:root:31/07/2015 22:09:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:09:55' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:09:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:09:55' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:00
+INFO:root:INSERT completed successfully 22:10:00
+ERROR:root:31/07/2015 22:10:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:00' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:00' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:05
+INFO:root:INSERT completed successfully 22:10:05
+ERROR:root:31/07/2015 22:10:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:05' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:05' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:10
+INFO:root:INSERT completed successfully 22:10:10
+ERROR:root:31/07/2015 22:10:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:10' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:10' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:15
+INFO:root:INSERT completed successfully 22:10:15
+ERROR:root:31/07/2015 22:10:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:15' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:15' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:20
+INFO:root:INSERT completed successfully 22:10:20
+ERROR:root:31/07/2015 22:10:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:20' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:20' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:25
+INFO:root:INSERT completed successfully 22:10:25
+ERROR:root:31/07/2015 22:10:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:25' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:25' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:30
+INFO:root:INSERT completed successfully 22:10:30
+ERROR:root:31/07/2015 22:10:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:30' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:30' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:35
+INFO:root:INSERT completed successfully 22:10:35
+ERROR:root:31/07/2015 22:10:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:35' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:35' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:40
+INFO:root:INSERT completed successfully 22:10:40
+ERROR:root:31/07/2015 22:10:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:40' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:40' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:45
+INFO:root:INSERT completed successfully 22:10:45
+ERROR:root:31/07/2015 22:10:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:45' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:45' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:50
+INFO:root:INSERT completed successfully 22:10:50
+ERROR:root:31/07/2015 22:10:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:50' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:50' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:10:55
+INFO:root:INSERT completed successfully 22:10:55
+ERROR:root:31/07/2015 22:10:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:10:55' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:10:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:10:55' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:00
+INFO:root:INSERT completed successfully 22:11:00
+ERROR:root:31/07/2015 22:11:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:00' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:00' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:05
+INFO:root:INSERT completed successfully 22:11:05
+ERROR:root:31/07/2015 22:11:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:05' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:05' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:10
+INFO:root:INSERT completed successfully 22:11:10
+ERROR:root:31/07/2015 22:11:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:10' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:10' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:15
+INFO:root:INSERT completed successfully 22:11:15
+ERROR:root:31/07/2015 22:11:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:15' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:15' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:20
+INFO:root:INSERT completed successfully 22:11:20
+ERROR:root:31/07/2015 22:11:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:20' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:20' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:25
+INFO:root:INSERT completed successfully 22:11:25
+ERROR:root:31/07/2015 22:11:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:25' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:25' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:30
+INFO:root:INSERT completed successfully 22:11:30
+ERROR:root:31/07/2015 22:11:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:30' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:30' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:35
+INFO:root:INSERT completed successfully 22:11:35
+ERROR:root:31/07/2015 22:11:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:35' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:35' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:40
+INFO:root:INSERT completed successfully 22:11:40
+ERROR:root:31/07/2015 22:11:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:40' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:40' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:45
+INFO:root:INSERT completed successfully 22:11:45
+ERROR:root:31/07/2015 22:11:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:45' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:45' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:50
+INFO:root:INSERT completed successfully 22:11:50
+ERROR:root:31/07/2015 22:11:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:50' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:50' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:11:55
+INFO:root:INSERT completed successfully 22:11:55
+ERROR:root:31/07/2015 22:11:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:11:55' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:11:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:11:55' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:00
+INFO:root:INSERT completed successfully 22:12:00
+ERROR:root:31/07/2015 22:12:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:00' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:00' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:05
+INFO:root:INSERT completed successfully 22:12:05
+ERROR:root:31/07/2015 22:12:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:05' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:05' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:10
+INFO:root:INSERT completed successfully 22:12:10
+ERROR:root:31/07/2015 22:12:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:10' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:10' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:15
+INFO:root:INSERT completed successfully 22:12:15
+ERROR:root:31/07/2015 22:12:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:15' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:15' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:20
+INFO:root:INSERT completed successfully 22:12:20
+ERROR:root:31/07/2015 22:12:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:20' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:20' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:25
+INFO:root:INSERT completed successfully 22:12:25
+ERROR:root:31/07/2015 22:12:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:25' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:25' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:30
+INFO:root:INSERT completed successfully 22:12:30
+ERROR:root:31/07/2015 22:12:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:30' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:30: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:30' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:35
+INFO:root:INSERT completed successfully 22:12:35
+ERROR:root:31/07/2015 22:12:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:35' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:35: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:35' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:40
+INFO:root:INSERT completed successfully 22:12:40
+ERROR:root:31/07/2015 22:12:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:40' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:40: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:40' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:45
+INFO:root:INSERT completed successfully 22:12:45
+ERROR:root:31/07/2015 22:12:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:45' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:45: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:45' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:50
+INFO:root:INSERT completed successfully 22:12:50
+ERROR:root:31/07/2015 22:12:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:50' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:50: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:50' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:12:55
+INFO:root:INSERT completed successfully 22:12:55
+ERROR:root:31/07/2015 22:12:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:12:55' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:12:55: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:12:55' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:13:00
+INFO:root:INSERT completed successfully 22:13:00
+ERROR:root:31/07/2015 22:13:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:13:00' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:13:00: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:13:00' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:13:05
+INFO:root:INSERT completed successfully 22:13:05
+ERROR:root:31/07/2015 22:13:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:13:05' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:13:05: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:13:05' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:13:10
+INFO:root:INSERT completed successfully 22:13:10
+ERROR:root:31/07/2015 22:13:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:13:10' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:13:10: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:13:10' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:13:15
+INFO:root:INSERT completed successfully 22:13:15
+ERROR:root:31/07/2015 22:13:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:13:15' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:13:15: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:13:15' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:13:20
+INFO:root:INSERT completed successfully 22:13:20
+ERROR:root:31/07/2015 22:13:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:13:20' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:13:20: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:13:20' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:13:25
+INFO:root:INSERT completed successfully 22:13:25
+ERROR:root:31/07/2015 22:13:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:13:25' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:13:25: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:13:25' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:13:30
+INFO:root:INSERT completed successfully 22:13:30
+INFO:root:INSERT completed successfully 22:13:31
+INFO:root:INSERT completed successfully 22:13:31
+INFO:root:INSERT completed successfully 22:13:35
+INFO:root:INSERT completed successfully 22:13:35
+INFO:root:INSERT completed successfully 22:13:36
+INFO:root:INSERT completed successfully 22:13:36
+INFO:root:INSERT completed successfully 22:13:40
+INFO:root:INSERT completed successfully 22:13:40
+INFO:root:INSERT completed successfully 22:13:41
+INFO:root:INSERT completed successfully 22:13:41
+INFO:root:INSERT completed successfully 22:13:45
+INFO:root:INSERT completed successfully 22:13:45
+INFO:root:INSERT completed successfully 22:13:46
+INFO:root:INSERT completed successfully 22:13:46
+INFO:root:INSERT completed successfully 22:13:50
+INFO:root:INSERT completed successfully 22:13:50
+INFO:root:INSERT completed successfully 22:13:51
+INFO:root:INSERT completed successfully 22:13:51
+INFO:root:INSERT completed successfully 22:13:55
+INFO:root:INSERT completed successfully 22:13:55
+INFO:root:INSERT completed successfully 22:13:56
+INFO:root:INSERT completed successfully 22:13:56
+INFO:root:INSERT completed successfully 22:14:00
+INFO:root:INSERT completed successfully 22:14:00
+INFO:root:INSERT completed successfully 22:14:01
+INFO:root:INSERT completed successfully 22:14:01
+INFO:root:INSERT completed successfully 22:14:05
+INFO:root:INSERT completed successfully 22:14:05
+INFO:root:INSERT completed successfully 22:14:06
+INFO:root:INSERT completed successfully 22:14:06
+INFO:root:INSERT completed successfully 22:14:10
+INFO:root:INSERT completed successfully 22:14:10
+INFO:root:INSERT completed successfully 22:14:11
+INFO:root:INSERT completed successfully 22:14:11
+INFO:root:INSERT completed successfully 22:14:15
+INFO:root:INSERT completed successfully 22:14:15
+INFO:root:INSERT completed successfully 22:14:16
+INFO:root:INSERT completed successfully 22:14:16
+INFO:root:INSERT completed successfully 22:14:20
+INFO:root:INSERT completed successfully 22:14:20
+INFO:root:INSERT completed successfully 22:14:21
+INFO:root:INSERT completed successfully 22:14:21
+INFO:root:INSERT completed successfully 22:14:25
+INFO:root:INSERT completed successfully 22:14:25
+INFO:root:INSERT completed successfully 22:14:26
+INFO:root:INSERT completed successfully 22:14:26
+INFO:root:INSERT completed successfully 22:14:30
+INFO:root:INSERT completed successfully 22:14:30
+INFO:root:INSERT completed successfully 22:14:31
+INFO:root:INSERT completed successfully 22:14:31
+INFO:root:INSERT completed successfully 22:14:35
+INFO:root:INSERT completed successfully 22:14:35
+INFO:root:INSERT completed successfully 22:14:36
+INFO:root:INSERT completed successfully 22:14:36
+INFO:root:INSERT completed successfully 22:14:40
+INFO:root:INSERT completed successfully 22:14:40
+INFO:root:INSERT completed successfully 22:14:41
+INFO:root:INSERT completed successfully 22:14:41
+INFO:root:INSERT completed successfully 22:14:45
+INFO:root:INSERT completed successfully 22:14:45
+INFO:root:INSERT completed successfully 22:14:46
+INFO:root:INSERT completed successfully 22:14:46
+INFO:root:INSERT completed successfully 22:14:50
+INFO:root:INSERT completed successfully 22:14:50
+INFO:root:INSERT completed successfully 22:14:51
+INFO:root:INSERT completed successfully 22:14:51
+INFO:root:INSERT completed successfully 22:14:55
+INFO:root:INSERT completed successfully 22:14:55
+INFO:root:INSERT completed successfully 22:14:56
+INFO:root:INSERT completed successfully 22:14:56
+INFO:root:INSERT completed successfully 22:15:00
+INFO:root:INSERT completed successfully 22:15:00
+INFO:root:INSERT completed successfully 22:15:01
+INFO:root:INSERT completed successfully 22:15:01
+INFO:root:INSERT completed successfully 22:15:05
+INFO:root:INSERT completed successfully 22:15:05
+INFO:root:INSERT completed successfully 22:15:06
+INFO:root:INSERT completed successfully 22:15:06
+INFO:root:INSERT completed successfully 22:15:10
+INFO:root:INSERT completed successfully 22:15:10
+INFO:root:INSERT completed successfully 22:15:11
+INFO:root:INSERT completed successfully 22:15:11
+INFO:root:INSERT completed successfully 22:15:15
+INFO:root:INSERT completed successfully 22:15:15
+INFO:root:INSERT completed successfully 22:15:16
+INFO:root:INSERT completed successfully 22:15:16
+INFO:root:INSERT completed successfully 22:15:20
+INFO:root:INSERT completed successfully 22:15:20
+INFO:root:INSERT completed successfully 22:15:21
+INFO:root:INSERT completed successfully 22:15:21
+INFO:root:INSERT completed successfully 22:15:25
+INFO:root:INSERT completed successfully 22:15:25
+INFO:root:INSERT completed successfully 22:15:26
+INFO:root:INSERT completed successfully 22:15:26
+INFO:root:INSERT completed successfully 22:15:30
+INFO:root:INSERT completed successfully 22:15:30
+INFO:root:INSERT completed successfully 22:15:31
+INFO:root:INSERT completed successfully 22:15:31
+INFO:root:INSERT completed successfully 22:15:35
+INFO:root:INSERT completed successfully 22:15:35
+INFO:root:INSERT completed successfully 22:15:36
+INFO:root:INSERT completed successfully 22:15:36
+INFO:root:INSERT completed successfully 22:15:40
+INFO:root:INSERT completed successfully 22:15:40
+INFO:root:INSERT completed successfully 22:15:41
+INFO:root:INSERT completed successfully 22:15:41
+INFO:root:INSERT completed successfully 22:15:45
+INFO:root:INSERT completed successfully 22:15:45
+INFO:root:INSERT completed successfully 22:15:46
+INFO:root:INSERT completed successfully 22:15:46
+INFO:root:INSERT completed successfully 22:15:50
+INFO:root:INSERT completed successfully 22:15:50
+INFO:root:INSERT completed successfully 22:15:51
+INFO:root:INSERT completed successfully 22:15:51
+INFO:root:INSERT completed successfully 22:15:55
+INFO:root:INSERT completed successfully 22:15:55
+INFO:root:INSERT completed successfully 22:15:56
+INFO:root:INSERT completed successfully 22:15:56
+INFO:root:INSERT completed successfully 22:16:00
+INFO:root:INSERT completed successfully 22:16:00
+INFO:root:INSERT completed successfully 22:16:01
+INFO:root:INSERT completed successfully 22:16:01
+INFO:root:INSERT completed successfully 22:16:05
+INFO:root:INSERT completed successfully 22:16:05
+INFO:root:INSERT completed successfully 22:16:06
+INFO:root:INSERT completed successfully 22:16:06
+INFO:root:INSERT completed successfully 22:16:10
+INFO:root:INSERT completed successfully 22:16:10
+INFO:root:INSERT completed successfully 22:16:11
+INFO:root:INSERT completed successfully 22:16:11
+INFO:root:INSERT completed successfully 22:16:15
+INFO:root:INSERT completed successfully 22:16:15
+INFO:root:INSERT completed successfully 22:16:16
+INFO:root:INSERT completed successfully 22:16:16
+INFO:root:INSERT completed successfully 22:16:20
+INFO:root:INSERT completed successfully 22:16:20
+INFO:root:INSERT completed successfully 22:16:21
+INFO:root:INSERT completed successfully 22:16:21
+INFO:root:INSERT completed successfully 22:16:25
+INFO:root:INSERT completed successfully 22:16:25
+INFO:root:INSERT completed successfully 22:16:26
+INFO:root:INSERT completed successfully 22:16:26
+INFO:root:INSERT completed successfully 22:16:30
+INFO:root:INSERT completed successfully 22:16:30
+INFO:root:INSERT completed successfully 22:16:31
+INFO:root:INSERT completed successfully 22:16:31
+INFO:root:INSERT completed successfully 22:16:35
+INFO:root:INSERT completed successfully 22:16:35
+INFO:root:INSERT completed successfully 22:16:36
+INFO:root:INSERT completed successfully 22:16:36
+INFO:root:INSERT completed successfully 22:16:40
+INFO:root:INSERT completed successfully 22:16:40
+INFO:root:INSERT completed successfully 22:16:41
+INFO:root:INSERT completed successfully 22:16:41
+INFO:root:INSERT completed successfully 22:16:45
+INFO:root:INSERT completed successfully 22:16:45
+INFO:root:INSERT completed successfully 22:16:46
+INFO:root:INSERT completed successfully 22:16:46
+INFO:root:INSERT completed successfully 22:16:50
+INFO:root:INSERT completed successfully 22:16:50
+INFO:root:INSERT completed successfully 22:16:51
+INFO:root:INSERT completed successfully 22:16:51
+INFO:root:INSERT completed successfully 22:16:55
+INFO:root:INSERT completed successfully 22:16:55
+INFO:root:INSERT completed successfully 22:16:56
+INFO:root:INSERT completed successfully 22:16:56
+INFO:root:INSERT completed successfully 22:17:00
+INFO:root:INSERT completed successfully 22:17:00
+INFO:root:INSERT completed successfully 22:17:01
+INFO:root:INSERT completed successfully 22:17:01
+INFO:root:INSERT completed successfully 22:17:05
+INFO:root:INSERT completed successfully 22:17:05
+INFO:root:INSERT completed successfully 22:17:06
+INFO:root:INSERT completed successfully 22:17:06
+INFO:root:INSERT completed successfully 22:17:10
+INFO:root:INSERT completed successfully 22:17:10
+INFO:root:INSERT completed successfully 22:17:11
+INFO:root:INSERT completed successfully 22:17:11
+INFO:root:INSERT completed successfully 22:17:15
+INFO:root:INSERT completed successfully 22:17:15
+INFO:root:INSERT completed successfully 22:17:16
+INFO:root:INSERT completed successfully 22:17:16
+INFO:root:INSERT completed successfully 22:17:20
+INFO:root:INSERT completed successfully 22:17:20
+INFO:root:INSERT completed successfully 22:17:21
+INFO:root:INSERT completed successfully 22:17:21
+INFO:root:INSERT completed successfully 22:17:25
+INFO:root:INSERT completed successfully 22:17:25
+INFO:root:INSERT completed successfully 22:17:26
+INFO:root:INSERT completed successfully 22:17:26
+INFO:root:INSERT completed successfully 22:17:30
+INFO:root:INSERT completed successfully 22:17:30
+INFO:root:INSERT completed successfully 22:17:31
+INFO:root:INSERT completed successfully 22:17:31
+INFO:root:INSERT completed successfully 22:17:35
+INFO:root:INSERT completed successfully 22:17:35
+INFO:root:INSERT completed successfully 22:17:36
+INFO:root:INSERT completed successfully 22:17:36
+INFO:root:INSERT completed successfully 22:17:40
+INFO:root:INSERT completed successfully 22:17:40
+INFO:root:INSERT completed successfully 22:17:41
+INFO:root:INSERT completed successfully 22:17:41
+INFO:root:INSERT completed successfully 22:17:45
+INFO:root:INSERT completed successfully 22:17:45
+INFO:root:INSERT completed successfully 22:17:46
+INFO:root:INSERT completed successfully 22:17:46
+INFO:root:INSERT completed successfully 22:17:50
+INFO:root:INSERT completed successfully 22:17:50
+INFO:root:INSERT completed successfully 22:17:51
+INFO:root:INSERT completed successfully 22:17:51
+INFO:root:INSERT completed successfully 22:17:55
+INFO:root:INSERT completed successfully 22:17:55
+INFO:root:INSERT completed successfully 22:17:56
+INFO:root:INSERT completed successfully 22:17:56
+INFO:root:INSERT completed successfully 22:18:00
+INFO:root:INSERT completed successfully 22:18:00
+INFO:root:INSERT completed successfully 22:18:01
+INFO:root:INSERT completed successfully 22:18:01
+INFO:root:INSERT completed successfully 22:18:05
+INFO:root:INSERT completed successfully 22:18:05
+INFO:root:INSERT completed successfully 22:18:06
+INFO:root:INSERT completed successfully 22:18:06
+INFO:root:INSERT completed successfully 22:18:10
+INFO:root:INSERT completed successfully 22:18:10
+INFO:root:INSERT completed successfully 22:18:11
+INFO:root:INSERT completed successfully 22:18:11
+INFO:root:INSERT completed successfully 22:18:15
+INFO:root:INSERT completed successfully 22:18:15
+INFO:root:INSERT completed successfully 22:18:16
+INFO:root:INSERT completed successfully 22:18:16
+INFO:root:INSERT completed successfully 22:18:20
+INFO:root:INSERT completed successfully 22:18:20
+INFO:root:INSERT completed successfully 22:18:21
+INFO:root:INSERT completed successfully 22:18:21
+INFO:root:INSERT completed successfully 22:18:25
+INFO:root:INSERT completed successfully 22:18:25
+INFO:root:INSERT completed successfully 22:18:26
+INFO:root:INSERT completed successfully 22:18:26
+INFO:root:INSERT completed successfully 22:18:30
+INFO:root:INSERT completed successfully 22:18:30
+INFO:root:INSERT completed successfully 22:18:31
+INFO:root:INSERT completed successfully 22:18:31
+INFO:root:INSERT completed successfully 22:18:35
+INFO:root:INSERT completed successfully 22:18:35
+INFO:root:INSERT completed successfully 22:18:36
+INFO:root:INSERT completed successfully 22:18:36
+INFO:root:INSERT completed successfully 22:18:40
+INFO:root:INSERT completed successfully 22:18:40
+INFO:root:INSERT completed successfully 22:18:41
+INFO:root:INSERT completed successfully 22:18:41
+INFO:root:INSERT completed successfully 22:18:45
+INFO:root:INSERT completed successfully 22:18:45
+INFO:root:INSERT completed successfully 22:18:46
+INFO:root:INSERT completed successfully 22:18:46
+INFO:root:INSERT completed successfully 22:18:50
+INFO:root:INSERT completed successfully 22:18:50
+INFO:root:INSERT completed successfully 22:18:51
+INFO:root:INSERT completed successfully 22:18:51
+INFO:root:INSERT completed successfully 22:18:55
+INFO:root:INSERT completed successfully 22:18:55
+INFO:root:INSERT completed successfully 22:18:56
+INFO:root:INSERT completed successfully 22:18:56
+INFO:root:INSERT completed successfully 22:19:00
+INFO:root:INSERT completed successfully 22:19:00
+INFO:root:INSERT completed successfully 22:19:01
+INFO:root:INSERT completed successfully 22:19:01
+INFO:root:INSERT completed successfully 22:19:05
+INFO:root:INSERT completed successfully 22:19:05
+INFO:root:INSERT completed successfully 22:19:06
+INFO:root:INSERT completed successfully 22:19:06
+INFO:root:INSERT completed successfully 22:19:10
+INFO:root:INSERT completed successfully 22:19:10
+INFO:root:INSERT completed successfully 22:19:11
+INFO:root:INSERT completed successfully 22:19:11
+INFO:root:INSERT completed successfully 22:19:15
+INFO:root:INSERT completed successfully 22:19:15
+INFO:root:INSERT completed successfully 22:19:16
+INFO:root:INSERT completed successfully 22:19:16
+INFO:root:INSERT completed successfully 22:19:20
+INFO:root:INSERT completed successfully 22:19:20
+INFO:root:INSERT completed successfully 22:19:21
+INFO:root:INSERT completed successfully 22:19:21
+INFO:root:INSERT completed successfully 22:19:25
+INFO:root:INSERT completed successfully 22:19:25
+INFO:root:INSERT completed successfully 22:19:26
+INFO:root:INSERT completed successfully 22:19:26
+INFO:root:INSERT completed successfully 22:19:30
+INFO:root:INSERT completed successfully 22:19:30
+INFO:root:INSERT completed successfully 22:19:31
+INFO:root:INSERT completed successfully 22:19:31
+INFO:root:INSERT completed successfully 22:19:35
+INFO:root:INSERT completed successfully 22:19:35
+INFO:root:INSERT completed successfully 22:19:36
+INFO:root:INSERT completed successfully 22:19:36
+INFO:root:INSERT completed successfully 22:19:40
+INFO:root:INSERT completed successfully 22:19:40
+INFO:root:INSERT completed successfully 22:19:41
+INFO:root:INSERT completed successfully 22:19:41
+INFO:root:INSERT completed successfully 22:19:45
+INFO:root:INSERT completed successfully 22:19:45
+INFO:root:INSERT completed successfully 22:19:46
+INFO:root:INSERT completed successfully 22:19:46
+INFO:root:INSERT completed successfully 22:19:50
+INFO:root:INSERT completed successfully 22:19:50
+INFO:root:INSERT completed successfully 22:19:51
+INFO:root:INSERT completed successfully 22:19:51
+INFO:root:INSERT completed successfully 22:19:55
+INFO:root:INSERT completed successfully 22:19:55
+INFO:root:INSERT completed successfully 22:19:56
+INFO:root:INSERT completed successfully 22:19:56
+INFO:root:INSERT completed successfully 22:20:00
+INFO:root:INSERT completed successfully 22:20:00
+INFO:root:INSERT completed successfully 22:20:01
+INFO:root:INSERT completed successfully 22:20:01
+INFO:root:INSERT completed successfully 22:20:05
+INFO:root:INSERT completed successfully 22:20:05
+INFO:root:INSERT completed successfully 22:20:06
+INFO:root:INSERT completed successfully 22:20:06
+INFO:root:INSERT completed successfully 22:20:10
+INFO:root:INSERT completed successfully 22:20:10
+INFO:root:INSERT completed successfully 22:20:11
+INFO:root:INSERT completed successfully 22:20:11
+INFO:root:INSERT completed successfully 22:20:15
+INFO:root:INSERT completed successfully 22:20:15
+INFO:root:INSERT completed successfully 22:20:16
+INFO:root:INSERT completed successfully 22:20:16
+INFO:root:INSERT completed successfully 22:20:20
+INFO:root:INSERT completed successfully 22:20:20
+INFO:root:INSERT completed successfully 22:20:21
+INFO:root:INSERT completed successfully 22:20:21
+INFO:root:INSERT completed successfully 22:20:25
+INFO:root:INSERT completed successfully 22:20:25
+INFO:root:INSERT completed successfully 22:20:26
+INFO:root:INSERT completed successfully 22:20:26
+INFO:root:INSERT completed successfully 22:20:30
+INFO:root:INSERT completed successfully 22:20:30
+INFO:root:INSERT completed successfully 22:20:31
+INFO:root:INSERT completed successfully 22:20:31
+INFO:root:INSERT completed successfully 22:20:35
+INFO:root:INSERT completed successfully 22:20:35
+INFO:root:INSERT completed successfully 22:20:36
+INFO:root:INSERT completed successfully 22:20:36
+INFO:root:INSERT completed successfully 22:20:40
+INFO:root:INSERT completed successfully 22:20:40
+INFO:root:INSERT completed successfully 22:20:41
+INFO:root:INSERT completed successfully 22:20:41
+INFO:root:INSERT completed successfully 22:20:45
+INFO:root:INSERT completed successfully 22:20:45
+INFO:root:INSERT completed successfully 22:20:46
+INFO:root:INSERT completed successfully 22:20:46
+INFO:root:INSERT completed successfully 22:20:50
+INFO:root:INSERT completed successfully 22:20:50
+INFO:root:INSERT completed successfully 22:20:51
+INFO:root:INSERT completed successfully 22:20:51
+INFO:root:INSERT completed successfully 22:20:55
+INFO:root:INSERT completed successfully 22:20:55
+INFO:root:INSERT completed successfully 22:20:56
+INFO:root:INSERT completed successfully 22:20:56
+INFO:root:INSERT completed successfully 22:21:00
+INFO:root:INSERT completed successfully 22:21:00
+INFO:root:INSERT completed successfully 22:21:01
+INFO:root:INSERT completed successfully 22:21:01
+INFO:root:INSERT completed successfully 22:21:05
+INFO:root:INSERT completed successfully 22:21:05
+INFO:root:INSERT completed successfully 22:21:06
+INFO:root:INSERT completed successfully 22:21:06
+INFO:root:INSERT completed successfully 22:21:10
+INFO:root:INSERT completed successfully 22:21:10
+INFO:root:INSERT completed successfully 22:21:11
+INFO:root:INSERT completed successfully 22:21:11
+INFO:root:INSERT completed successfully 22:21:15
+INFO:root:INSERT completed successfully 22:21:15
+INFO:root:INSERT completed successfully 22:21:16
+INFO:root:INSERT completed successfully 22:21:16
+INFO:root:INSERT completed successfully 22:21:20
+INFO:root:INSERT completed successfully 22:21:20
+INFO:root:INSERT completed successfully 22:21:21
+INFO:root:INSERT completed successfully 22:21:21
+INFO:root:INSERT completed successfully 22:21:25
+INFO:root:INSERT completed successfully 22:21:25
+INFO:root:INSERT completed successfully 22:21:26
+INFO:root:INSERT completed successfully 22:21:26
+INFO:root:INSERT completed successfully 22:21:30
+INFO:root:INSERT completed successfully 22:21:30
+INFO:root:INSERT completed successfully 22:21:31
+INFO:root:INSERT completed successfully 22:21:31
+INFO:root:INSERT completed successfully 22:21:35
+INFO:root:INSERT completed successfully 22:21:35
+INFO:root:INSERT completed successfully 22:21:36
+INFO:root:INSERT completed successfully 22:21:36
+INFO:root:INSERT completed successfully 22:21:40
+INFO:root:INSERT completed successfully 22:21:40
+INFO:root:INSERT completed successfully 22:21:41
+INFO:root:INSERT completed successfully 22:21:41
+INFO:root:INSERT completed successfully 22:21:45
+INFO:root:INSERT completed successfully 22:21:45
+INFO:root:INSERT completed successfully 22:21:46
+INFO:root:INSERT completed successfully 22:21:46
+INFO:root:INSERT completed successfully 22:21:50
+INFO:root:INSERT completed successfully 22:21:50
+INFO:root:INSERT completed successfully 22:21:51
+INFO:root:INSERT completed successfully 22:21:51
+INFO:root:INSERT completed successfully 22:21:55
+INFO:root:INSERT completed successfully 22:21:55
+INFO:root:INSERT completed successfully 22:21:56
+INFO:root:INSERT completed successfully 22:21:56
+INFO:root:INSERT completed successfully 22:22:00
+INFO:root:INSERT completed successfully 22:22:00
+INFO:root:INSERT completed successfully 22:22:01
+INFO:root:INSERT completed successfully 22:22:01
+INFO:root:INSERT completed successfully 22:22:05
+INFO:root:INSERT completed successfully 22:22:05
+INFO:root:INSERT completed successfully 22:22:06
+INFO:root:INSERT completed successfully 22:22:06
+INFO:root:INSERT completed successfully 22:22:10
+INFO:root:INSERT completed successfully 22:22:10
+INFO:root:INSERT completed successfully 22:22:11
+INFO:root:INSERT completed successfully 22:22:11
+INFO:root:INSERT completed successfully 22:22:15
+INFO:root:INSERT completed successfully 22:22:16
+ERROR:root:31/07/2015 22:22:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:22:16' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:22:16
+INFO:root:INSERT completed successfully 22:22:20
+INFO:root:INSERT completed successfully 22:22:21
+INFO:root:INSERT completed successfully 22:22:21
+INFO:root:INSERT completed successfully 22:22:21
+INFO:root:INSERT completed successfully 22:22:25
+INFO:root:INSERT completed successfully 22:22:26
+INFO:root:INSERT completed successfully 22:22:26
+ERROR:root:31/07/2015 22:22:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:22:26' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:22:31
+INFO:root:INSERT completed successfully 22:22:31
+ERROR:root:31/07/2015 22:22:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:22:31' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:22:31
+INFO:root:INSERT completed successfully 22:22:36
+INFO:root:INSERT completed successfully 22:22:36
+ERROR:root:31/07/2015 22:22:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:22:36' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:22:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:22:36' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:22:41
+INFO:root:INSERT completed successfully 22:22:41
+ERROR:root:31/07/2015 22:22:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:22:41' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:22:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:22:41' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:22:46
+INFO:root:INSERT completed successfully 22:22:46
+ERROR:root:31/07/2015 22:22:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:22:46' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:22:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:22:46' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:22:51
+INFO:root:INSERT completed successfully 22:22:51
+ERROR:root:31/07/2015 22:22:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:22:51' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:22:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:22:51' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:22:56
+INFO:root:INSERT completed successfully 22:22:56
+ERROR:root:31/07/2015 22:22:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:22:56' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:22:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:22:56' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:01
+INFO:root:INSERT completed successfully 22:23:01
+ERROR:root:31/07/2015 22:23:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:01' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:01' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:06
+INFO:root:INSERT completed successfully 22:23:06
+ERROR:root:31/07/2015 22:23:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:06' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:06' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:11
+INFO:root:INSERT completed successfully 22:23:11
+ERROR:root:31/07/2015 22:23:11: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:11' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:11: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:11' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:16
+INFO:root:INSERT completed successfully 22:23:16
+ERROR:root:31/07/2015 22:23:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:16' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:16' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:21
+INFO:root:INSERT completed successfully 22:23:21
+ERROR:root:31/07/2015 22:23:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:21' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:21' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:26
+INFO:root:INSERT completed successfully 22:23:26
+ERROR:root:31/07/2015 22:23:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:26' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:26' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:31
+INFO:root:INSERT completed successfully 22:23:31
+ERROR:root:31/07/2015 22:23:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:31' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:31' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:36
+INFO:root:INSERT completed successfully 22:23:36
+ERROR:root:31/07/2015 22:23:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:36' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:36' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:41
+INFO:root:INSERT completed successfully 22:23:41
+ERROR:root:31/07/2015 22:23:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:41' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:41' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:46
+INFO:root:INSERT completed successfully 22:23:46
+ERROR:root:31/07/2015 22:23:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:46' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:46' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:51
+INFO:root:INSERT completed successfully 22:23:51
+ERROR:root:31/07/2015 22:23:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:51' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:51' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:23:56
+INFO:root:INSERT completed successfully 22:23:56
+ERROR:root:31/07/2015 22:23:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:23:56' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:23:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:23:56' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:01
+INFO:root:INSERT completed successfully 22:24:01
+ERROR:root:31/07/2015 22:24:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:01' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:01' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:06
+INFO:root:INSERT completed successfully 22:24:06
+ERROR:root:31/07/2015 22:24:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:06' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:06' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:11
+INFO:root:INSERT completed successfully 22:24:11
+ERROR:root:31/07/2015 22:24:11: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:11' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:11: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:11' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:16
+INFO:root:INSERT completed successfully 22:24:16
+ERROR:root:31/07/2015 22:24:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:16' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:16' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:21
+INFO:root:INSERT completed successfully 22:24:21
+ERROR:root:31/07/2015 22:24:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:21' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:21' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:26
+INFO:root:INSERT completed successfully 22:24:26
+ERROR:root:31/07/2015 22:24:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:26' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:26' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:31
+INFO:root:INSERT completed successfully 22:24:31
+ERROR:root:31/07/2015 22:24:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:31' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:31' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:36
+INFO:root:INSERT completed successfully 22:24:36
+ERROR:root:31/07/2015 22:24:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:36' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:36' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:41
+INFO:root:INSERT completed successfully 22:24:41
+ERROR:root:31/07/2015 22:24:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:41' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:41' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:46
+INFO:root:INSERT completed successfully 22:24:46
+ERROR:root:31/07/2015 22:24:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:46' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:46' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:51
+INFO:root:INSERT completed successfully 22:24:51
+ERROR:root:31/07/2015 22:24:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:51' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:51' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:24:56
+INFO:root:INSERT completed successfully 22:24:56
+ERROR:root:31/07/2015 22:24:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:24:56' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:24:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:24:56' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:01
+INFO:root:INSERT completed successfully 22:25:01
+ERROR:root:31/07/2015 22:25:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:01' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:01' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:06
+INFO:root:INSERT completed successfully 22:25:06
+ERROR:root:31/07/2015 22:25:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:06' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:06' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:11
+INFO:root:INSERT completed successfully 22:25:11
+ERROR:root:31/07/2015 22:25:11: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:11' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:11: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:11' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:16
+INFO:root:INSERT completed successfully 22:25:16
+ERROR:root:31/07/2015 22:25:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:16' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:16' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:21
+INFO:root:INSERT completed successfully 22:25:21
+ERROR:root:31/07/2015 22:25:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:21' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:21' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:26
+INFO:root:INSERT completed successfully 22:25:26
+ERROR:root:31/07/2015 22:25:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:26' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:26' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:31
+INFO:root:INSERT completed successfully 22:25:31
+ERROR:root:31/07/2015 22:25:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:31' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:31' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:36
+INFO:root:INSERT completed successfully 22:25:36
+ERROR:root:31/07/2015 22:25:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:36' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:36' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:41
+INFO:root:INSERT completed successfully 22:25:41
+ERROR:root:31/07/2015 22:25:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:41' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:41' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:46
+INFO:root:INSERT completed successfully 22:25:46
+ERROR:root:31/07/2015 22:25:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:46' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:46' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:51
+INFO:root:INSERT completed successfully 22:25:51
+ERROR:root:31/07/2015 22:25:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:51' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:51' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:25:56
+INFO:root:INSERT completed successfully 22:25:56
+ERROR:root:31/07/2015 22:25:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:25:56' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:25:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:25:56' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:01
+INFO:root:INSERT completed successfully 22:26:01
+ERROR:root:31/07/2015 22:26:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:01' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:01' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:06
+INFO:root:INSERT completed successfully 22:26:06
+ERROR:root:31/07/2015 22:26:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:06' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:06' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:11
+INFO:root:INSERT completed successfully 22:26:11
+ERROR:root:31/07/2015 22:26:11: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:11' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:11: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:11' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:16
+INFO:root:INSERT completed successfully 22:26:16
+ERROR:root:31/07/2015 22:26:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:16' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:16' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:21
+INFO:root:INSERT completed successfully 22:26:21
+ERROR:root:31/07/2015 22:26:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:21' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:21' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:26
+INFO:root:INSERT completed successfully 22:26:26
+ERROR:root:31/07/2015 22:26:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:26' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:26' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:31
+INFO:root:INSERT completed successfully 22:26:31
+ERROR:root:31/07/2015 22:26:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:31' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:31' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:36
+INFO:root:INSERT completed successfully 22:26:36
+ERROR:root:31/07/2015 22:26:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:36' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:36' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:41
+INFO:root:INSERT completed successfully 22:26:41
+ERROR:root:31/07/2015 22:26:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:41' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:41' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:46
+INFO:root:INSERT completed successfully 22:26:46
+ERROR:root:31/07/2015 22:26:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:46' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:46' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:51
+INFO:root:INSERT completed successfully 22:26:51
+ERROR:root:31/07/2015 22:26:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:51' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:51' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:26:56
+INFO:root:INSERT completed successfully 22:26:56
+ERROR:root:31/07/2015 22:26:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:26:56' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:26:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:26:56' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:01
+INFO:root:INSERT completed successfully 22:27:01
+ERROR:root:31/07/2015 22:27:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:01' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:01' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:06
+INFO:root:INSERT completed successfully 22:27:06
+ERROR:root:31/07/2015 22:27:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:06' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:06' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:11
+INFO:root:INSERT completed successfully 22:27:11
+ERROR:root:31/07/2015 22:27:11: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:11' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:11: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:11' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:16
+INFO:root:INSERT completed successfully 22:27:16
+ERROR:root:31/07/2015 22:27:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:16' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:16' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:21
+INFO:root:INSERT completed successfully 22:27:21
+ERROR:root:31/07/2015 22:27:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:21' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:21' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:26
+INFO:root:INSERT completed successfully 22:27:26
+ERROR:root:31/07/2015 22:27:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:26' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:26' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:31
+INFO:root:INSERT completed successfully 22:27:31
+ERROR:root:31/07/2015 22:27:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:31' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:31' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:36
+INFO:root:INSERT completed successfully 22:27:36
+ERROR:root:31/07/2015 22:27:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:36' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:36' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:41
+INFO:root:INSERT completed successfully 22:27:41
+ERROR:root:31/07/2015 22:27:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:41' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:41' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:46
+INFO:root:INSERT completed successfully 22:27:46
+ERROR:root:31/07/2015 22:27:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:46' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:46: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:46' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:51
+INFO:root:INSERT completed successfully 22:27:51
+ERROR:root:31/07/2015 22:27:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:51' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:51: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:51' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:27:56
+INFO:root:INSERT completed successfully 22:27:56
+ERROR:root:31/07/2015 22:27:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:27:56' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:27:56: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:27:56' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:28:01
+INFO:root:INSERT completed successfully 22:28:01
+ERROR:root:31/07/2015 22:28:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:28:01' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:28:01: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:28:01' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:28:06
+INFO:root:INSERT completed successfully 22:28:06
+ERROR:root:31/07/2015 22:28:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:28:06' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:28:06: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:28:06' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:28:11
+INFO:root:INSERT completed successfully 22:28:11
+INFO:root:INSERT completed successfully 22:28:12
+INFO:root:INSERT completed successfully 22:28:12
+INFO:root:INSERT completed successfully 22:28:16
+INFO:root:INSERT completed successfully 22:28:16
+ERROR:root:31/07/2015 22:28:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:28:16' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:28:16: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:28:16' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:28:21
+INFO:root:INSERT completed successfully 22:28:21
+ERROR:root:31/07/2015 22:28:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:28:21' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:28:21: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:28:21' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:28:26
+INFO:root:INSERT completed successfully 22:28:26
+ERROR:root:31/07/2015 22:28:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:28:26' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:28:26: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:28:26' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:28:31
+INFO:root:INSERT completed successfully 22:28:31
+ERROR:root:31/07/2015 22:28:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:28:31' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:28:31: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:28:31' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:28:36
+INFO:root:INSERT completed successfully 22:28:36
+ERROR:root:31/07/2015 22:28:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:28:36' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:28:36: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:28:36' for key 'PRIMARY'
+INFO:root:INSERT completed successfully 22:28:41
+INFO:root:INSERT completed successfully 22:28:41
+ERROR:root:31/07/2015 22:28:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-2-2015-07-31 22:28:41' for key 'PRIMARY'
+ERROR:root:31/07/2015 22:28:41: Something went wrong with the database INSERT: 1062 (23000): Duplicate entry 'OT9000-1-2015-07-31 22:28:41' for key 'PRIMARY'

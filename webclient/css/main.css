@@ -1,0 +1,28 @@
+#nodes{
+    width:100%;
+    border-collapse:collapse;
+}
+#nodes td{
+    padding:7px; border:#4e95f4 1px solid;
+}
+/* provide some minimal visual accomodation for IE8 and below */
+#nodes tr{
+    background: #b8d1f3;
+}
+/*  Define the background color for all the ODD background rows  */
+#nodes tr:nth-child(odd){
+    background: #b8d1f3;
+}
+/*  Define the background color for all the EVEN background rows  */
+#nodes tr:nth-child(even){
+    background: #dae5f4;
+}
+
+.sort {
+    color: #800000;
+}
+
+td {
+    text-align:center;
+    vertical-align:middle;
+}
