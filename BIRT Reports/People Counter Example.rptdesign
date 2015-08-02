@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+    <list-property name="includeScripts">
+        <property>test.js</property>
+    </list-property>
+    <property name="units">in</property>
+    <method name="clientInitialize"><![CDATA[var host     = "10.59.32.55"; // CHANGE ME WHEN DEPLOYED
+var port     = 9001;
+var clientID = "BIRT"  + Math.floor(Math.random() * 1000000) + 1;
+var client;
+var mqtt     = "10.59.32.55:8700/ActivityTracker/js/mqttws31.js";
+
+$(document).ready(function() {
+	$.getScript( "http://10.59.32.55:8700/ActivityTracker/js/mqttws31.js", function( data, textStatus, jqxhr ) {
+  		console.log( "Load was performed." );
+
+  		try {
+			client = new Paho.MQTT.Client(host, port, clientID);
+
+		    client.onConnectionLost = onConnectionLost;
+	    	client.onMessageArrived = onMessageArrived;
+
+			console.log('DONE');
+
+		    client.connect({
+   	    		onSuccess: onConnect
+		    });
+  		}catch(err){
+  			console.log(err.message);
+  		}
+	});
+});
+
+function onConnect() {
+	console.log(new Date() + ': Connected to ' + host);
+	client.subscribe("/beat/#");
+}
+
+function onMessageArrived(message) {
+	console.log(new Date() + ': Message Arrived!');
+	$('#testDiv').html(message.payloadString);
+}
+
+function onConnectionLost(responseObject) {
+	console.log(new Date() + ': Connection Lost!');
+}]]></method>
+    <property name="theme">ThemesReportItems31.Modern</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="5">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<div id="testDiv"></div>]]></text-property>
+        </text>
+    </body>
+</report>
