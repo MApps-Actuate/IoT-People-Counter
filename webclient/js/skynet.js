@@ -1,6 +1,6 @@
-var host     = "10.59.32.55"; // 10.59.32.55
+var host     = "10.59.32.55"; // CHANGE ME WHEN DEPLOYED
 var port     = 9001;
-var clientID = "WebClient_Console"  // Needs to be unique, if multiple web clients add some token at end
+var clientID = "ActivityMonitor"  + Math.floor(Math.random() * 1000000) + 1
 var client = new Paho.MQTT.Client(host, port, clientID);
 var sortBy = 'Node';
 
@@ -30,27 +30,28 @@ function addMessage(hashmap, div) {
 
         $('#nodes tbody').append(newDropDown);
 
+        var switchVar = Math.floor(lastHeartbeat/10);
 
         switch(true) {
-            case(lastHeartbeat < 15):
+            case(switchVar == 0):
                 $("#canvas" + key).drawArc({
-                    draggable: true,
+                    draggable: false,
                     fillStyle: "green",
                     x: 12.5, y: 12.5,
                     radius: 12.5
                 });
                 break;
-            case(lastHeartbeat >= 15):
+            case(switchVar == 1):
                 $("#canvas" + key).drawArc({
-                    draggable: true,
+                    draggable: false,
                     fillStyle: "yellow",
                     x: 12.5, y: 12.5,
                     radius: 12.5
                 });
                 break;
-            case(lastHeartbeat >= 30):
+            case(switchVar > 1):
                 $("#canvas" + key).drawArc({
-                    draggable: true,
+                    draggable: false,
                     fillStyle: "red",
                     x: 12.5, y: 12.5,
                     radius: 12.5
@@ -120,7 +121,7 @@ $(document).ready(function() {
         var name  = obj.node;
         var count = obj.peopleCount;
         var ip    = obj.ip;
-        var time  = obj.timestamp;
+        var time  = new Date();
         var alldetails = [count, ip, time];
 
         var testValue   = {};
