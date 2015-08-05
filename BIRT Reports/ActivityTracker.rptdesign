@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+    <property name="units">in</property>
+    <method name="clientInitialize"><![CDATA[var host = "10.59.32.55";
+var ihubPort = "8700";
+var mqttPort = "9001";
+var clientID = "BIRT" + Math.floor(Math.random() * 1000000) + 1;
+var topic    = '/beat/#';
+var heatmap;
+var hashmap  = new Object();
+
+$(document).ready(function() {	
+	var scripts = ['http://localhost:63342/PeopleCounter/src/js/bootstrap.min.js',
+				   'http://localhost:63342/PeopleCounter/src/js/mqttws31.js',
+				   'http://localhost:63342/PeopleCounter/src/js/heatcanvas-worker.js',
+				   'http://localhost:63342/PeopleCounter/src/js/heatcanvas.js'];
+	var loaded  = 0;
+	
+	var onLoaded = function() {	
+		loaded++;
+		if(loaded == scripts.length) {
+			console.log("All libraries loaded!");
+			main();
+		}else{
+			console.log("Still loading libraries, please wait...");
+		}
+	}
+	
+	for(i=0; i<scripts.length; i++) {
+		$.getScript(scripts[i], onLoaded);
+	}
+});
+
+function main() {
+	// Add a canvas to the outter div
+	loadCanvas('outterMapDiv');
+	
+	// Create an MQTT Instance
+	client = new Paho.MQTT.Client(host, Number(mqttPort), clientID);
+	
+	// Set the callbacks
+	client.onConnectionLost = onConnectionLost;
+	client.onMessageArrived = onMessageArrived;
+	
+	// Connect the client
+	client.connect({
+		onSuccess: onConnect
+	});
+	
+	// Create the map
+	heatmap = new HeatCanvas("CursorLayer");
+}
+
+function onConnect() {
+	// Let everyone know we're connected
+	console.log(new Date() + " " + clientID + ": Connected to " + host);
+	
+	// Subscribe to the heartbeats
+	client.subscribe(topic);
+	
+	// Let everyone know that we've subscribed
+	console.log(new Date() + " " + clientID + ": Subscribed to " + topic);
+}
+
+function onMessageArrived(message) {
+    var obj = jQuery.parseJSON( message.payloadString );
+    var node   = {};
+
+    node["peopleCount"] = obj.peopleCount;
+    node["timestamp"]   = new Date();
+    node["ip"]          = obj.ip;
+
+    hashmap[obj.node] = node;
+
+    Object.keys(hashmap).forEach(function(key) {
+        if(key == 'OT9000-1') {
+            //
+            try {
+				var weight = Number(obj.peopleCount)*5
+				placePoints(10, 10, weight);
+            }catch(err){
+            	console.log(err);
+            }
+        }else if(key == 'OT9000-2'){
+            try {
+				var weight = Number(obj.peopleCount)*5
+				placePoints(207, 165, weight);
+            }catch(err){
+            	console.log(err);
+            }
+        }else if(key == 'OT9000-3'){
+            try {
+				var weight = Number(obj.peopleCount)*5
+				placePoints(340, 256, weight);
+            }catch(err){
+            	console.log(err);
+            }
+        }
+    });
+}
+
+function onConnectionLost(responseObject) {
+	// Let everyone know we've lost the connection to skynet
+	console.log(new Date() + " " + clientID + ": Lost connection to skynet!");
+	console.log(responseObject.errorMessage);
+}
+
+// add data interactively
+function placePoints(x, y, pressure) {
+    addData(x, y, pressure)
+    render();
+}
+
+function addData(x, y, v){
+    // push data into the map
+    heatmap.push(x, y, v);
+}
+
+function reset() {
+    heatmap.clear();
+}
+
+function render(){
+    // you can render the map with custom colors
+    heatmap.render(1, null, null);
+}
+
+function loadCanvas(id) {
+    var canvas = document.createElement('canvas');
+    div = document.getElementById(id); 
+    canvas.id     = "CursorLayer";
+    canvas.width  = 1224;
+    canvas.height = 768;
+    canvas.style.zIndex   = 8;
+    canvas.style.position = "absolute";
+    canvas.style.border   = "1px solid";
+    div.appendChild(canvas)
+}]]></method>
+    <property name="theme">ThemesReportItems31.Modern</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="4">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<div id="outterMapDiv"></div>]]></text-property>
+        </text>
+    </body>
+</report>
