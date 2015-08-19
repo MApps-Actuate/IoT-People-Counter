@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+    <list-property name="propertyBindings">
+        <structure>
+            <property name="name">queryText</property>
+            <property name="id">5</property>
+            <expression name="value" type="javascript">"SELECT SUM(peoplecount) as totalpeoplecount, HOUR(event_time) as theEventTime," + " node FROM iot_people_counter WHERE iot_people_counter.event_time BETWEEN DATE_ADD(\'" +  params["pDate"].value + "\', INTERVAL 0 day) AND DATE_ADD(\'" +  params["pDate"].value + "\', INTERVAL 1 day) GROUP BY HOUR(event_time), node";</expression>
+        </structure>
+        <structure>
+            <property name="name">queryTimeOut</property>
+            <property name="id">5</property>
+        </structure>
+        <structure>
+            <property name="name">rowFetchSize</property>
+            <property name="id">5</property>
+        </structure>
+    </list-property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">ThemesReportItems3.rptlibrary</property>
+            <property name="namespace">ThemesReportItems3</property>
+        </structure>
+    </list-property>
+    <parameters>
+        <scalar-parameter name="pDate" id="1533">
+            <property name="hidden">true</property>
+            <property name="valueType">static</property>
+            <property name="dataType">string</property>
+            <property name="distinct">true</property>
+            <simple-property-list name="defaultValue">
+                <value type="constant">2015-08-17</value>
+            </simple-property-list>
+            <list-property name="selectionList"/>
+            <property name="paramType">simple</property>
+            <property name="controlType">text-box</property>
+            <structure name="format">
+                <property name="category">Unformatted</property>
+            </structure>
+        </scalar-parameter>
+    </parameters>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Local MySQL DS" id="28">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://10.59.23.45:3306/people_counter?useCursorFetch=true&amp;defaultFetchSize=2000</property>
+            <property name="odaUser">skynet</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Local MySQL DS" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">totalpeoplecount</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">totalpeoplecount</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">totalpeoplecount</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">theEventTime</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">theEventTime</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">theEventTime</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">node</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">node</text-property>
+                    <property name="onColumnLayout">false</property>
+                    <text-property name="heading">node</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">totalpeoplecount</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">theEventTime</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">node</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <method name="beforeOpen"><![CDATA[logger = java.util.logging.Logger.getLogger("birt.report.logger");
+logger.warning (this.queryText);
+
+]]></method>
+            <property name="dataSource">Local MySQL DS</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">totalpeoplecount</property>
+                    <property name="nativeName">totalpeoplecount</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">3</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">theEventTime</property>
+                    <property name="nativeName">theEventTime</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">node</property>
+                    <property name="nativeName">node</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT SUM(peoplecount) as totalpeoplecount, HOUR(event_time) as theEventTime, node
+FROM iot_people_counter
+WHERE iot_people_counter.event_time BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 1 day)
+GROUP BY HOUR(event_time), node]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>node</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>node</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>node</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>event_time</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>event_time</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>event_time</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>peoplecount</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>peoplecount</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>peoplecount</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <themes>
+        <report-item-theme type="Table" name="default-table" id="777">
+            <styles>
+                <style name="table" id="896">
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontSize">8pt</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-detail-cell" id="918">
+                    <property name="backgroundColor">#FFFFFF</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-header-cell" id="919">
+                    <property name="backgroundColor">#EDEEF3</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-group-header-cell" id="920">
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-group-footer-cell" id="921">
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-footer-cell" id="922">
+                    <property name="backgroundColor">#EDEEF3</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+            </styles>
+        </report-item-theme>
+    </themes>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">us-legal</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0.25in</property>
+            <property name="leftMargin">0.25in</property>
+            <property name="bottomMargin">0in</property>
+            <property name="rightMargin">0.25in</property>
+            <property name="backgroundColor">#2D3A47</property>
+            <property name="height">8.5in</property>
+            <property name="width">11in</property>
+            <property name="showHeaderOnFirst">true</property>
+            <property name="showFooterOnLast">false</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="8">
+            <property name="fontFamily">"Raleway"</property>
+            <property name="textAlign">center</property>
+            <property name="height">2.875in</property>
+            <column id="444"/>
+            <row id="1522">
+                <property name="fontSize">8pt</property>
+                <property name="verticalAlign">middle</property>
+                <property name="height">0.9583333333333334in</property>
+                <cell id="1523">
+                    <property name="paddingLeft">1pt</property>
+                    <property name="paddingRight">1pt</property>
+                    <property name="textAlign">center</property>
+                    <data id="1534">
+                        <property name="fontSize">24pt</property>
+                        <property name="color">#FFFFFF</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">pDate</property>
+                                <expression name="expression" type="javascript">params["pDate"] + ' Hourly Activity Tracker View'</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="resultSetColumn">pDate</property>
+                    </data>
+                </cell>
+            </row>
+            <row id="1293">
+                <property name="fontSize">8pt</property>
+                <property name="verticalAlign">middle</property>
+                <property name="height">1.9166666666666667in</property>
+                <cell id="1294">
+                    <property name="paddingLeft">1pt</property>
+                    <property name="paddingRight">1pt</property>
+                    <property name="textAlign">center</property>
+                    <extended-item extensionName="HTMLControl" id="1521">
+                        <property name="html">&lt;div id="example-h"  >&lt;/div></property>
+                        <property name="css">/* Cal-HeatMap CSS */&#13;
+&#13;
+.cal-heatmap-container {&#13;
+	display: block;&#13;
+}&#13;
+&#13;
+.graph&#13;
+{&#13;
+	font-family:  "Raleway", "Lucida Grande", Lucida, Verdana, sans-serif;&#13;
+}&#13;
+&#13;
+.graph-label&#13;
+{&#13;
+	fill: #999;&#13;
+	font-weight: bold;&#13;
+	font-size: 12px;&#13;
+}&#13;
+&#13;
+.graph, .graph-legend rect {&#13;
+	shape-rendering: crispedges&#13;
+}&#13;
+&#13;
+.graph-rect&#13;
+{&#13;
+	fill: #ededed&#13;
+}&#13;
+&#13;
+.graph-subdomain-group rect:hover&#13;
+{&#13;
+	stroke: #000;&#13;
+	stroke-width: 1px&#13;
+}&#13;
+&#13;
+.subdomain-text {&#13;
+	font-size: 8px;&#13;
+	fill: #999;&#13;
+	pointer-events: none&#13;
+}&#13;
+&#13;
+.hover_cursor:hover {&#13;
+	cursor: pointer&#13;
+}&#13;
+&#13;
+.qi {&#13;
+	background-color: #999;&#13;
+	fill: #999&#13;
+}&#13;
+&#13;
+/*&#13;
+Remove comment to apply this style to date with value equal to 0&#13;
+.q0&#13;
+{&#13;
+	background-color: #fff;&#13;
+	fill: #fff;&#13;
+	stroke: #ededed&#13;
+}&#13;
+*/&#13;
+&#13;
+.q1&#13;
+{&#13;
+	background-color: #dae289;&#13;
+	fill: #dae289&#13;
+}&#13;
+&#13;
+.q2&#13;
+{&#13;
+	background-color: #cedb9c;&#13;
+	fill: #9cc069&#13;
+}&#13;
+&#13;
+.q3&#13;
+{&#13;
+	background-color: #b5cf6b;&#13;
+	fill: #669d45&#13;
+}&#13;
+&#13;
+.q4&#13;
+{&#13;
+	background-color: #637939;&#13;
+	fill: #637939&#13;
+}&#13;
+&#13;
+.q5&#13;
+{&#13;
+	background-color: #3b6427;&#13;
+	fill: #3b6427&#13;
+}&#13;
+&#13;
+rect.highlight&#13;
+{&#13;
+	stroke:#444;&#13;
+	stroke-width:1&#13;
+}&#13;
+&#13;
+text.highlight&#13;
+{&#13;
+	fill: #444&#13;
+}&#13;
+&#13;
+rect.now&#13;
+{&#13;
+	stroke: red&#13;
+}&#13;
+&#13;
+text.now&#13;
+{&#13;
+	fill: red;&#13;
+	font-weight: 800&#13;
+}&#13;
+&#13;
+.domain-background {&#13;
+	fill: none;&#13;
+	shape-rendering: crispedges&#13;
+}&#13;
+&#13;
+.ch-tooltip {&#13;
+	padding: 10px;&#13;
+	background: #222;&#13;
+	color: #bbb;&#13;
+	font-size: 12px;&#13;
+	line-height: 1.4;&#13;
+	width: 140px;&#13;
+&#13;
+	z-index: 99999;&#13;
+	text-align: center;&#13;
+	border-radius: 2px;&#13;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);&#13;
+	display: none;&#13;
+	box-sizing: border-box;&#13;
+}&#13;
+&#13;
+.ch-tooltip::after{&#13;
+	position: absolute;&#13;
+	width: 0;&#13;
+	height: 0;&#13;
+	border-color: transparent;&#13;
+	border-style: solid;&#13;
+	content: "";&#13;
+	padding: 0;&#13;
+	display: "block";&#13;
+	bottom: -6px;&#13;
+	left: 50%;&#13;
+	margin-left: -6px;&#13;
+    border-width: 6px 6px 0;&#13;
+    border-top-color: #222;&#13;
+}&#13;
+&#13;
+&#13;
+				#example-h .graph-label {&#13;
+					font-weight: bold;&#13;
+					font-size: 12px;&#13;
+					fill: #888;&#13;
+				}&#13;
+&#13;
+				#example-h .domain-background {&#13;
+					fill: #2d3a47;&#13;
+				}&#13;
+&#13;
+				#example-h .graph-domain.m_2 .domain-background {&#13;
+					fill: red;&#13;
+				}&#13;
+&#13;
+				#example-h .grap-rect {fill:#35252d;}&#13;
+				#example-h .q0 {fill:#35252d;}&#13;
+				#example-h .q1 {fill:#fea1eb; opacity: 0.1}&#13;
+				#example-h .q2 {fill:#fea1eb; opacity: 0.2}&#13;
+				#example-h .q3 {fill:#fea1eb; opacity: 0.4}&#13;
+				#example-h .q4 {fill:#fea1eb; opacity: 0.6}&#13;
+				#example-h .q5 {fill:#fea1eb; opacity: 0.8}&#13;
+				#example-h .q6 {fill:#fea1eb; opacity: 1}&#13;
+				#example-h .graph-rect:hover {fill: #fff; opacity: 1; stroke-width: 0;}</property>
+                        <method name="clientOnCreate"><![CDATA[// Cal-heatmap
+// http://kamisama.github.io/cal-heatmap/
+//
+var customViz = this;
+//debugger;
+var containerId = this.getId();
+//var containerWidth = $("#" + containerId).width();
+//var containerHeight = $("#" + containerId).height();
+
+var startDate = new Date();
+
+function dataTransfrom(cursor) {
+	var stats = {};
+	while (cursor.hasNext()) {
+		var rowData = cursor.next();
+		//var ctr = 0;
+		var epochTimestamp = Math.round(+new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), rowData["theEventTime"], 0, 0)/1000);
+		stats[String(epochTimestamp)] = rowData["totalpeoplecount"];
+		//ctr++;
+	}
+	return stats;
+}
+
+myData = dataTransfrom(customViz.getDataCursor());
+
+
+var callback = function() {
+
+	var cal = new CalHeatMap();
+	//var thisContainerID = "#" + containerId;
+	var thisContainerID = "#example-h";
+	//cal.init({});
+	
+	cal.init({
+
+		data: myData,
+		start: startDate,
+		itemSelector: thisContainerID,
+		domainLabelFormat: "OT 9000-1",
+		domain: "day",
+		range: 1,
+		domainMargin: 10,
+		colLimit: 24,
+		displayLegend: false,
+		cellSize: 25,
+		cellRadius: 3,
+		cellPadding: 5,
+		label: {
+			position: "left",
+			offset: { 	x: 10, y: 20 }
+		}
+	});
+}
+
+head.load('ActivityTracker/d3.v3.min.js','ActivityTracker/cal-heatmap.min.js',callback);]]></method>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">eq</property>
+                                <expression name="expr" type="javascript">row["node"]</expression>
+                                <simple-property-list name="value1">
+                                    <value>"OT9000-1"</value>
+                                </simple-property-list>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="height">1.40625in</property>
+                        <property name="width">100%</property>
+                        <property name="dataSet">Local MySQL DS</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">totalpeoplecount</property>
+                                <text-property name="displayName">totalpeoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["totalpeoplecount"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">theEventTime</property>
+                                <text-property name="displayName">theEventTime</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["theEventTime"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">node</property>
+                                <text-property name="displayName">node</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["node"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="displayName">Cal-heatmap</property>
+                    </extended-item>
+                </cell>
+            </row>
+            <row id="1527">
+                <property name="fontSize">8pt</property>
+                <property name="verticalAlign">middle</property>
+                <property name="height">1.9166666666666667in</property>
+                <cell id="1528">
+                    <property name="paddingLeft">1pt</property>
+                    <property name="paddingRight">1pt</property>
+                    <property name="textAlign">center</property>
+                    <extended-item extensionName="HTMLControl" id="1531">
+                        <property name="html">&lt;div id="example-h"  >&lt;/div></property>
+                        <property name="css">/* Cal-HeatMap CSS */&#13;
+&#13;
+.cal-heatmap-container {&#13;
+	display: block;&#13;
+}&#13;
+&#13;
+.graph&#13;
+{&#13;
+	font-family:  "Raleway", "Lucida Grande", Lucida, Verdana, sans-serif;&#13;
+}&#13;
+&#13;
+.graph-label&#13;
+{&#13;
+	fill: #999;&#13;
+	font-weight: bold;&#13;
+	font-size: 12px;&#13;
+}&#13;
+&#13;
+.graph, .graph-legend rect {&#13;
+	shape-rendering: crispedges&#13;
+}&#13;
+&#13;
+.graph-rect&#13;
+{&#13;
+	fill: #ededed&#13;
+}&#13;
+&#13;
+.graph-subdomain-group rect:hover&#13;
+{&#13;
+	stroke: #000;&#13;
+	stroke-width: 1px&#13;
+}&#13;
+&#13;
+.subdomain-text {&#13;
+	font-size: 8px;&#13;
+	fill: #999;&#13;
+	pointer-events: none&#13;
+}&#13;
+&#13;
+.hover_cursor:hover {&#13;
+	cursor: pointer&#13;
+}&#13;
+&#13;
+.qi {&#13;
+	background-color: #999;&#13;
+	fill: #999&#13;
+}&#13;
+&#13;
+/*&#13;
+Remove comment to apply this style to date with value equal to 0&#13;
+.q0&#13;
+{&#13;
+	background-color: #fff;&#13;
+	fill: #fff;&#13;
+	stroke: #ededed&#13;
+}&#13;
+*/&#13;
+&#13;
+.q1&#13;
+{&#13;
+	background-color: #dae289;&#13;
+	fill: #dae289&#13;
+}&#13;
+&#13;
+.q2&#13;
+{&#13;
+	background-color: #cedb9c;&#13;
+	fill: #9cc069&#13;
+}&#13;
+&#13;
+.q3&#13;
+{&#13;
+	background-color: #b5cf6b;&#13;
+	fill: #669d45&#13;
+}&#13;
+&#13;
+.q4&#13;
+{&#13;
+	background-color: #637939;&#13;
+	fill: #637939&#13;
+}&#13;
+&#13;
+.q5&#13;
+{&#13;
+	background-color: #3b6427;&#13;
+	fill: #3b6427&#13;
+}&#13;
+&#13;
+rect.highlight&#13;
+{&#13;
+	stroke:#444;&#13;
+	stroke-width:1&#13;
+}&#13;
+&#13;
+text.highlight&#13;
+{&#13;
+	fill: #444&#13;
+}&#13;
+&#13;
+rect.now&#13;
+{&#13;
+	stroke: red&#13;
+}&#13;
+&#13;
+text.now&#13;
+{&#13;
+	fill: red;&#13;
+	font-weight: 800&#13;
+}&#13;
+&#13;
+.domain-background {&#13;
+	fill: none;&#13;
+	shape-rendering: crispedges&#13;
+}&#13;
+&#13;
+.ch-tooltip {&#13;
+	padding: 10px;&#13;
+	background: #222;&#13;
+	color: #bbb;&#13;
+	font-size: 12px;&#13;
+	line-height: 1.4;&#13;
+	width: 140px;&#13;
+&#13;
+	z-index: 99999;&#13;
+	text-align: center;&#13;
+	border-radius: 2px;&#13;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);&#13;
+	display: none;&#13;
+	box-sizing: border-box;&#13;
+}&#13;
+&#13;
+.ch-tooltip::after{&#13;
+	position: absolute;&#13;
+	width: 0;&#13;
+	height: 0;&#13;
+	border-color: transparent;&#13;
+	border-style: solid;&#13;
+	content: "";&#13;
+	padding: 0;&#13;
+	display: "block";&#13;
+	bottom: -6px;&#13;
+	left: 50%;&#13;
+	margin-left: -6px;&#13;
+    border-width: 6px 6px 0;&#13;
+    border-top-color: #222;&#13;
+}&#13;
+&#13;
+&#13;
+				#example-h .graph-label {&#13;
+					font-weight: bold;&#13;
+					font-size: 12px;&#13;
+					fill: #888;&#13;
+				}&#13;
+&#13;
+				#example-h .domain-background {&#13;
+					fill: #2d3a47;&#13;
+				}&#13;
+&#13;
+				#example-h .graph-domain.m_2 .domain-background {&#13;
+					fill: red;&#13;
+				}&#13;
+&#13;
+				#example-h .grap-rect {fill:#35252d;}&#13;
+				#example-h .q0 {fill:#35252d;}&#13;
+				#example-h .q1 {fill:#fea1eb; opacity: 0.1}&#13;
+				#example-h .q2 {fill:#fea1eb; opacity: 0.2}&#13;
+				#example-h .q3 {fill:#fea1eb; opacity: 0.4}&#13;
+				#example-h .q4 {fill:#fea1eb; opacity: 0.6}&#13;
+				#example-h .q5 {fill:#fea1eb; opacity: 0.8}&#13;
+				#example-h .q6 {fill:#fea1eb; opacity: 1}&#13;
+				#example-h .graph-rect:hover {fill: #fff; opacity: 1; stroke-width: 0;}</property>
+                        <method name="clientOnCreate"><![CDATA[// Cal-heatmap
+// http://kamisama.github.io/cal-heatmap/
+//
+var customViz = this;
+//debugger;
+var containerId = this.getId();
+//var containerWidth = $("#" + containerId).width();
+//var containerHeight = $("#" + containerId).height();
+
+var startDate = new Date();
+
+function dataTransfrom(cursor) {
+	var stats = {};
+	while (cursor.hasNext()) {
+		var rowData = cursor.next();
+		//var ctr = 0;
+		var epochTimestamp = Math.round(+new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), rowData["theEventTime"], 0, 0)/1000);
+		stats[String(epochTimestamp)] = rowData["totalpeoplecount"];
+		//ctr++;
+	}
+	return stats;
+}
+
+myData2 = dataTransfrom(customViz.getDataCursor());
+
+
+var callback = function() {
+
+	var cal = new CalHeatMap();
+	//var thisContainerID = "#" + containerId;
+	var thisContainerID = "#example-h";
+	//cal.init({});
+	
+	cal.init({
+subDomain: "hour",
+subDomainTextFormat: function(date,value) {
+debugger;
+		return value;
+	},
+		data: myData2,
+		start: startDate,
+		itemSelector: thisContainerID,
+		domainLabelFormat: "OT 9000-2",
+		domain: "day",
+		range: 1,
+		domainMargin: 10,
+		colLimit: 24,
+		displayLegend: false,
+		cellSize: 25,
+		cellRadius: 3,
+		cellPadding: 5,
+		label: {
+			position: "left",
+			offset: { 	x: 10, y: 20 }
+		}
+	});
+}
+
+head.load('ActivityTracker/d3.v3.min.js','ActivityTracker/cal-heatmap.min.js',callback);]]></method>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">eq</property>
+                                <expression name="expr" type="javascript">row["node"]</expression>
+                                <simple-property-list name="value1">
+                                    <value>"OT9000-2"</value>
+                                </simple-property-list>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="height">1.40625in</property>
+                        <property name="width">100%</property>
+                        <property name="dataSet">Local MySQL DS</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">totalpeoplecount</property>
+                                <text-property name="displayName">totalpeoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["totalpeoplecount"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">theEventTime</property>
+                                <text-property name="displayName">theEventTime</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["theEventTime"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">node</property>
+                                <text-property name="displayName">node</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["node"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                    </extended-item>
+                </cell>
+            </row>
+            <row id="1529">
+                <property name="fontSize">8pt</property>
+                <property name="verticalAlign">middle</property>
+                <property name="height">1.9166666666666667in</property>
+                <cell id="1530">
+                    <property name="paddingLeft">1pt</property>
+                    <property name="paddingRight">1pt</property>
+                    <property name="textAlign">center</property>
+                    <extended-item extensionName="HTMLControl" id="1532">
+                        <property name="html">&lt;div id="example-h"  >&lt;/div></property>
+                        <property name="css">/* Cal-HeatMap CSS */&#13;
+&#13;
+.cal-heatmap-container {&#13;
+	display: block;&#13;
+}&#13;
+&#13;
+.graph&#13;
+{&#13;
+	font-family:  "Raleway", "Lucida Grande", Lucida, Verdana, sans-serif;&#13;
+}&#13;
+&#13;
+.graph-label&#13;
+{&#13;
+	fill: #999;&#13;
+	font-weight: bold;&#13;
+	font-size: 12px;&#13;
+}&#13;
+&#13;
+.graph, .graph-legend rect {&#13;
+	shape-rendering: crispedges&#13;
+}&#13;
+&#13;
+.graph-rect&#13;
+{&#13;
+	fill: #ededed&#13;
+}&#13;
+&#13;
+.graph-subdomain-group rect:hover&#13;
+{&#13;
+	stroke: #000;&#13;
+	stroke-width: 1px&#13;
+}&#13;
+&#13;
+.subdomain-text {&#13;
+	font-size: 8px;&#13;
+	fill: #999;&#13;
+	pointer-events: none&#13;
+}&#13;
+&#13;
+.hover_cursor:hover {&#13;
+	cursor: pointer&#13;
+}&#13;
+&#13;
+.qi {&#13;
+	background-color: #999;&#13;
+	fill: #999&#13;
+}&#13;
+&#13;
+/*&#13;
+Remove comment to apply this style to date with value equal to 0&#13;
+.q0&#13;
+{&#13;
+	background-color: #fff;&#13;
+	fill: #fff;&#13;
+	stroke: #ededed&#13;
+}&#13;
+*/&#13;
+&#13;
+.q1&#13;
+{&#13;
+	background-color: #dae289;&#13;
+	fill: #dae289&#13;
+}&#13;
+&#13;
+.q2&#13;
+{&#13;
+	background-color: #cedb9c;&#13;
+	fill: #9cc069&#13;
+}&#13;
+&#13;
+.q3&#13;
+{&#13;
+	background-color: #b5cf6b;&#13;
+	fill: #669d45&#13;
+}&#13;
+&#13;
+.q4&#13;
+{&#13;
+	background-color: #637939;&#13;
+	fill: #637939&#13;
+}&#13;
+&#13;
+.q5&#13;
+{&#13;
+	background-color: #3b6427;&#13;
+	fill: #3b6427&#13;
+}&#13;
+&#13;
+rect.highlight&#13;
+{&#13;
+	stroke:#444;&#13;
+	stroke-width:1&#13;
+}&#13;
+&#13;
+text.highlight&#13;
+{&#13;
+	fill: #444&#13;
+}&#13;
+&#13;
+rect.now&#13;
+{&#13;
+	stroke: red&#13;
+}&#13;
+&#13;
+text.now&#13;
+{&#13;
+	fill: red;&#13;
+	font-weight: 800&#13;
+}&#13;
+&#13;
+.domain-background {&#13;
+	fill: none;&#13;
+	shape-rendering: crispedges&#13;
+}&#13;
+&#13;
+.ch-tooltip {&#13;
+	padding: 10px;&#13;
+	background: #222;&#13;
+	color: #bbb;&#13;
+	font-size: 12px;&#13;
+	line-height: 1.4;&#13;
+	width: 140px;&#13;
+&#13;
+	z-index: 99999;&#13;
+	text-align: center;&#13;
+	border-radius: 2px;&#13;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);&#13;
+	display: none;&#13;
+	box-sizing: border-box;&#13;
+}&#13;
+&#13;
+.ch-tooltip::after{&#13;
+	position: absolute;&#13;
+	width: 0;&#13;
+	height: 0;&#13;
+	border-color: transparent;&#13;
+	border-style: solid;&#13;
+	content: "";&#13;
+	padding: 0;&#13;
+	display: "block";&#13;
+	bottom: -6px;&#13;
+	left: 50%;&#13;
+	margin-left: -6px;&#13;
+    border-width: 6px 6px 0;&#13;
+    border-top-color: #222;&#13;
+}&#13;
+&#13;
+&#13;
+				#example-h .graph-label {&#13;
+					font-weight: bold;&#13;
+					font-size: 12px;&#13;
+					fill: #888;&#13;
+				}&#13;
+&#13;
+				#example-h .domain-background {&#13;
+					fill: #2d3a47;&#13;
+				}&#13;
+&#13;
+				#example-h .graph-domain.m_2 .domain-background {&#13;
+					fill: red;&#13;
+				}&#13;
+&#13;
+				#example-h .grap-rect {fill:#35252d;}&#13;
+				#example-h .q0 {fill:#35252d;}&#13;
+				#example-h .q1 {fill:#fea1eb; opacity: 0.1}&#13;
+				#example-h .q2 {fill:#fea1eb; opacity: 0.2}&#13;
+				#example-h .q3 {fill:#fea1eb; opacity: 0.4}&#13;
+				#example-h .q4 {fill:#fea1eb; opacity: 0.6}&#13;
+				#example-h .q5 {fill:#fea1eb; opacity: 0.8}&#13;
+				#example-h .q6 {fill:#fea1eb; opacity: 1}&#13;
+				#example-h .graph-rect:hover {fill: #fff; opacity: 1; stroke-width: 0;}</property>
+                        <method name="clientOnCreate"><![CDATA[// Cal-heatmap
+// http://kamisama.github.io/cal-heatmap/
+//
+var customViz = this;
+//debugger;
+var containerId = this.getId();
+//var containerWidth = $("#" + containerId).width();
+//var containerHeight = $("#" + containerId).height();
+
+var startDate = new Date();
+
+function dataTransfrom(cursor) {
+	var stats = {};
+	while (cursor.hasNext()) {
+		var rowData = cursor.next();
+		//var ctr = 0;
+		var epochTimestamp = Math.round(+new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), rowData["theEventTime"], 0, 0)/1000);
+		stats[String(epochTimestamp)] = rowData["totalpeoplecount"];
+		//ctr++;
+	}
+	return stats;
+}
+
+myData3 = dataTransfrom(customViz.getDataCursor());
+
+
+var callback = function() {
+
+	var cal = new CalHeatMap();
+	//var thisContainerID = "#" + containerId;
+	var thisContainerID = "#example-h";
+	//cal.init({});
+	
+	cal.init({
+
+		data: myData3,
+		start: startDate,
+		itemSelector: thisContainerID,
+		domainLabelFormat: "OT 9000-3",
+		domain: "day",
+		range: 1,
+		domainMargin: 10,
+		colLimit: 24,
+		displayLegend: false,
+		cellSize: 25,
+		cellRadius: 3,
+		cellPadding: 5,
+		label: {
+			position: "left",
+			offset: { 	x: 10, y: 20 }
+		}
+	});
+}
+
+head.load('ActivityTracker/d3.v3.min.js','ActivityTracker/cal-heatmap.min.js',callback);]]></method>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">eq</property>
+                                <expression name="expr" type="javascript">row["node"]</expression>
+                                <simple-property-list name="value1">
+                                    <value>"OT9000-3"</value>
+                                </simple-property-list>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="height">1.40625in</property>
+                        <property name="width">100%</property>
+                        <property name="dataSet">Local MySQL DS</property>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">totalpeoplecount</property>
+                                <text-property name="displayName">totalpeoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["totalpeoplecount"]</expression>
+                                <property name="dataType">decimal</property>
+                            </structure>
+                            <structure>
+                                <property name="name">theEventTime</property>
+                                <text-property name="displayName">theEventTime</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["theEventTime"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">node</property>
+                                <text-property name="displayName">node</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["node"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                    </extended-item>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>
