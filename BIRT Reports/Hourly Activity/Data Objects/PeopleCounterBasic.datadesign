@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Activity Tracker - Data Source" id="2">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://10.59.23.45:3306/people_counter?useCursorFetch=true&amp;defaultFetchSize=2000</property>
+            <property name="odaUser">skynet</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="All Data - Data Set" id="3">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">location</property>
+                    <expression name="expression" type="javascript">if(row["node"] == "OT9000-1"){&#13;
+	"Reception Lobby";&#13;
+}else if(row["node"] == "OT9000-2"){&#13;
+	"Conference Room";&#13;
+}else if(row["node"] == "OT9000-3"){&#13;
+	"Break/Coffee Room";&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">node</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">node</text-property>
+                    <text-property name="heading">node</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">event_time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">event_time</text-property>
+                    <text-property name="heading">event_time</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">peoplecount</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">peoplecount</text-property>
+                    <text-property name="heading">peoplecount</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">location</property>
+                    <property name="analysis">attribute</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">node</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">event_time</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">peoplecount</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">location</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Activity Tracker - Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">node</property>
+                    <property name="nativeName">node</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">event_time</property>
+                    <property name="nativeName">event_time</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">peoplecount</property>
+                    <property name="nativeName">peoplecount</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from iot_people_counter]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>node</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>node</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>node</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>event_time</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>event_time</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>event_time</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>peoplecount</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>peoplecount</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>peoplecount</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Last 7 Days - Data Set" id="10">
+            <list-property name="computedColumns">
+                <structure>
+                    <property name="name">location</property>
+                    <expression name="expression" type="javascript">if(row["node"] == "OT9000-1"){&#13;
+	"Reception Lobby";&#13;
+}else if(row["node"] == "OT9000-2"){&#13;
+	"Conference Room";&#13;
+}else if(row["node"] == "OT9000-3"){&#13;
+	"Break/Coffee Room";&#13;
+}</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">node</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">node</text-property>
+                    <text-property name="heading">node</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">event_time</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">event_time</text-property>
+                    <text-property name="heading">event_time</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">peoplecount</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">peoplecount</text-property>
+                    <text-property name="heading">peoplecount</text-property>
+                    <property name="indexColumn">false</property>
+                    <property name="compressed">false</property>
+                </structure>
+                <structure>
+                    <property name="columnName">location</property>
+                    <property name="analysis">attribute</property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">node</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">event_time</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">peoplecount</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">location</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Activity Tracker - Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">node</property>
+                    <property name="nativeName">node</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">event_time</property>
+                    <property name="nativeName">event_time</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">peoplecount</property>
+                    <property name="nativeName">peoplecount</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select * 
+from iot_people_counter
+where event_time > date_sub(now(), interval 7 day) and now()]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>node</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>node</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>node</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>event_time</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>event_time</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>event_time</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>peoplecount</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>peoplecount</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>peoplecount</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <property name="linkedDataModels">
+        <linked-data-model name="Data Model" id="22">
+            <property name="aliasDataSets">
+                <alias-data-set name="All Data - Data Set" id="33">
+                    <property name="originDataSet">All Data - Data Set</property>
+                </alias-data-set>
+                <alias-data-set name="Last 7 Days - Data Set" id="34">
+                    <property name="originDataSet">Last 7 Days - Data Set</property>
+                </alias-data-set>
+            </property>
+            <property name="categories">
+                <category name="All Data - Data Set" id="23">
+                    <property name="categoryColumns">
+                        <category-column name="node" id="24">
+                            <property name="aliasDataSet">Data Model/All Data - Data Set</property>
+                            <property name="resultSetColumnName">node</property>
+                        </category-column>
+                        <category-column name="event_time" id="25">
+                            <property name="aliasDataSet">Data Model/All Data - Data Set</property>
+                            <property name="resultSetColumnName">event_time</property>
+                        </category-column>
+                        <category-column name="peoplecount" id="26">
+                            <property name="aliasDataSet">Data Model/All Data - Data Set</property>
+                            <property name="resultSetColumnName">peoplecount</property>
+                        </category-column>
+                        <category-column name="location" id="27">
+                            <property name="aliasDataSet">Data Model/All Data - Data Set</property>
+                            <property name="resultSetColumnName">location</property>
+                        </category-column>
+                    </property>
+                </category>
+                <category name="Last 7 Days - Data Set" id="28">
+                    <property name="categoryColumns">
+                        <category-column name="node1" id="29">
+                            <property name="aliasDataSet">Data Model/Last 7 Days - Data Set</property>
+                            <property name="resultSetColumnName">node</property>
+                        </category-column>
+                        <category-column name="event_time1" id="30">
+                            <property name="aliasDataSet">Data Model/Last 7 Days - Data Set</property>
+                            <property name="resultSetColumnName">event_time</property>
+                        </category-column>
+                        <category-column name="peoplecount1" id="31">
+                            <property name="aliasDataSet">Data Model/Last 7 Days - Data Set</property>
+                            <property name="resultSetColumnName">peoplecount</property>
+                        </category-column>
+                        <category-column name="location1" id="32">
+                            <property name="aliasDataSet">Data Model/Last 7 Days - Data Set</property>
+                            <property name="resultSetColumnName">location</property>
+                        </category-column>
+                    </property>
+                </category>
+            </property>
+            <property name="pushDown">true</property>
+        </linked-data-model>
+    </property>
+</datamart>

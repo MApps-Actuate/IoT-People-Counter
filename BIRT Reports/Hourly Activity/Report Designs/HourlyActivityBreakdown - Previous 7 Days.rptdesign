@@ -1,0 +1,4374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+    <list-property name="includeScripts">
+        <property>JSDebugLog.js</property>
+    </list-property>
+    <xml-property name="externalMetadata">
+        <external-datamarts>
+            <datamart-node location="file:/C:/Users/jfreeman/BIRTworkspace/iHub%203.1%20Beta%20Workspace/PeopleCounter/Data%20Objects/PeopleCounterBasic.data">
+                <reference-elements>Data Object Data Source;</reference-elements>
+                <datamart xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+                    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+                    <data-sources>
+                        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Activity Tracker - Data Source" id="2">
+                            <list-property name="privateDriverProperties">
+                                <ex-property>
+                                    <name>metadataBidiFormatStr</name>
+                                    <value>ILYNN</value>
+                                </ex-property>
+                                <ex-property>
+                                    <name>disabledMetadataBidiFormatStr</name>
+                                </ex-property>
+                                <ex-property>
+                                    <name>contentBidiFormatStr</name>
+                                    <value>ILYNN</value>
+                                </ex-property>
+                                <ex-property>
+                                    <name>disabledContentBidiFormatStr</name>
+                                </ex-property>
+                            </list-property>
+                            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+                            <property name="odaURL">jdbc:mysql://10.59.23.45:3306/people_counter?useCursorFetch=true&amp;defaultFetchSize=2000</property>
+                            <property name="odaUser">skynet</property>
+                        </oda-data-source>
+                    </data-sources>
+                    <data-sets>
+                        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="All Data - Data Set" id="3">
+                            <list-property name="computedColumns">
+                                <structure>
+                                    <property name="name">location</property>
+                                    <expression name="expression" type="javascript">if(row["node"] == "OT9000-1"){&#13;
+	"Reception Lobby";&#13;
+}else if(row["node"] == "OT9000-2"){&#13;
+	"Conference Room";&#13;
+}else if(row["node"] == "OT9000-3"){&#13;
+	"Break/Coffee Room";&#13;
+}</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">node</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="displayName">node</text-property>
+                                    <text-property name="heading">node</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">event_time</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="displayName">event_time</text-property>
+                                    <text-property name="heading">event_time</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">peoplecount</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="displayName">peoplecount</text-property>
+                                    <text-property name="heading">peoplecount</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">location</property>
+                                    <property name="analysis">attribute</property>
+                                </structure>
+                            </list-property>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">node</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">event_time</property>
+                                        <property name="dataType">date-time</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">peoplecount</property>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">location</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">Activity Tracker - Data Source</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">node</property>
+                                    <property name="nativeName">node</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">event_time</property>
+                                    <property name="nativeName">event_time</property>
+                                    <property name="dataType">date-time</property>
+                                    <property name="nativeDataType">93</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">peoplecount</property>
+                                    <property name="nativeName">peoplecount</property>
+                                    <property name="dataType">integer</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select *
+from iot_people_counter]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>node</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>node</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>node</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>event_time</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>event_time</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>event_time</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>peoplecount</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>peoplecount</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>peoplecount</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                        </oda-data-set>
+                        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Last 7 Days - Data Set" id="10">
+                            <list-property name="computedColumns">
+                                <structure>
+                                    <property name="name">location</property>
+                                    <expression name="expression" type="javascript">if(row["node"] == "OT9000-1"){&#13;
+	"Reception Lobby";&#13;
+}else if(row["node"] == "OT9000-2"){&#13;
+	"Conference Room";&#13;
+}else if(row["node"] == "OT9000-3"){&#13;
+	"Break/Coffee Room";&#13;
+}</expression>
+                                    <property name="dataType">string</property>
+                                </structure>
+                            </list-property>
+                            <list-property name="columnHints">
+                                <structure>
+                                    <property name="columnName">node</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="displayName">node</text-property>
+                                    <text-property name="heading">node</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">event_time</property>
+                                    <property name="analysis">dimension</property>
+                                    <text-property name="displayName">event_time</text-property>
+                                    <text-property name="heading">event_time</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">peoplecount</property>
+                                    <property name="analysis">measure</property>
+                                    <text-property name="displayName">peoplecount</text-property>
+                                    <text-property name="heading">peoplecount</text-property>
+                                    <property name="indexColumn">false</property>
+                                    <property name="compressed">false</property>
+                                </structure>
+                                <structure>
+                                    <property name="columnName">location</property>
+                                    <property name="analysis">attribute</property>
+                                </structure>
+                            </list-property>
+                            <structure name="cachedMetaData">
+                                <list-property name="resultSet">
+                                    <structure>
+                                        <property name="position">1</property>
+                                        <property name="name">node</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">2</property>
+                                        <property name="name">event_time</property>
+                                        <property name="dataType">date-time</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">3</property>
+                                        <property name="name">peoplecount</property>
+                                        <property name="dataType">integer</property>
+                                    </structure>
+                                    <structure>
+                                        <property name="position">4</property>
+                                        <property name="name">location</property>
+                                        <property name="dataType">string</property>
+                                    </structure>
+                                </list-property>
+                            </structure>
+                            <property name="dataSource">Activity Tracker - Data Source</property>
+                            <list-property name="resultSet">
+                                <structure>
+                                    <property name="position">1</property>
+                                    <property name="name">node</property>
+                                    <property name="nativeName">node</property>
+                                    <property name="dataType">string</property>
+                                    <property name="nativeDataType">12</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">2</property>
+                                    <property name="name">event_time</property>
+                                    <property name="nativeName">event_time</property>
+                                    <property name="dataType">date-time</property>
+                                    <property name="nativeDataType">93</property>
+                                </structure>
+                                <structure>
+                                    <property name="position">3</property>
+                                    <property name="name">peoplecount</property>
+                                    <property name="nativeName">peoplecount</property>
+                                    <property name="dataType">integer</property>
+                                    <property name="nativeDataType">4</property>
+                                </structure>
+                            </list-property>
+                            <xml-property name="queryText"><![CDATA[select * 
+from iot_people_counter
+where event_time > date_sub(now(), interval 7 day) and now()]]></xml-property>
+                            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>node</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>node</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>node</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>event_time</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>event_time</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>event_time</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>peoplecount</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>peoplecount</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>peoplecount</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+                        </oda-data-set>
+                    </data-sets>
+                    <property name="linkedDataModels">
+                        <linked-data-model name="Data Model" id="22">
+                            <property name="aliasDataSets">
+                                <alias-data-set name="All Data - Data Set" id="33">
+                                    <property name="originDataSet">All Data - Data Set</property>
+                                </alias-data-set>
+                                <alias-data-set name="Last 7 Days - Data Set" id="34">
+                                    <property name="originDataSet">Last 7 Days - Data Set</property>
+                                </alias-data-set>
+                            </property>
+                            <property name="categories">
+                                <category name="All Data - Data Set" id="23">
+                                    <property name="categoryColumns">
+                                        <category-column name="node" id="24">
+                                            <property name="aliasDataSet">Data Model/All Data - Data Set</property>
+                                            <property name="resultSetColumnName">node</property>
+                                        </category-column>
+                                        <category-column name="event_time" id="25">
+                                            <property name="aliasDataSet">Data Model/All Data - Data Set</property>
+                                            <property name="resultSetColumnName">event_time</property>
+                                        </category-column>
+                                        <category-column name="peoplecount" id="26">
+                                            <property name="aliasDataSet">Data Model/All Data - Data Set</property>
+                                            <property name="resultSetColumnName">peoplecount</property>
+                                        </category-column>
+                                        <category-column name="location" id="27">
+                                            <property name="aliasDataSet">Data Model/All Data - Data Set</property>
+                                            <property name="resultSetColumnName">location</property>
+                                        </category-column>
+                                    </property>
+                                </category>
+                                <category name="Last 7 Days - Data Set" id="28">
+                                    <property name="categoryColumns">
+                                        <category-column name="node1" id="29">
+                                            <property name="aliasDataSet">Data Model/Last 7 Days - Data Set</property>
+                                            <property name="resultSetColumnName">node</property>
+                                        </category-column>
+                                        <category-column name="event_time1" id="30">
+                                            <property name="aliasDataSet">Data Model/Last 7 Days - Data Set</property>
+                                            <property name="resultSetColumnName">event_time</property>
+                                        </category-column>
+                                        <category-column name="peoplecount1" id="31">
+                                            <property name="aliasDataSet">Data Model/Last 7 Days - Data Set</property>
+                                            <property name="resultSetColumnName">peoplecount</property>
+                                        </category-column>
+                                        <category-column name="location1" id="32">
+                                            <property name="aliasDataSet">Data Model/Last 7 Days - Data Set</property>
+                                            <property name="resultSetColumnName">location</property>
+                                        </category-column>
+                                    </property>
+                                </category>
+                            </property>
+                            <property name="pushDown">true</property>
+                        </linked-data-model>
+                    </property>
+                </datamart>
+            </datamart-node>
+        </external-datamarts>
+    </xml-property>
+    <property name="units">in</property>
+    <property name="theme">ThemesReportItems31.Modern</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <data-mart-data-source name="Data Object Data Source" id="64">
+            <property name="datamartURL">Data Objects/PeopleCounterBasic</property>
+            <property name="accessType">latest</property>
+        </data-mart-data-source>
+    </data-sources>
+    <property name="linkedDataModels">
+        <data-mart-linked-data-model name="Data Model" id="65">
+            <property name="dataSource">Data Object Data Source</property>
+            <property name="dataObject">Data Model</property>
+        </data-mart-linked-data-model>
+    </property>
+    <themes>
+        <report-item-theme type="Chart" name="BlueATTheme" id="63">
+            <xml-property name="customValues"><![CDATA[<type>1</type><ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Hourly Activity by Location"/>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,572.25,286.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.zoom" value="x"/>
+  <extendedProperties name="jschart.client.script" value=""/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&amp;quot;Location&amp;quot;]">
+      <grouping/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Series 1" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&amp;quot;peoplecount&amp;quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="BarSeries" seriesIdentifier="" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+     </series>
+     <series _type="AreaSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="PieSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <title>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </title>
+     </series>
+     <series _type="DialSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dial>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+       <majorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </majorGrid>
+       <minorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </minorGrid>
+       <label>
+        <background _nil="1"/>
+        <outline>
+         <color _nil="1"/>
+        </outline>
+       </label>
+      </dial>
+      <needle>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+      </needle>
+     </series>
+     <series _type="ScatterSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="StockSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+     </series>
+     <series _type="BubbleSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <accLineAttributes>
+       <color _nil="1"/>
+      </accLineAttributes>
+     </series>
+     <series _type="DifferenceSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <negativeMarkers>
+       <outline/>
+      </negativeMarkers>
+      <negativeLineAttributes>
+       <color _nil="1"/>
+      </negativeLineAttributes>
+     </series>
+     <series _type="GanttSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <connectionLine>
+       <color _nil="1"/>
+      </connectionLine>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+      <decorationLabel>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </decorationLabel>
+     </series>
+     <series _type="RadarSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font>
+         <alignment/>
+        </font>
+       </caption>
+       <outline/>
+       <insets/>
+      </label>
+      <dataPoint/>
+      <marker>
+       <outline/>
+      </marker>
+      <lineAttributes/>
+      <webLineAttributes/>
+      <webLabel>
+       <caption>
+        <font>
+         <alignment/>
+        </font>
+       </caption>
+       <outline/>
+       <insets/>
+      </webLabel>
+      <catLabel>
+       <caption>
+        <font>
+         <alignment/>
+        </font>
+       </caption>
+       <outline/>
+       <insets/>
+      </catLabel>
+     </series>
+     <grouping _nil="1"/>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <ancillaryAxes>
+    <title>
+     <caption value="Z-Axis Title"/>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _type="NumberDataElement" value="0.0"/>
+    </origin>
+   </ancillaryAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,0,84,135"/>
+     <entries _body=",255,0,121,193"/>
+     <entries _body=",255,129,189,224"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&amp;quot;event_time&amp;quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping _nil="1"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>]]></xml-property>
+        </report-item-theme>
+        <report-item-theme type="Chart" name="testing" id="127">
+            <xml-property name="customValues"><![CDATA[<type>1</type><ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock" anchor="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Today">
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,572.25,286.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.zoom" value="xy"/>
+  <extendedProperties name="jschart.client.script" value=""/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&amp;quot;location1&amp;quot;]">
+      <grouping/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Series 1" stacked="false">
+      <label>
+       <caption>
+        <font name="Raleway"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&amp;quot;peoplecount1&amp;quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="BarSeries" seriesIdentifier="" riser="0">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+     </series>
+     <series _type="AreaSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="PieSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <title>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </title>
+     </series>
+     <series _type="DialSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dial>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+       <majorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </majorGrid>
+       <minorGrid>
+        <lineAttributes>
+         <color _nil="1"/>
+        </lineAttributes>
+        <tickAttributes>
+         <color _nil="1"/>
+        </tickAttributes>
+       </minorGrid>
+       <label>
+        <background _nil="1"/>
+        <outline>
+         <color _nil="1"/>
+        </outline>
+       </label>
+      </dial>
+      <needle>
+       <lineAttributes>
+        <color _nil="1"/>
+       </lineAttributes>
+      </needle>
+     </series>
+     <series _type="ScatterSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <series _type="StockSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+     </series>
+     <series _type="BubbleSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <accLineAttributes>
+       <color _nil="1"/>
+      </accLineAttributes>
+     </series>
+     <series _type="DifferenceSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+      <negativeMarkers>
+       <outline/>
+      </negativeMarkers>
+      <negativeLineAttributes>
+       <color _nil="1"/>
+      </negativeLineAttributes>
+     </series>
+     <series _type="GanttSeries" seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+      <connectionLine>
+       <color _nil="1"/>
+      </connectionLine>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+      <decorationLabel>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </decorationLabel>
+     </series>
+     <series _type="RadarSeries" seriesIdentifier="">
+      <label>
+       <caption>
+        <font>
+         <alignment/>
+        </font>
+       </caption>
+       <outline/>
+       <insets/>
+      </label>
+      <dataPoint/>
+      <marker>
+       <outline/>
+      </marker>
+      <lineAttributes/>
+      <webLineAttributes/>
+      <webLabel>
+       <caption>
+        <font>
+         <alignment/>
+        </font>
+       </caption>
+       <outline/>
+       <insets/>
+      </webLabel>
+      <catLabel>
+       <caption>
+        <font>
+         <alignment/>
+        </font>
+       </caption>
+       <outline/>
+       <insets/>
+      </catLabel>
+     </series>
+     <grouping _nil="1"/>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="100.0">
+     <min _type="NumberDataElement" value="0.0"/>
+     <max _type="NumberDataElement" value="600.0"/>
+    </scale>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <ancillaryAxes>
+    <title>
+     <caption value="Z-Axis Title"/>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition=""/>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series seriesIdentifier="">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <curveFitting _nil="1"/>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <origin>
+     <value _type="NumberDataElement" value="0.0"/>
+    </origin>
+   </ancillaryAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,0,84,135"/>
+     <entries _body=",255,0,121,193"/>
+     <entries _body=",255,129,189,224"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&amp;quot;event_time1&amp;quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping _nil="1"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Raleway"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="HH"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>]]></xml-property>
+        </report-item-theme>
+    </themes>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">landscape</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="68">
+            <column id="69"/>
+            <column id="70"/>
+            <column id="71"/>
+            <column id="72"/>
+            <row id="88">
+                <cell id="89">
+                    <property name="colSpan">4</property>
+                    <property name="rowSpan">1</property>
+                    <label id="93">
+                        <property name="fontFamily">"Raleway"</property>
+                        <property name="fontSize">24pt</property>
+                        <property name="color">#404040</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Hourly Activity Break Down</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="94">
+                <cell id="95">
+                    <property name="colSpan">4</property>
+                    <property name="rowSpan">1</property>
+                    <label id="99">
+                        <property name="fontFamily">"Raleway"</property>
+                        <property name="fontSize">18pt</property>
+                        <property name="color">#404040</property>
+                        <property name="textAlign">center</property>
+                        <text-property name="text">Previous 7 days</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="117">
+                <property name="height">25px</property>
+                <cell id="118"/>
+                <cell id="119"/>
+                <cell id="120"/>
+                <cell id="121"/>
+            </row>
+            <row id="100">
+                <cell id="101"/>
+                <cell id="102">
+                    <property name="colSpan">2</property>
+                    <property name="rowSpan">1</property>
+                    <text id="116">
+                        <property name="fontFamily">"Raleway"</property>
+                        <property name="textAlign">left</property>
+                        <expression name="bookmark" type="javascript">"customLegend"</expression>
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<script>
+	//create table to hold canvas and textItem
+	var newTable = document.createElement('table');
+	newTable.style.margin="0 auto";
+	
+	var seriesNames = ["Break/Coffee Room", "Conference Room", "Reception Lobby"];
+	var seriesColors = ["#005487", "#0079c1", "#81bde0"];
+	
+	var legendLength = seriesNames.length;
+	
+	//crate new Table Row for items
+	var newRow = document.createElement('tr');
+	
+	//Loop through all legend items to be added to custom legend
+	for(var i=0; i<legendLength; i++){
+	
+		//crate new Table Row for items
+		//var newRow = document.createElement('tr');
+		
+		//create new detail row and canvas
+		var newDetail1 = document.createElement('td');
+		var newCanvas = document.createElement('canvas');
+		
+		//set width/height of canvas
+		newCanvas.width = 20;
+		newCanvas.height = 8;
+		
+		//obtain 2d context of canvas and set fill color obtained from legendProps array set in chart script
+		var ctx = newCanvas.getContext("2d");
+		ctx.fillStyle=seriesColors[i];
+		ctx.fillRect(0,0,20,5);
+		//append canvas into table detail and table detail into table row
+		newDetail1.appendChild(newCanvas);
+		newRow.appendChild(newDetail1);
+		
+		//create new detail and text item
+		var newDetail2 = document.createElement('td');
+		var newText = document.createElement('p');
+		
+		//set contents of text item from legendProps array
+		var newTextContent = seriesNames[i];
+		newText.textContent = newTextContent;
+		
+		//remove default margins on text item
+		newText.style.marginTop="0px";
+		newText.style.marginBottom="0px";
+		
+		//append text item into table detail and table detail into table row		
+		newDetail2.appendChild(newText);		
+		newRow.appendChild(newDetail2);
+		
+		//append table row to table
+		//newTable.appendChild(newRow);
+		var newDetailsBuffer = document.createElement('td');
+		newDetailsBuffer.style.width="20px";
+		newRow.appendChild(newDetailsBuffer);
+	}
+	//append table row to table
+	newTable.appendChild(newRow);
+	
+	//append table to this text element
+	//element id is obtained based on value specified as its bookmark
+	var legendContainer = document.getElementById("container_customLegend");
+	legendContainer.appendChild(newTable);
+	
+</script>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="104"/>
+            </row>
+            <row id="122">
+                <property name="height">25px</property>
+                <cell id="123"/>
+                <cell id="124"/>
+                <cell id="125"/>
+                <cell id="126"/>
+            </row>
+            <row id="73">
+                <property name="fontFamily">"Raleway"</property>
+                <cell id="74">
+                    <extended-item extensionName="Chart" id="6">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay">
+  <block>
+   <children _type="TitleBlock" anchor="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Today">
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,572.25,286.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <triggers condition="2">
+    <action type="0">
+     <value _type="MultiURLValues">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;HourlyActivityBreakdown - Today.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_self&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+       <label>
+        <caption value="Drill down to Today"/>
+       </label>
+      </uRLValues>
+      <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
+      <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
+      <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
+      <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+     </value>
+    </action>
+   </triggers>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.zoom" value="y"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{ &#13;&#10;    chart.getCore().series[0].xAxis.setExtremes(0, 10, true);&#13;&#10;},&#13;&#10;&#13;&#10;beforeDrawAxis: function(axis, axisOptions, chart, axisIndex)&#13;&#10;{&#13;&#10;    if(axis.xOrY == &quot;x&quot;){&#13;&#10;        axisOptions.labels.formatter = function(){&#13;&#10;            if(this.isFirst){&#13;&#10;                count = 8&#13;&#10;            }&#13;&#10;            var countString = count.toString();&#13;&#10;            if(countString==&quot;8&quot; || count==&quot;9&quot;){&#13;&#10;                countString = &quot;0&quot; + countString;&#13;&#10;            }&#13;&#10;            count++;&#13;&#10;            return countString;&#13;&#10;        }&#13;&#10;    }&#13;&#10;},"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&quot;location1&quot;]">
+      <grouping/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Series 1" stacked="false">
+      <label>
+       <caption>
+        <font name="Raleway"/>
+       </caption>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;peoplecount1&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+     <grouping _nil="1"/>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="100.0">
+     <min _type="NumberDataElement" value="0.0"/>
+     <max _type="NumberDataElement" value="700.0"/>
+    </scale>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions sorting="0">
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;event_time1&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="2" groupType="1"/>
+    <sortKey definition="row[&quot;event_time1&quot;]"/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Raleway"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="HH"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <scale step="1.0" unit="2">
+    <min _type="DateTimeDataElement" value="50400000"/>
+    <max _type="DateTimeDataElement" value="86400000"/>
+   </scale>
+   <origin type="2">
+    <value _type="NumberDataElement" value="0.0"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="targetWindow">_self</property>
+                                <property name="linkType">drill-through</property>
+                                <property name="targetFileType">report-design</property>
+                                <property name="reportName">HourlyActivityBreakdown - Today.rptdesign</property>
+                            </structure>
+                        </list-property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">between</property>
+                                <expression name="expr" type="javascript">row["event_time1"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">/* &#13;
+var dateDiff = BirtDateTime.diffHour(BirtDateTime.today(), BirtDateTime.now());&#13;
+if(dateDiff &lt; 19){&#13;
+	if(dateDiff &lt;=10){&#13;
+		BirtDateTime.today();&#13;
+	}else{&#13;
+		BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today()), (19-dateDiff), 0, 0);&#13;
+	}&#13;
+}else{&#13;
+	BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today()), 8, 0, 0);&#13;
+}&#13;
+*/&#13;
+&#13;
+BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today()), 8, 0, 0);</value>
+                                </simple-property-list>
+                                <expression name="value2" type="javascript">/*&#13;
+var dateDiff = BirtDateTime.diffHour(BirtDateTime.today(), BirtDateTime.now());&#13;
+if(dateDiff &lt; 19){&#13;
+	BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today()), dateDiff, 0, 0);&#13;
+}else{&#13;
+	BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today()), 19, 0, 0);&#13;
+}&#13;
+*/&#13;
+BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today()), 19, 0, 0);</expression>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">true</property>
+                        <property name="height">275px</property>
+                        <property name="width">375px</property>
+                        <expression name="bookmark" type="javascript">"todayChart"</expression>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">event_time1</property>
+                                <text-property name="displayName">event_time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["event_time1"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">peoplecount1</property>
+                                <text-property name="displayName">peoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["peoplecount1"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">location1</property>
+                                <text-property name="displayName">location1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["location1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="linkedDataModel">Data Model</property>
+                    </extended-item>
+                </cell>
+                <cell id="75">
+                    <extended-item extensionName="Chart" id="66">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" script="&#10;/**&#10; * Called before generation of chart model to GeneratedChartState.&#10; * &#10; * @param chart&#10; *            Chart&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function beforeGeneration( chart, icsc )&#10;{&#10; var weekday = new Array(7);&#10; weekday[0]=  &quot;Sunday&quot;;&#10; weekday[1] = &quot;Monday&quot;;&#10; weekday[2] = &quot;Tuesday&quot;;&#10; weekday[3] = &quot;Wednesday&quot;;&#10; weekday[4] = &quot;Thursday&quot;;&#10; weekday[5] = &quot;Friday&quot;;&#10; weekday[6] = &quot;Saturday&quot;;&#10; var day = BirtDateTime.weekDay(BirtDateTime.today()) - 2; // -1 gets today, -2 gets yesterday, etc&#10; if(day &lt;0){&#10;  day = day + 7;&#10; }&#10; var dayName = weekday[day];&#10; chart.getTitle().getLabel().getCaption().setValue(dayName);&#10; &#10; &#10;}&#10;">
+  <block>
+   <children _type="TitleBlock" anchor="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Day -1 Hourly Activity">
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,752.25,376.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <triggers condition="2">
+    <action type="0">
+     <value _type="MultiURLValues">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;HourlyActivityBreakdown - Today-1.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_self&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+       <label>
+        <caption value="Drill Down to Specific Day"/>
+       </label>
+      </uRLValues>
+      <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
+      <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
+      <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
+      <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+     </value>
+    </action>
+   </triggers>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{&#13;&#10;    var seriesLength = chart.getCore().series.length;&#13;&#10;    for(var i=0; i&lt;seriesLength; i++){&#13;&#10;        var dataLength = chart.getCore().series[i].data.length;&#13;&#10;        if(dataLength &gt; 11){&#13;&#10;            chart.getCore().series[i].data[11].remove(true);&#13;&#10;        }&#13;&#10;    }&#13;&#10;},"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.zoom" value="y"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage visible="true">
+   <caption value="Data not available.">
+    <font name="Raleway"/>
+   </caption>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&quot;location1&quot;]">
+      <grouping/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,255,255,255"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Series 1" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;peoplecount1&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="100.0">
+     <min _type="NumberDataElement" value="0.0"/>
+     <max _type="NumberDataElement" value="700.0"/>
+    </scale>
+    <origin type="2">
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;event_time1&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="2" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Raleway"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="HH"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <scale step="1.0" unit="2">
+    <min _type="DateTimeDataElement" value="50400000"/>
+    <max _type="DateTimeDataElement" value="86400000"/>
+   </scale>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="targetWindow">_self</property>
+                                <property name="linkType">drill-through</property>
+                                <property name="targetFileType">report-design</property>
+                                <property name="reportName">HourlyActivityBreakdown - Today-1.rptdesign</property>
+                            </structure>
+                        </list-property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">between</property>
+                                <expression name="expr" type="javascript">row["event_time1"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-1, 8, 0, 0)</value>
+                                </simple-property-list>
+                                <expression name="value2" type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-1, 19, 0, 0)</expression>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="height">275px</property>
+                        <property name="width">375px</property>
+                        <expression name="bookmark" type="javascript">"yesterdayChart"</expression>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">event_time1</property>
+                                <text-property name="displayName">event_time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["event_time1"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">peoplecount1</property>
+                                <text-property name="displayName">peoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["peoplecount1"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">location1</property>
+                                <text-property name="displayName">location1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["location1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="theme">ThemesReportItems31.Chart-Clean Blue</property>
+                        <property name="linkedDataModel">Data Model</property>
+                    </extended-item>
+                </cell>
+                <cell id="76">
+                    <extended-item extensionName="Chart" id="67">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" script="&#10;/**&#10; * Called before generation of chart model to GeneratedChartState.&#10; * &#10; * @param chart&#10; *            Chart&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function beforeGeneration( chart, icsc )&#10;{&#10; var weekday = new Array(7);&#10; weekday[0]=  &quot;Sunday&quot;;&#10; weekday[1] = &quot;Monday&quot;;&#10; weekday[2] = &quot;Tuesday&quot;;&#10; weekday[3] = &quot;Wednesday&quot;;&#10; weekday[4] = &quot;Thursday&quot;;&#10; weekday[5] = &quot;Friday&quot;;&#10; weekday[6] = &quot;Saturday&quot;;&#10; var day = BirtDateTime.weekDay(BirtDateTime.today()) - 3; // -1 gets today, -2 gets yesterday, etc&#10; if(day &lt;0){&#10;  day = day + 7;&#10; }&#10; var dayName = weekday[day];&#10; chart.getTitle().getLabel().getCaption().setValue(dayName);&#10;}&#10;">
+  <block>
+   <children _type="TitleBlock" anchor="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Day -2 Hourly Activity">
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,752.25,376.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <triggers condition="2">
+    <action type="0">
+     <value _type="MultiURLValues">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;HourlyActivityBreakdown - Today-2.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_self&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+       <label>
+        <caption value="Drill To Full Size View"/>
+       </label>
+      </uRLValues>
+      <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
+      <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
+      <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
+      <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+     </value>
+    </action>
+   </triggers>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{&#13;&#10;    var seriesLength = chart.getCore().series.length;&#13;&#10;    for(var i=0; i&lt;seriesLength; i++){&#13;&#10;        var dataLength = chart.getCore().series[i].data.length;&#13;&#10;        if(dataLength &gt; 11){&#13;&#10;            chart.getCore().series[i].data[11].remove(true);&#13;&#10;        }&#13;&#10;    }&#13;&#10;},"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.zoom" value="y"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&quot;location1&quot;]">
+      <grouping/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,255,255,255"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Series 1" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;peoplecount1&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="100.0">
+     <min _type="NumberDataElement" value="0.0"/>
+     <max _type="NumberDataElement" value="700.0"/>
+    </scale>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;event_time1&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="2" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Raleway"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="HH"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="targetWindow">_self</property>
+                                <property name="linkType">drill-through</property>
+                                <property name="targetFileType">report-design</property>
+                                <property name="reportName">HourlyActivityBreakdown - Today-2.rptdesign</property>
+                            </structure>
+                        </list-property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">between</property>
+                                <expression name="expr" type="javascript">row["event_time1"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-2, 8, 0, 0)</value>
+                                </simple-property-list>
+                                <expression name="value2" type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-2, 19, 0, 0)</expression>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="height">275px</property>
+                        <property name="width">375px</property>
+                        <expression name="bookmark" type="javascript">"yesterdayChart"</expression>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">event_time1</property>
+                                <text-property name="displayName">event_time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["event_time1"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">peoplecount1</property>
+                                <text-property name="displayName">peoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["peoplecount1"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">location1</property>
+                                <text-property name="displayName">location1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["location1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="theme">ThemesReportItems31.Chart-Clean Blue</property>
+                        <property name="linkedDataModel">Data Model</property>
+                    </extended-item>
+                </cell>
+                <cell id="77">
+                    <extended-item extensionName="Chart" id="83">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" script="&#10;/**&#10; * Called before generation of chart model to GeneratedChartState.&#10; * &#10; * @param chart&#10; *            Chart&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function beforeGeneration( chart, icsc )&#10;{&#10; var weekday = new Array(7);&#10; weekday[0]=  &quot;Sunday&quot;;&#10; weekday[1] = &quot;Monday&quot;;&#10; weekday[2] = &quot;Tuesday&quot;;&#10; weekday[3] = &quot;Wednesday&quot;;&#10; weekday[4] = &quot;Thursday&quot;;&#10; weekday[5] = &quot;Friday&quot;;&#10; weekday[6] = &quot;Saturday&quot;;&#10; var day = BirtDateTime.weekDay(BirtDateTime.today()) - 4; // -1 gets today, -2 gets yesterday, etc&#10; if(day &lt;0){&#10;  day = day + 7;&#10; }&#10; var dayName = weekday[day];&#10; chart.getTitle().getLabel().getCaption().setValue(dayName);&#10;}&#10;">
+  <block>
+   <children _type="TitleBlock" anchor="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Day -3 Hourly Activity">
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,752.25,376.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <triggers condition="2">
+    <action type="0">
+     <value _type="MultiURLValues">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;HourlyActivityBreakdown - Today-3.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_self&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+       <label>
+        <caption value="Drill down to day"/>
+       </label>
+      </uRLValues>
+      <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
+      <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
+      <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
+      <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+     </value>
+    </action>
+   </triggers>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{&#13;&#10;    var seriesLength = chart.getCore().series.length;&#13;&#10;    for(var i=0; i&lt;seriesLength; i++){&#13;&#10;        var dataLength = chart.getCore().series[i].data.length;&#13;&#10;        if(dataLength &gt; 11){&#13;&#10;            chart.getCore().series[i].data[11].remove(true);&#13;&#10;        }&#13;&#10;    }&#13;&#10;},"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.zoom" value="y"/>
+  <extendedProperties name="enable.data.summarize" value="false"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&quot;location1&quot;]">
+      <grouping/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,255,255,255"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Series 1" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;peoplecount1&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="100.0">
+     <min _type="NumberDataElement" value="0.0"/>
+     <max _type="NumberDataElement" value="700.0"/>
+    </scale>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;event_time1&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="2" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Raleway"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="HH"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="targetWindow">_self</property>
+                                <property name="linkType">drill-through</property>
+                                <property name="targetFileType">report-design</property>
+                                <property name="reportName">HourlyActivityBreakdown - Today-3.rptdesign</property>
+                            </structure>
+                        </list-property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">between</property>
+                                <expression name="expr" type="javascript">row["event_time1"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-3, 8, 0, 0)</value>
+                                </simple-property-list>
+                                <expression name="value2" type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-3, 19, 0, 0)</expression>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="height">275px</property>
+                        <property name="width">375px</property>
+                        <expression name="bookmark" type="javascript">"yesterdayChart"</expression>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">event_time1</property>
+                                <text-property name="displayName">event_time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["event_time1"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">peoplecount1</property>
+                                <text-property name="displayName">peoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["peoplecount1"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">location1</property>
+                                <text-property name="displayName">location1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["location1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="theme">ThemesReportItems31.Chart-Clean Blue</property>
+                        <property name="linkedDataModel">Data Model</property>
+                    </extended-item>
+                </cell>
+            </row>
+            <row id="78">
+                <property name="fontFamily">"Raleway"</property>
+                <cell id="79">
+                    <extended-item extensionName="Chart" id="84">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" script="&#10;/**&#10; * Called before generation of chart model to GeneratedChartState.&#10; * &#10; * @param chart&#10; *            Chart&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function beforeGeneration( chart, icsc )&#10;{&#10; var weekday = new Array(7);&#10; weekday[0]=  &quot;Sunday&quot;;&#10; weekday[1] = &quot;Monday&quot;;&#10; weekday[2] = &quot;Tuesday&quot;;&#10; weekday[3] = &quot;Wednesday&quot;;&#10; weekday[4] = &quot;Thursday&quot;;&#10; weekday[5] = &quot;Friday&quot;;&#10; weekday[6] = &quot;Saturday&quot;;&#10; var day = BirtDateTime.weekDay(BirtDateTime.today()) - 5; // -1 gets today, -2 gets yesterday, etc&#10; if(day &lt;0){&#10;  day = day + 7;&#10; }&#10; var dayName = weekday[day];&#10; chart.getTitle().getLabel().getCaption().setValue(dayName);&#10;}&#10;">
+  <block>
+   <children _type="TitleBlock" anchor="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Day -4 Hourly Activity">
+      <font name="Raleway" rotation="0.0"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,752.25,376.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <triggers condition="2">
+    <action type="0">
+     <value _type="MultiURLValues">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;HourlyActivityBreakdown - Today-4.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_self&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+       <label>
+        <caption value="Drill down to day"/>
+       </label>
+      </uRLValues>
+      <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
+      <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
+      <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
+      <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+     </value>
+    </action>
+   </triggers>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{&#13;&#10;    var seriesLength = chart.getCore().series.length;&#13;&#10;    for(var i=0; i&lt;seriesLength; i++){&#13;&#10;        var dataLength = chart.getCore().series[i].data.length;&#13;&#10;        if(dataLength &gt; 11){&#13;&#10;            chart.getCore().series[i].data[11].remove(true);&#13;&#10;        }&#13;&#10;    }&#13;&#10;},"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.zoom" value="y"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&quot;location1&quot;]">
+      <grouping/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,255,255,255"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Series 1" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;peoplecount1&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <label>
+     <caption>
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="100.0">
+     <min _type="NumberDataElement" value="0.0"/>
+     <max _type="NumberDataElement" value="700.0"/>
+    </scale>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;event_time1&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="2" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Raleway"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="HH"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="targetWindow">_self</property>
+                                <property name="linkType">drill-through</property>
+                                <property name="targetFileType">report-design</property>
+                                <property name="reportName">HourlyActivityBreakdown - Today-4.rptdesign</property>
+                            </structure>
+                        </list-property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">between</property>
+                                <expression name="expr" type="javascript">row["event_time1"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-4, 8, 0, 0)</value>
+                                </simple-property-list>
+                                <expression name="value2" type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-4, 19, 0, 0)</expression>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="height">275px</property>
+                        <property name="width">375px</property>
+                        <expression name="bookmark" type="javascript">"yesterdayChart"</expression>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">event_time1</property>
+                                <text-property name="displayName">event_time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["event_time1"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">peoplecount1</property>
+                                <text-property name="displayName">peoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["peoplecount1"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">location1</property>
+                                <text-property name="displayName">location1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["location1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="theme">ThemesReportItems31.Chart-Clean Blue</property>
+                        <property name="linkedDataModel">Data Model</property>
+                    </extended-item>
+                </cell>
+                <cell id="80">
+                    <extended-item extensionName="Chart" id="85">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" script="&#10;/**&#10; * Called before generation of chart model to GeneratedChartState.&#10; * &#10; * @param chart&#10; *            Chart&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function beforeGeneration( chart, icsc )&#10;{&#10; var weekday = new Array(7);&#10; weekday[0]=  &quot;Sunday&quot;;&#10; weekday[1] = &quot;Monday&quot;;&#10; weekday[2] = &quot;Tuesday&quot;;&#10; weekday[3] = &quot;Wednesday&quot;;&#10; weekday[4] = &quot;Thursday&quot;;&#10; weekday[5] = &quot;Friday&quot;;&#10; weekday[6] = &quot;Saturday&quot;;&#10; var day = BirtDateTime.weekDay(BirtDateTime.today()) - 6; // -1 gets today, -2 gets yesterday, etc&#10; if(day &lt;0){&#10;  day = day + 7;&#10; }&#10; var dayName = weekday[day];&#10; chart.getTitle().getLabel().getCaption().setValue(dayName);&#10;}&#10;">
+  <block>
+   <children _type="TitleBlock" anchor="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Day -5 Hourly Activity">
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,752.25,376.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <triggers condition="2">
+    <action type="0">
+     <value _type="MultiURLValues">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;HourlyActivityBreakdown - Today-5.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_self&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+       <label>
+        <caption value="Drill Down to Specific Day"/>
+       </label>
+      </uRLValues>
+      <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
+      <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
+      <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
+      <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+     </value>
+    </action>
+   </triggers>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{&#13;&#10;    var seriesLength = chart.getCore().series.length;&#13;&#10;    for(var i=0; i&lt;seriesLength; i++){&#13;&#10;        var dataLength = chart.getCore().series[i].data.length;&#13;&#10;        if(dataLength &gt; 11){&#13;&#10;            chart.getCore().series[i].data[11].remove(true);&#13;&#10;        }&#13;&#10;    }&#13;&#10;},"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.zoom" value="y"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&quot;location1&quot;]">
+      <grouping/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,255,255,255"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Series 1" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;peoplecount1&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="100.0">
+     <min _type="NumberDataElement" value="0.0"/>
+     <max _type="NumberDataElement" value="700.0"/>
+    </scale>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;event_time1&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="2" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Raleway"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="HH"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="targetWindow">_self</property>
+                                <property name="linkType">drill-through</property>
+                                <property name="targetFileType">report-design</property>
+                                <property name="reportName">HourlyActivityBreakdown - Today-5.rptdesign</property>
+                            </structure>
+                        </list-property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">between</property>
+                                <expression name="expr" type="javascript">row["event_time1"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-5, 8, 0, 0)</value>
+                                </simple-property-list>
+                                <expression name="value2" type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-5, 19, 0, 0)</expression>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="height">275px</property>
+                        <property name="width">375px</property>
+                        <expression name="bookmark" type="javascript">"yesterdayChart"</expression>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">event_time1</property>
+                                <text-property name="displayName">event_time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["event_time1"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">peoplecount1</property>
+                                <text-property name="displayName">peoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["peoplecount1"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">location1</property>
+                                <text-property name="displayName">location1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["location1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="theme">ThemesReportItems31.Chart-Clean Blue</property>
+                        <property name="linkedDataModel">Data Model</property>
+                    </extended-item>
+                </cell>
+                <cell id="81">
+                    <extended-item extensionName="Chart" id="86">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" script="&#10;/**&#10; * Called before generation of chart model to GeneratedChartState.&#10; * &#10; * @param chart&#10; *            Chart&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function beforeGeneration( chart, icsc )&#10;{&#10; var weekday = new Array(7);&#10; weekday[0]=  &quot;Sunday&quot;;&#10; weekday[1] = &quot;Monday&quot;;&#10; weekday[2] = &quot;Tuesday&quot;;&#10; weekday[3] = &quot;Wednesday&quot;;&#10; weekday[4] = &quot;Thursday&quot;;&#10; weekday[5] = &quot;Friday&quot;;&#10; weekday[6] = &quot;Saturday&quot;;&#10; var day = BirtDateTime.weekDay(BirtDateTime.today()) - 7; // -1 gets today, -2 gets yesterday, etc&#10; if(day &lt;0){&#10;  day = day + 7;&#10; }&#10; var dayName = weekday[day];&#10; chart.getTitle().getLabel().getCaption().setValue(dayName);&#10;}&#10;">
+  <block>
+   <children _type="TitleBlock" anchor="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Day -6 Hourly Activity">
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,752.25,376.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <triggers condition="2">
+    <action type="0">
+     <value _type="MultiURLValues">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;HourlyActivityBreakdown - Today-6.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_self&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+       <label>
+        <caption value="Drill Down to Specific Day"/>
+       </label>
+      </uRLValues>
+      <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
+      <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
+      <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
+      <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+     </value>
+    </action>
+   </triggers>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{&#13;&#10;    var seriesLength = chart.getCore().series.length;&#13;&#10;    for(var i=0; i&lt;seriesLength; i++){&#13;&#10;        var dataLength = chart.getCore().series[i].data.length;&#13;&#10;        if(dataLength &gt; 11){&#13;&#10;            chart.getCore().series[i].data[11].remove(true);&#13;&#10;        }&#13;&#10;    }&#13;&#10;},"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.zoom" value="y"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&quot;location1&quot;]">
+      <grouping/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,255,255,255"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Series 1" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;peoplecount1&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="100.0">
+     <min _type="NumberDataElement" value="0.0"/>
+     <max _type="NumberDataElement" value="700.0"/>
+    </scale>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;event_time1&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="2" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Raleway"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="HH"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="targetWindow">_self</property>
+                                <property name="linkType">drill-through</property>
+                                <property name="targetFileType">report-design</property>
+                                <property name="reportName">HourlyActivityBreakdown - Today-6.rptdesign</property>
+                            </structure>
+                        </list-property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">between</property>
+                                <expression name="expr" type="javascript">row["event_time1"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-6, 8, 0, 0)</value>
+                                </simple-property-list>
+                                <expression name="value2" type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-6, 19, 0, 0)</expression>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="height">275px</property>
+                        <property name="width">375px</property>
+                        <expression name="bookmark" type="javascript">"yesterdayChart"</expression>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">event_time1</property>
+                                <text-property name="displayName">event_time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["event_time1"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">peoplecount1</property>
+                                <text-property name="displayName">peoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["peoplecount1"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">location1</property>
+                                <text-property name="displayName">location1</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["location1"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="theme">ThemesReportItems31.Chart-Clean Blue</property>
+                        <property name="linkedDataModel">Data Model</property>
+                    </extended-item>
+                </cell>
+                <cell id="82">
+                    <extended-item extensionName="Chart" id="87">
+                        <xml-property name="xmlRepresentation"><![CDATA[<ActuateChart version="2.6.1">
+ <ChartWithAxes version="2.6.1" type="Line Chart" subType="Overlay" script="&#10;/**&#10; * Called before generation of chart model to GeneratedChartState.&#10; * &#10; * @param chart&#10; *            Chart&#10; * @param icsc&#10; *            IChartScriptContext&#10; */&#10;&#10;function beforeGeneration( chart, icsc )&#10;{&#10; var weekday = new Array(7);&#10; weekday[0]=  &quot;Sunday&quot;;&#10; weekday[1] = &quot;Monday&quot;;&#10; weekday[2] = &quot;Tuesday&quot;;&#10; weekday[3] = &quot;Wednesday&quot;;&#10; weekday[4] = &quot;Thursday&quot;;&#10; weekday[5] = &quot;Friday&quot;;&#10; weekday[6] = &quot;Saturday&quot;;&#10; var day = BirtDateTime.weekDay(BirtDateTime.today()) - 8; // -1 gets today, -2 gets yesterday, etc&#10; if(day &lt;0){&#10;  day = day + 7;&#10; }&#10; var dayName = weekday[day];&#10; chart.getTitle().getLabel().getCaption().setValue(dayName);&#10;}&#10;">
+  <block>
+   <children _type="TitleBlock" anchor="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <label>
+     <caption value="Day -7 Hourly Activity">
+      <font name="Raleway"/>
+     </caption>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+   </children>
+   <children _type="Plot">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+   </children>
+   <children _type="Legend" visible="false" position="0">
+    <outline>
+     <color _nil="1"/>
+    </outline>
+    <clientArea>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </clientArea>
+    <separator>
+     <color _nil="1"/>
+    </separator>
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+   </children>
+   <bounds _body="0.0,0.0,752.25,376.125"/>
+   <outline>
+    <color _nil="1"/>
+   </outline>
+   <triggers condition="2">
+    <action type="0">
+     <value _type="MultiURLValues">
+      <uRLValues baseUrl="&lt;structure&gt;&#10;    &lt;property name=&quot;linkType&quot;&gt;drill-through&lt;/property&gt;&#10;    &lt;property name=&quot;reportName&quot;&gt;HourlyActivityBreakdown - Today-7.rptdesign&lt;/property&gt;&#10;    &lt;property name=&quot;targetWindow&quot;&gt;_self&lt;/property&gt;&#10;    &lt;property name=&quot;targetFileType&quot;&gt;report-design&lt;/property&gt;&#10;&lt;/structure&gt;&#10;" baseParameterName="" valueParameterName="" seriesParameterName="">
+       <label>
+        <caption value="Drill Down to Specific Day"/>
+       </label>
+      </uRLValues>
+      <propertiesMap key="MenuItem" value="color:Black;fontSize:10pt;paddingLeft:10px;paddingRight:10px;paddingTop:2px;paddingBottom:2px"/>
+      <propertiesMap key="Menu" value="zIndex:99999;backgroundColor:#FAFFF8;width:auto;height:auto;border:1px solid #333333;filter:progid:DXImageTransform.Microsoft.Shadow(Color:#333333,Direction=120,strength=5)"/>
+      <propertiesMap key="OnMouseOut" value="backgroundColor:#FAFFF8;color:#000000"/>
+      <propertiesMap key="OnMouseOver" value="backgroundColor:#245DDB;color:#FFFFFF"/>
+     </value>
+    </action>
+   </triggers>
+   <cursor type="0"/>
+  </block>
+  <extendedProperties name="enable.area.alt" value="false"/>
+  <extendedProperties name="enable.drill.category" value="true"/>
+  <extendedProperties name="enable.drill.series" value="true"/>
+  <extendedProperties name="jschart.client.script" value="afterRendering: function(chart)&#13;&#10;{&#13;&#10;    var seriesLength = chart.getCore().series.length;&#13;&#10;    for(var i=0; i&lt;seriesLength; i++){&#13;&#10;        var dataLength = chart.getCore().series[i].data.length;&#13;&#10;        if(dataLength &gt; 11){&#13;&#10;            chart.getCore().series[i].data[11].remove(true);&#13;&#10;        }&#13;&#10;    }&#13;&#10;},"/>
+  <extendedProperties name="jschart.series.shadow" value="false"/>
+  <extendedProperties name="jschart.zoom" value="y"/>
+  <sampleData>
+   <baseSampleData dataSetRepresentation="01/05/2000,02/01/2000,04/12/2000,03/12/2000,02/29/2000"/>
+   <orthogonalSampleData dataSetRepresentation="6,4,12,8,10" seriesDefinitionIndex="0"/>
+  </sampleData>
+  <emptyMessage>
+   <caption value="This chart contains no data."/>
+   <background _body=",64,127,127,127"/>
+   <outline>
+    <color _body=",128,127,127,127"/>
+   </outline>
+  </emptyMessage>
+  <axes type="3">
+   <title>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </title>
+   <associatedAxes primaryAxis="true" percent="false">
+    <title>
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </title>
+    <seriesDefinitions>
+     <query definition="row[&quot;location&quot;]">
+      <grouping/>
+     </query>
+     <seriesPalette>
+      <entries _body=",255,0,84,135"/>
+      <entries _body=",255,0,121,193"/>
+      <entries _body=",255,129,189,224"/>
+      <entries _body=",255,128,255,128"/>
+      <entries _body=",255,64,128,128"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,170,85,85"/>
+      <entries _body=",255,128,128,0"/>
+      <entries _body=",255,192,192,192"/>
+      <entries _body=",255,255,255,128"/>
+      <entries _body=",255,128,192,128"/>
+      <entries _body=",255,7,146,94"/>
+      <entries _body=",255,0,128,255"/>
+      <entries _body=",255,255,128,192"/>
+      <entries _body=",255,0,255,255"/>
+      <entries _body=",255,255,128,128"/>
+      <entries _body=",255,0,128,192"/>
+      <entries _body=",255,128,128,192"/>
+      <entries _body=",255,255,0,255"/>
+      <entries _body=",255,128,64,64"/>
+      <entries _body=",255,255,128,64"/>
+      <entries _body=",255,80,240,120"/>
+      <entries _body=",255,0,64,128"/>
+      <entries _body=",255,128,0,64"/>
+      <entries _body=",255,255,0,128"/>
+      <entries _body=",255,128,128,64"/>
+      <entries _body=",255,128,128,128"/>
+      <entries _body=",255,255,128,255"/>
+      <entries _body=",255,0,64,0"/>
+      <entries _body=",255,0,0,0"/>
+      <entries _body=",255,255,255,255"/>
+      <entries _body=",255,255,128,0"/>
+      <entries _body=",255,255,255,255"/>
+     </seriesPalette>
+     <series _type="LineSeries" seriesIdentifier="Series 1" stacked="false">
+      <label>
+       <background _nil="1"/>
+       <outline>
+        <color _nil="1"/>
+       </outline>
+      </label>
+      <dataDefinition definition="row[&quot;peoplecount&quot;]">
+       <grouping/>
+      </dataDefinition>
+      <triggers condition="6">
+       <action type="1">
+        <value _type="TooltipValue" text="" delay="200"/>
+       </action>
+      </triggers>
+      <curveFitting _nil="1"/>
+      <markers>
+       <outline/>
+      </markers>
+      <lineAttributes>
+       <color _nil="1"/>
+      </lineAttributes>
+     </series>
+    </seriesDefinitions>
+    <lineAttributes visible="false">
+     <color _nil="1"/>
+    </lineAttributes>
+    <label visible="false">
+     <background _nil="1"/>
+     <outline>
+      <color _nil="1"/>
+     </outline>
+    </label>
+    <majorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </majorGrid>
+    <minorGrid>
+     <lineAttributes>
+      <color _nil="1"/>
+     </lineAttributes>
+     <tickAttributes>
+      <color _nil="1"/>
+     </tickAttributes>
+    </minorGrid>
+    <scale step="100.0">
+     <min _type="NumberDataElement" value="0.0"/>
+     <max _type="NumberDataElement" value="700.0"/>
+    </scale>
+    <origin>
+     <value _nil="1"/>
+    </origin>
+   </associatedAxes>
+   <seriesDefinitions>
+    <query definition=""/>
+    <seriesPalette>
+     <entries _body=",255,80,166,218"/>
+     <entries _body=",255,242,88,106"/>
+     <entries _body=",255,232,172,57"/>
+     <entries _body=",255,128,255,128"/>
+     <entries _body=",255,64,128,128"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,170,85,85"/>
+     <entries _body=",255,128,128,0"/>
+     <entries _body=",255,192,192,192"/>
+     <entries _body=",255,255,255,128"/>
+     <entries _body=",255,128,192,128"/>
+     <entries _body=",255,7,146,94"/>
+     <entries _body=",255,0,128,255"/>
+     <entries _body=",255,255,128,192"/>
+     <entries _body=",255,0,255,255"/>
+     <entries _body=",255,255,128,128"/>
+     <entries _body=",255,0,128,192"/>
+     <entries _body=",255,128,128,192"/>
+     <entries _body=",255,255,0,255"/>
+     <entries _body=",255,128,64,64"/>
+     <entries _body=",255,255,128,64"/>
+     <entries _body=",255,80,240,120"/>
+     <entries _body=",255,0,64,128"/>
+     <entries _body=",255,128,0,64"/>
+     <entries _body=",255,255,0,128"/>
+     <entries _body=",255,128,128,64"/>
+     <entries _body=",255,128,128,128"/>
+     <entries _body=",255,255,128,255"/>
+     <entries _body=",255,0,64,0"/>
+     <entries _body=",255,0,0,0"/>
+     <entries _body=",255,255,255,255"/>
+     <entries _body=",255,255,128,0"/>
+    </seriesPalette>
+    <series seriesIdentifier="">
+     <label>
+      <background _nil="1"/>
+      <outline>
+       <color _nil="1"/>
+      </outline>
+     </label>
+     <dataDefinition definition="row[&quot;event_time&quot;]"/>
+     <curveFitting _nil="1"/>
+    </series>
+    <grouping enabled="true" groupingUnit="2" groupType="1"/>
+    <sortKey/>
+   </seriesDefinitions>
+   <lineAttributes>
+    <color _nil="1"/>
+   </lineAttributes>
+   <label>
+    <caption>
+     <font name="Raleway"/>
+    </caption>
+    <background _nil="1"/>
+    <outline>
+     <color _nil="1"/>
+    </outline>
+   </label>
+   <formatSpecifier _type="JavaDateFormatSpecifier" pattern="HH"/>
+   <majorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </majorGrid>
+   <minorGrid>
+    <lineAttributes>
+     <color _nil="1"/>
+    </lineAttributes>
+    <tickAttributes>
+     <color _nil="1"/>
+    </tickAttributes>
+   </minorGrid>
+   <origin>
+    <value _nil="1"/>
+   </origin>
+  </axes>
+  <rotation>
+   <angles/>
+  </rotation>
+ </ChartWithAxes>
+</ActuateChart>
+]]></xml-property>
+                        <property name="outputFormat">JS</property>
+                        <list-property name="action">
+                            <structure>
+                                <property name="targetWindow">_self</property>
+                                <property name="linkType">drill-through</property>
+                                <property name="targetFileType">report-design</property>
+                                <property name="reportName">HourlyActivityBreakdown - Today-7.rptdesign</property>
+                            </structure>
+                        </list-property>
+                        <list-property name="filter">
+                            <structure>
+                                <property name="operator">between</property>
+                                <expression name="expr" type="javascript">row["event_time"]</expression>
+                                <simple-property-list name="value1">
+                                    <value type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-7, 8, 0, 0)</value>
+                                </simple-property-list>
+                                <expression name="value2" type="javascript">BirtDateTime.date(BirtDateTime.year(BirtDateTime.today()), BirtDateTime.month(BirtDateTime.today())-1, BirtDateTime.day(BirtDateTime.today())-7, 19, 0, 0)</expression>
+                                <property name="updateAggregation">true</property>
+                            </structure>
+                        </list-property>
+                        <property name="inheritColumns">false</property>
+                        <property name="height">275px</property>
+                        <property name="width">375px</property>
+                        <expression name="bookmark" type="javascript">"yesterdayChart"</expression>
+                        <list-property name="boundDataColumns">
+                            <structure>
+                                <property name="name">event_time</property>
+                                <text-property name="displayName">event_time</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["event_time"]</expression>
+                                <property name="dataType">date-time</property>
+                            </structure>
+                            <structure>
+                                <property name="name">peoplecount</property>
+                                <text-property name="displayName">peoplecount</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["peoplecount"]</expression>
+                                <property name="dataType">integer</property>
+                            </structure>
+                            <structure>
+                                <property name="name">location</property>
+                                <text-property name="displayName">location</text-property>
+                                <expression name="expression" type="javascript">dataSetRow["location"]</expression>
+                                <property name="dataType">string</property>
+                            </structure>
+                        </list-property>
+                        <property name="theme">ThemesReportItems31.Chart-Clean Blue</property>
+                        <property name="linkedDataModel">Data Model</property>
+                    </extended-item>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>
