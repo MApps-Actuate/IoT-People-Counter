@@ -659,7 +659,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                     <property name="verticalAlign">bottom</property>
                     <label id="1292">
                         <property name="fontFamily">"Raleway"</property>
-                        <property name="fontSize">24pt</property>
+                        <property name="fontSize">18pt</property>
                         <property name="color">#FFFFFF</property>
                         <text-property name="text">Knowledge is Power</text-property>
                     </label>
@@ -710,15 +710,17 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                     <property name="fontSize">14pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
                                     <text-property name="text">Hardest Time to Schedule a Meeting</text-property>
                                 </label>
                             </cell>
                             <cell id="184">
                                 <property name="verticalAlign">middle</property>
                                 <label id="1548">
-                                    <property name="fontSize">24pt</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">bold</property>
                                     <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
                                     <text-property name="text">11:00 and 2:00</text-property>
                                 </label>
                             </cell>
@@ -738,15 +740,17 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                     <property name="fontSize">14pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
                                     <text-property name="text">Best Time to Take the Stairs</text-property>
                                 </label>
                             </cell>
                             <cell id="1552">
                                 <property name="verticalAlign">middle</property>
                                 <label id="1559">
-                                    <property name="fontSize">24pt</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">bold</property>
                                     <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
                                     <text-property name="text">10:00-11:00 and 2:00-3:00</text-property>
                                 </label>
                             </cell>
@@ -766,15 +770,17 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                     <property name="fontSize">14pt</property>
                                     <property name="fontWeight">normal</property>
                                     <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
                                     <text-property name="text">Busiest Break Times</text-property>
                                 </label>
                             </cell>
                             <cell id="1556">
                                 <property name="verticalAlign">middle</property>
                                 <label id="1562">
-                                    <property name="fontSize">24pt</property>
+                                    <property name="fontSize">18pt</property>
                                     <property name="fontWeight">bold</property>
                                     <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
                                     <text-property name="text">9:00, 12:00 and 3:00</text-property>
                                 </label>
                             </cell>
