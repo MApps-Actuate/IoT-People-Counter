@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+    <property name="units">in</property>
+    <property name="theme">ThemesReportItems31.Modern</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">auto</property>
+            <property name="backgroundColor">#0079C1</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="1409">
+            <property name="fontFamily">"Raleway"</property>
+            <property name="fontSize">24pt</property>
+            <property name="color">#FFFFFF</property>
+            <property name="paddingTop">66pt</property>
+            <property name="textAlign">center</property>
+            <text-property name="text">Today's Realtime Location Activity</text-property>
+        </label>
+        <grid id="4">
+            <property name="marginTop">40pt</property>
+            <property name="textAlign">center</property>
+            <property name="canShrink">false</property>
+            <property name="height">5.072916666666667in</property>
+            <property name="width">5.46875in</property>
+            <column id="5"/>
+            <column id="6">
+                <property name="width">0.4166666666666667in</property>
+            </column>
+            <column id="7">
+                <property name="width">2.3958333333333335in</property>
+            </column>
+            <row id="8">
+                <property name="height">2.3645833333333335in</property>
+                <cell id="9">
+                    <property name="fontFamily">"Raleway"</property>
+                    <property name="borderBottomColor">#FFFFFF</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">10px</property>
+                    <property name="borderLeftColor">#FFFFFF</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">10px</property>
+                    <property name="borderRightColor">#FFFFFF</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">10px</property>
+                    <property name="borderTopColor">#FFFFFF</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">10px</property>
+                    <label id="1310">
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="color">#FFFFFF</property>
+                        <text-property name="text">Conference Room</text-property>
+                    </label>
+                    <text id="1410">
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<script>
+$(".nodecm").css({"width":"30px", "height":"30px", "display":"none", "text-align":"center", "color":"white", "background-color":"green"}); 
+var speedcm = 500;
+var nodenumcm = 9;
+$(document).ready(function(){
+    $("#btncm").click(function(){
+        for (icm=1; icm<=nodenumcm; icm++) {
+           $("#divcm"+icm).fadeIn(speedcm*(nodenumcm-icm+1)).fadeOut(speedcm*(nodenumcm-icm+1));
+        }
+    });
+});
+</script>
+<button id="btncm">Click to fade in activity</button><br><br>
+
+<table style="margin:auto">
+<tr>
+<td><div id="divcm2" class="nodecm">2</div></td>
+<td><div id="divcm5" class="nodecm">5</div></td>
+<td><div id="divcm3" class="nodecm">3</div></td>
+</tr>
+<tr>
+<td><div id="divcm8" class="nodecm">8</div></td>
+<td><div id="divcm1" class="nodecm">1</div></td>
+<td><div id="divcm6" class="nodecm">6</div></td>
+</tr>
+<tr>
+<td><div id="divcm7" class="nodecm">7</div></td>
+<td><div id="divcm4" class="nodecm">4</div></td>
+<td><div id="divcm9" class="nodecm">9</div></td>
+</tr>
+</table>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="10"/>
+                <cell id="11">
+                    <property name="fontFamily">"Raleway"</property>
+                    <property name="borderBottomColor">#FFFFFF</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">10px</property>
+                    <property name="borderLeftColor">#FFFFFF</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">10px</property>
+                    <property name="borderRightColor">#FFFFFF</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">10px</property>
+                    <property name="borderTopColor">#FFFFFF</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">10px</property>
+                    <label id="1311">
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="color">#FFFFFF</property>
+                        <text-property name="text">Break/Coffee Room</text-property>
+                    </label>
+                    <text id="1411">
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<script>
+$(".nodebm").css({"width":"30px", "height":"30px", "display":"none", "text-align":"center", "color":"white", "background-color":"green"}); 
+var speedbm = 500;
+var nodenumbm = 5;
+$(document).ready(function(){
+    $("#btnbm").click(function(){
+        for (ibm=1; ibm<=nodenumbm; ibm++) {
+           $("#divbm"+ibm).fadeIn(speedbm*(nodenumbm-ibm+1)).fadeOut(speedbm*(nodenumbm-ibm+1));
+        }
+    });
+});
+</script>
+<button id="btnbm">Click to fade in activity</button><br><br>
+
+<table style="margin:auto">
+<tr>
+<td><div id="divbm2" class="nodebm">2</div></td>
+<td><div id="divbm5" class="nodebm">5</div></td>
+<td><div id="divbm3" class="nodebm">3</div></td>
+</tr>
+<tr>
+<td><div id="divbm8" class="nodebm">8</div></td>
+<td><div id="divbm1" class="nodebm">1</div></td>
+<td><div id="divbm6" class="nodebm">6</div></td>
+</tr>
+<tr>
+<td><div id="divbm7" class="nodebm">7</div></td>
+<td><div id="divbm4" class="nodebm">4</div></td>
+<td><div id="divbm9" class="nodebm">9</div></td>
+</tr>
+</table>]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="12">
+                <property name="height">0.4166666666666667in</property>
+                <cell id="13"/>
+                <cell id="14"/>
+                <cell id="15"/>
+            </row>
+            <row id="16">
+                <property name="height">2.46875in</property>
+                <cell id="17">
+                    <property name="fontFamily">"Raleway"</property>
+                    <property name="borderBottomColor">#FFFFFF</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">10px</property>
+                    <property name="borderLeftColor">#FFFFFF</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">10px</property>
+                    <property name="borderRightColor">#FFFFFF</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">10px</property>
+                    <property name="borderTopColor">#FFFFFF</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">10px</property>
+                    <label id="1309">
+                        <property name="fontSize">14pt</property>
+                        <property name="fontWeight">normal</property>
+                        <property name="color">#FFFFFF</property>
+                        <text-property name="text">Reception Lobby</text-property>
+                    </label>
+                    <text id="1412">
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<script>
+$(".noderl").css({"width":"30px", "height":"30px", "display":"none", "text-align":"center", "color":"white", "background-color":"green"}); 
+var speedrl = 500;
+var nodenumrl = 4;
+$(document).ready(function(){
+    $("#btnrl").click(function(){
+        for (irl=1; irl<=nodenumrl; irl++) {
+           $("#divrl"+irl).fadeIn(speedrl*(nodenumrl-irl+1)).fadeOut(speedrl*(nodenumrl-irl+1));
+        }
+    });
+});
+</script>
+<button id="btnrl">Click to fade in activity</button><br><br>
+
+<table style="margin:auto">
+<tr>
+<td><div id="divrl2" class="noderl">2</div></td>
+<td><div id="divrl5" class="noderl">5</div></td>
+<td><div id="divrl3" class="noderl">3</div></td>
+</tr>
+<tr>
+<td><div id="divrl8" class="noderl">8</div></td>
+<td><div id="divrl1" class="noderl">1</div></td>
+<td><div id="divrl6" class="noderl">6</div></td>
+</tr>
+<tr>
+<td><div id="divrl7" class="noderl">7</div></td>
+<td><div id="divrl4" class="noderl">4</div></td>
+<td><div id="divrl9" class="noderl">9</div></td>
+</tr>
+</table>]]></text-property>
+                    </text>
+                </cell>
+                <cell id="18"/>
+                <cell id="19"/>
+            </row>
+        </grid>
+    </body>
+</report>
