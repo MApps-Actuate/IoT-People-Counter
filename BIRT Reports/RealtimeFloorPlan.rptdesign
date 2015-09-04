@@ -72,34 +72,35 @@
                     <text id="1410">
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[<script>
-$(".nodecm").css({"width":"30px", "height":"30px", "display":"none", "text-align":"center", "color":"white", "background-color":"green"}); 
-var speedcm = 500;
-var nodenumcm = 9;
-$(document).ready(function(){
-    $("#btncm").click(function(){
-        for (icm=1; icm<=nodenumcm; icm++) {
-           $("#divcm"+icm).fadeIn(speedcm*(nodenumcm-icm+1)).fadeOut(speedcm*(nodenumcm-icm+1));
-        }
-    });
-});
-</script>
-<button id="btncm">Click to fade in activity</button><br><br>
+$(".nodecm").css({"width":"30px", "height":"30px", "display":"none", "text-align":"center", "color":"white", "font-family":"fontcustom", "font-size":"30px"}); 
 
+function displayNodesCM()
+{
+    var speedcm = 500;
+    var nodenumcm = Math.floor((Math.random() * 9) + 1);
+    $("#countTitleCM").text("Count: " + nodenumcm);
+    for (icm=1; icm<=nodenumcm; icm++) {
+       $("#divcm"+icm).fadeIn(speedcm*(nodenumcm-icm+1)).fadeOut(speedcm*(nodenumcm-icm+1));
+    }
+}
+</script>
+<div id="countTitleCM" style="color:white; font-size:16px"></div>
+<br/><br/>
 <table style="margin:auto">
 <tr>
-<td><div id="divcm2" class="nodecm">2</div></td>
-<td><div id="divcm5" class="nodecm">5</div></td>
-<td><div id="divcm3" class="nodecm">3</div></td>
+<td><div id="divcm2" class="nodecm"></div></td>
+<td><div id="divcm5" class="nodecm"></div></td>
+<td><div id="divcm3" class="nodecm"></div></td>
 </tr>
 <tr>
-<td><div id="divcm8" class="nodecm">8</div></td>
-<td><div id="divcm1" class="nodecm">1</div></td>
-<td><div id="divcm6" class="nodecm">6</div></td>
+<td><div id="divcm8" class="nodecm"></div></td>
+<td><div id="divcm1" class="nodecm"></div></td>
+<td><div id="divcm6" class="nodecm"></div></td>
 </tr>
 <tr>
-<td><div id="divcm7" class="nodecm">7</div></td>
-<td><div id="divcm4" class="nodecm">4</div></td>
-<td><div id="divcm9" class="nodecm">9</div></td>
+<td><div id="divcm7" class="nodecm"></div></td>
+<td><div id="divcm4" class="nodecm"></div></td>
+<td><div id="divcm9" class="nodecm"></div></td>
 </tr>
 </table>]]></text-property>
                     </text>
@@ -128,34 +129,36 @@ $(document).ready(function(){
                     <text id="1411">
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[<script>
-$(".nodebm").css({"width":"30px", "height":"30px", "display":"none", "text-align":"center", "color":"white", "background-color":"green"}); 
+$(".nodebm").css({"width":"30px", "height":"30px", "display":"none", "text-align":"center", "color":"white", "font-family":"fontcustom", "font-size":"30px"}); 
 var speedbm = 500;
-var nodenumbm = 5;
-$(document).ready(function(){
-    $("#btnbm").click(function(){
-        for (ibm=1; ibm<=nodenumbm; ibm++) {
-           $("#divbm"+ibm).fadeIn(speedbm*(nodenumbm-ibm+1)).fadeOut(speedbm*(nodenumbm-ibm+1));
-        }
-    });
-});
+
+function displayNodesBM()
+{
+    var nodenumbm = Math.floor((Math.random() * 9) + 1);
+    $("#countTitleBM").text("Count: " + nodenumbm);
+    for (ibm=1; ibm<=nodenumbm; ibm++) {
+       $("#divbm"+ibm).fadeIn(speedbm*(nodenumbm-ibm+1)).fadeOut(speedbm*(nodenumbm-ibm+1));
+    }
+}
 </script>
-<button id="btnbm">Click to fade in activity</button><br><br>
+<div id="countTitleBM" style="color:white; font-size:16px"></div>
+<br/><br/>
 
 <table style="margin:auto">
 <tr>
-<td><div id="divbm2" class="nodebm">2</div></td>
-<td><div id="divbm5" class="nodebm">5</div></td>
-<td><div id="divbm3" class="nodebm">3</div></td>
+<td><div id="divbm2" class="nodebm"></div></td>
+<td><div id="divbm5" class="nodebm"></div></td>
+<td><div id="divbm3" class="nodebm"></div></td>
 </tr>
 <tr>
-<td><div id="divbm8" class="nodebm">8</div></td>
-<td><div id="divbm1" class="nodebm">1</div></td>
-<td><div id="divbm6" class="nodebm">6</div></td>
+<td><div id="divbm8" class="nodebm"></div></td>
+<td><div id="divbm1" class="nodebm"></div></td>
+<td><div id="divbm6" class="nodebm"></div></td>
 </tr>
 <tr>
-<td><div id="divbm7" class="nodebm">7</div></td>
-<td><div id="divbm4" class="nodebm">4</div></td>
-<td><div id="divbm9" class="nodebm">9</div></td>
+<td><div id="divbm7" class="nodebm"></div></td>
+<td><div id="divbm4" class="nodebm"></div></td>
+<td><div id="divbm9" class="nodebm"></div></td>
 </tr>
 </table>]]></text-property>
                     </text>
@@ -192,40 +195,61 @@ $(document).ready(function(){
                     <text id="1412">
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[<script>
-$(".noderl").css({"width":"30px", "height":"30px", "display":"none", "text-align":"center", "color":"white", "background-color":"green"}); 
-var speedrl = 500;
-var nodenumrl = 4;
-$(document).ready(function(){
-    $("#btnrl").click(function(){
-        for (irl=1; irl<=nodenumrl; irl++) {
-           $("#divrl"+irl).fadeIn(speedrl*(nodenumrl-irl+1)).fadeOut(speedrl*(nodenumrl-irl+1));
-        }
-    });
-});
+$(".noderl").css({"width":"30px", "height":"30px", "display":"none", "text-align":"center", "color":"white", "font-family":"fontcustom", "font-size":"30px"}); 
+
+function displayNodesRL()
+{
+    var speedrl = 500;
+    var nodenumrl = Math.floor((Math.random() * 9) + 1);
+    $("#countTitleRL").text("Count: " + nodenumrl);
+    for (irl=1; irl<=nodenumrl; irl++) {
+       $("#divrl"+irl).fadeIn(speedrl*(nodenumrl-irl+1)).fadeOut(speedrl*(nodenumrl-irl+1));
+    }
+}
 </script>
-<button id="btnrl">Click to fade in activity</button><br><br>
+<div id="countTitleRL" style="color:white; font-size:16px"></div>
+<br><br>
 
 <table style="margin:auto">
 <tr>
-<td><div id="divrl2" class="noderl">2</div></td>
-<td><div id="divrl5" class="noderl">5</div></td>
-<td><div id="divrl3" class="noderl">3</div></td>
+<td><div id="divrl2" class="noderl"></div></td>
+<td><div id="divrl5" class="noderl"></div></td>
+<td><div id="divrl3" class="noderl"></div></td>
 </tr>
 <tr>
-<td><div id="divrl8" class="noderl">8</div></td>
-<td><div id="divrl1" class="noderl">1</div></td>
-<td><div id="divrl6" class="noderl">6</div></td>
+<td><div id="divrl8" class="noderl"></div></td>
+<td><div id="divrl1" class="noderl"></div></td>
+<td><div id="divrl6" class="noderl"></div></td>
 </tr>
 <tr>
-<td><div id="divrl7" class="noderl">7</div></td>
-<td><div id="divrl4" class="noderl">4</div></td>
-<td><div id="divrl9" class="noderl">9</div></td>
+<td><div id="divrl7" class="noderl"></div></td>
+<td><div id="divrl4" class="noderl"></div></td>
+<td><div id="divrl9" class="noderl"></div></td>
 </tr>
 </table>]]></text-property>
                     </text>
                 </cell>
                 <cell id="18"/>
-                <cell id="19"/>
+                <cell id="19">
+                    <property name="verticalAlign">bottom</property>
+                    <text id="1413">
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<script>
+$(document).ready(function(){
+    $("#btnall").click(displayNodesAll);
+});
+
+function displayNodesAll()
+{
+    displayNodesCM();
+    displayNodesBM();
+    displayNodesRL();
+}
+</script>
+
+<button id="btnall">Click to show activity</button>]]></text-property>
+                    </text>
+                </cell>
             </row>
         </grid>
     </body>
