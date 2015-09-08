@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">OT IOT Service</string>
+    <string name="title_activity_main">OpenText IoT People Counter</string>
+
+    <string name="default_lanting_title">Default Landing Page</string>
+    <string name="default_landing_val">http://www.krisbox.org/iotlanding</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="fb_app_id">698433820286571</string>
+    <string name="api_key">ASQak9t00ldGyNt8faPQut76u</string>
+    <string name="api_secrect">y8gw1QwQuLlPsk7n5ndyd2RMJ57RuO0RugaOYGvVFEImReV8EQ</string>
+
+    <string name="jsapi">&lt;script type=\'text/javascript\' language=\'JavaScript\' src=\'http://ihub1.krisbox.org:8700/iportal/jsapi\'&gt;&lt;/script&gt;&lt;script type=\'text/javascript\'&gt;actuate.load(\'viewer\');var reqOps = new actuate.RequestOptions( );reqOps.setVolume(\'krisbox.org\');reqOps.setCustomParameters({});actuate.initialize( \'http://ihub1.krisbox.org:8700/iportal/\',reqOps==undefined?null:reqOps, null,null,myInit );function myInit(){viewer1 = new actuate.Viewer( \'container1\' );viewer1.setReportDesign(\'/Home/SampleUser/Reports/Design Examples/BreadCrumbs DIV.rptdesign;1\');var options = new actuate.viewer.UIOptions( );viewer1.setUIOptions( options );viewer1.submit();}&lt;/script&gt;&lt;div id=\'container1\' style=\'border-width: 0px; border-style: solid;\'&gt;&lt;/div&gt;</string>
+    <string name="pref_sync">Pepole Counter Preferences</string>
+
+    <string name="facebook_app_name">HelloFBSample</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
+    <string name="ok">OK</string>
+    <string name="hello_user">Hello %1$s!</string>
+    <string name="success">Success</string>
+    <string name="successfully_posted_post">Post ID: %1$s</string>
+    <string name="error">Error</string>
+    <string name="status_update">Updating status for %1$s at %2$s</string>
+    <string name="photo_post">Photo Post</string>
+    <string name="you_picked">You picked:</string>
+    <string name="no_friends_selected">&lt;No friends selected&gt;</string>
+    <string name="no_place_selected">&lt;No place selected&gt;</string>
+    <string name="pick_seattle_place">Pick a Seattle Place</string>
+    <string name="app_id">355198514515820</string>
+    <string name="exception">Exception: %1$s</string>
+
+    <string name="pref_title_mqtt_broker_category">MQTT Broker Settings</string>
+    <string name="pref_title_broker_ssl">MQTT Broker uses SSL</string>
+    <string name="pref_title_broker_ip">MQTT Broker IP</string>
+    <string name="pref_title_broker_port">MQTT Broker Port</string>
+    <string name="pref_title_broker_topic">MQTT Broker Topic</string>
+    <string name="pref_title_broker_poll_time">MQTT Broker Poll Time</string>
+    <string name="pref_title_iportal_category">iPortal Settings</string>
+    <string name="pref_title_iportal_ssl">iPortal uses SSL</string>
+    <string name="pref_title_iportal_hostname">iPortal Hostname</string>
+    <string name="pref_title_iportal_port">iPortal Port</string>
+    <string name="pref_title_iportal_username">iPortal Username</string>
+    <string name="pref_title_iportal_password">iPortal Password</string>
+    <string name="pref_title_report_category">Report Settings</string>
+    <string name="pref_title_report_name">Report Name</string>
+    <string name="pref_title_report_location">Report Location</string>
+    <string name="pref_title_report_parameters">Report Parameters</string>
+    <string name="pref_title_watch_category">Watch Settings</string>
+    <string name="title_activity_facebook_connect">FacebookConnect</string>
+    <string name="title_activity_google_plus">google_plus</string>
+
+    <string name="title_text">Google Sign-In\nQuickstart</string>
+
+    <string name="gplus_key">901789162222-t8499jp1sg31gep0cfdggn5gts6taus7.apps.googleusercontent.com</string>
+
+    <!-- Sign-in status messages -->
+    <string name="signed_in_fmt">Signed in as: %s</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="signed_out">Signed out</string>
+
+    <!-- Google Play Services error for Toast -->
+    <string name="play_services_error_fmt">Google Play Services Error: %i</string>
+
+    <!-- Button labels -->
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+
+    <!-- Content Description for images -->
+    <string name="desc_google_icon">Google Logo</string>
+    <string name="title_activity_twitter">twitter</string>
+</resources>

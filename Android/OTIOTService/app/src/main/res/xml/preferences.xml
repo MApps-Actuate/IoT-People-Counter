@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="default_landing"
+        android:title="@string/default_lanting_title"
+        android:defaultValue="@string/default_landing_val"
+        android:persistent="true"/>
+
+    <PreferenceScreen
+        android:key="button_mqtt_broker_category_key"
+        android:title="@string/pref_title_mqtt_broker_category"
+        android:persistent="true">
+
+        <CheckBoxPreference
+            android:key="pref_broker_ssl"
+            android:title="@string/pref_title_broker_ssl"
+            android:defaultValue="false"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:key="pref_broker_ip"
+            android:title="@string/pref_title_broker_ip"
+            android:defaultValue="127.0.0.1"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:key="pref_broker_port"
+            android:title="@string/pref_title_broker_port"
+            android:defaultValue="3306"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:key="pref_broker_topic"
+            android:title="@string/pref_title_broker_topic"
+            android:defaultValue="/#"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:key="pref_broker_poll_time"
+            android:title="@string/pref_title_broker_poll_time"
+            android:defaultValue="3000"
+            android:persistent="true"/>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="button_iportal_category_key"
+        android:title="@string/pref_title_iportal_category"
+        android:persistent="true">
+
+        <CheckBoxPreference
+            android:key="pref_iportal_ssl"
+            android:title="@string/pref_title_iportal_ssl"
+            android:defaultValue="false"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:key="pref_iportal_hostname"
+            android:title="@string/pref_title_iportal_hostname"
+            android:defaultValue="localhost"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:key="pref_iportal_port"
+            android:title="@string/pref_title_iportal_port"
+            android:defaultValue="8700"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:key="pref_iportal_username"
+            android:title="@string/pref_title_iportal_username"
+            android:defaultValue="Administrator"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:key="pref_iportal_password"
+            android:title="@string/pref_title_iportal_password"
+            android:defaultValue=""
+            android:persistent="true"/>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="button_report_category_key"
+        android:title="@string/pref_title_report_category"
+        android:persistent="true">
+        <EditTextPreference
+            android:key="pref_report_name"
+            android:title="@string/pref_title_report_name"
+            android:defaultValue="myreport.rptdesign"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:key="pref_report_location"
+            android:title="@string/pref_title_report_location"
+            android:defaultValue="/Home/IOT/"
+            android:persistent="true"/>
+
+        <EditTextPreference
+            android:key="pref_report_parameters"
+            android:title="@string/pref_title_report_parameters"
+            android:defaultValue=""
+            android:persistent="true"/>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Facebook"
+        android:summary="Connect to Facebook">
+        <intent android:action="com.opentext.peoplecounter.FacebookConnectActivity"/>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Google+"
+        android:summary="Connect to Google+">
+        <intent android:action="com.opentext.peoplecounter.GooglePlusActivity" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="Twitter"
+        android:summary="Connect to Twitter">
+        <intent android:action="com.opentext.peoplecounter.TwitterActivity" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="button_watch_category_key"
+        android:title="@string/pref_title_watch_category"
+        android:persistent="false">
+    </PreferenceScreen>
+</PreferenceScreen>
