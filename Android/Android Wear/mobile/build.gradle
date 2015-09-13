@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.opentext.activitytracker"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName ".01-Alpha"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    wearApp project(':wear')
+    compile 'com.android.support:appcompat-v7:+'
+    compile "com.android.support:support-v4:+"
+    compile 'com.google.android.gms:play-services-wearable:+'
+    compile 'com.google.android.gms:play-services:+'
+    compile 'com.android.support:appcompat-v7:+'
+    compile "com.android.support:support-v4:+"
+    compile 'com.facebook.android:facebook-android-sdk:+'
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:+'
+
+
+    compile 'com.google.android.support:wearable:+'
+    compile "com.google.android.support:wearable:+"
+}
