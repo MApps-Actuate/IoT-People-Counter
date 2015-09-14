@@ -1,15 +1,27 @@
 package com.opentext.otiotservice;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Binder;
 import android.os.IBinder;
+import android.preference.PreferenceManager;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
+import android.support.v7.app.AppCompatActivity;
+
+import com.opentext.activitytracker.SettingsActivity;
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.MqttPersistable;
+import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,7 +34,11 @@ import java.util.Random;
 public class IOTService extends Service {
     private final IBinder myBinder = new MyLocalBinder();
     private boolean isRunning = false;
+    private MqttUtil mqtt;
+    private android.support.v7.app.AppCompatActivity ctx;
     int mStartMode;
+    private NotificationCompat.Builder notification_builder;
+    private NotificationManagerCompat notification_manager;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -32,6 +48,9 @@ public class IOTService extends Service {
     @Override
     public void onCreate() {
         isRunning = true;
+        mqtt = new MqttUtil("10.59.23.45", "1883", "/#", false);
+        mqtt.connectToBroker();
+        System.out.println("*************************************RUNNING*************************************");
     }
 
     @Override
@@ -39,6 +58,12 @@ public class IOTService extends Service {
         isRunning = false;
 
         super.onDestroy();
+    }
+
+    public void setContext(android.support.v7.app.AppCompatActivity ctx) {
+        this.ctx = ctx;
+        //String test = ctx.getSharedPreferences("pref_broker_ip", MODE_PRIVATE).getString("pref_broker_ip", null);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
     }
 
     public boolean isRunning() {
@@ -70,6 +95,7 @@ public class IOTService extends Service {
         private String  mqttPort     = null;
         private String  mqttTopic    = null;
         private boolean mqttSSL     = false;
+        private MemoryPersistence mqttPersistence = new MemoryPersistence();
 
         private String mqttConnectionString = null;
         private String mqttClientID         = null;
@@ -92,7 +118,7 @@ public class IOTService extends Service {
 
             // Create the broker connection
             try {
-                mqttClient = new MqttClient(mqttConnectionString, mqttClientID);
+                mqttClient = new MqttClient(mqttConnectionString, mqttClientID, mqttPersistence);
                 mqttClient.connect();
                 mqttClient.setCallback(this);
                 mqttClient.subscribe(mqttTopic);
@@ -107,7 +133,7 @@ public class IOTService extends Service {
 
         private void generateConnectionString() {
             if(mqttSSL == true)
-                this.mqttConnectionString = "tcp://" + mqttHostname + ":" + mqttPort;  // TODO: Implement SSL
+                this.mqttConnectionString = "tcp://" + getMqttHostname() + ":" + getMqttPort();  // TODO: Implement SSL
             else
                 this.mqttConnectionString = "tcp://" + mqttHostname + ":" + mqttPort;
         }
@@ -155,7 +181,8 @@ public class IOTService extends Service {
 
         @Override
         public void messageArrived(String topic, MqttMessage message) {
-            System.out.println(message.getPayload());
+            System.out.println("******************MESSAGE ARRIVED*******************");
+            System.out.println(message);
         }
 
         @Override

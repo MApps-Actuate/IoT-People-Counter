@@ -20,7 +20,7 @@
         <EditTextPreference
             android:key="pref_broker_ip"
             android:title="@string/pref_title_broker_ip"
-            android:defaultValue="127.0.0.1"
+            android:defaultValue="10.59.23.45"
             android:persistent="true"/>
 
         <EditTextPreference

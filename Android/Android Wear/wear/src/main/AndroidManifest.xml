@@ -14,7 +14,7 @@
         android:theme="@android:style/Theme.DeviceDefault" >
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.opentext.activitytracker.MainActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.DeviceDefault.Light" >
 
