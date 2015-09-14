@@ -14,6 +14,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 
+import com.opentext.activitytracker.MainActivity;
 import com.opentext.activitytracker.SettingsActivity;
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
@@ -35,7 +36,7 @@ public class IOTService extends Service {
     private final IBinder myBinder = new MyLocalBinder();
     private boolean isRunning = false;
     private MqttUtil mqtt;
-    private android.support.v7.app.AppCompatActivity ctx;
+    private Context ctx;
     int mStartMode;
     private NotificationCompat.Builder notification_builder;
     private NotificationManagerCompat notification_manager;
@@ -60,10 +61,10 @@ public class IOTService extends Service {
         super.onDestroy();
     }
 
-    public void setContext(android.support.v7.app.AppCompatActivity ctx) {
+    public void setContext(Context ctx) {
         this.ctx = ctx;
         //String test = ctx.getSharedPreferences("pref_broker_ip", MODE_PRIVATE).getString("pref_broker_ip", null);
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
+        //SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
     }
 
     public boolean isRunning() {
@@ -127,6 +128,26 @@ public class IOTService extends Service {
             }
         }
 
+        public void sendNotification(String title) {
+            NotificationManager notificationManager =
+                    (NotificationManager) ctx.getSystemService(NOTIFICATION_SERVICE);
+
+            Intent viewIntent = new Intent(ctx, ThreasholdActivity.class);
+            PendingIntent viewPendingIntent =
+                    PendingIntent.getActivity(ctx, 0, viewIntent, 0);
+
+            notification_builder =
+                    new NotificationCompat.Builder(ctx)
+                            .setSmallIcon(R.drawable.messenger_bubble_small_blue)
+                            .setContentTitle(title)
+                            .setContentIntent(viewPendingIntent);
+
+            notification_manager =
+                    NotificationManagerCompat.from(ctx);
+
+            notification_manager.notify(1, notification_builder.build());
+        }
+
         private void generateClientID() {
             mqttClientID = "OTIOTServiceMqttClient" + new Random().nextInt((1000000 - 1) + 1) + 1;
         }
@@ -183,6 +204,7 @@ public class IOTService extends Service {
         public void messageArrived(String topic, MqttMessage message) {
             System.out.println("******************MESSAGE ARRIVED*******************");
             System.out.println(message);
+            sendNotification("Message Arrived!");
         }
 
         @Override
