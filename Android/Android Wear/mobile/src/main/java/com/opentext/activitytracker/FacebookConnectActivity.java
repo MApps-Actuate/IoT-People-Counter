@@ -30,7 +30,7 @@ import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
-import com.opentext.otiotservice.R;
+import com.opentext.otiotwear.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -30,10 +30,10 @@ import android.widget.Button;
 
 import com.facebook.appevents.AppEventsLogger;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.opentext.otiotservice.IOTService;
-import com.opentext.otiotservice.IOTService.MyLocalBinder;
-import com.opentext.otiotservice.R;
-import com.opentext.otiotservice.ThreasholdActivity;
+import com.opentext.otiotwear.IOTService;
+import com.opentext.otiotwear.IOTService.MyLocalBinder;
+import com.opentext.otiotwear.R;
+import com.opentext.otiotwear.ThreasholdActivity;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

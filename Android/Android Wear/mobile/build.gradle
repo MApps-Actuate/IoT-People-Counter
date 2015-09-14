@@ -8,8 +8,8 @@ android {
         applicationId "com.opentext.activitytracker"
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 4
-        versionName ".04-Alpha"
+        versionCode 5
+        versionName ".05-Alpha"
     }
     buildTypes {
         release {
