@@ -48,10 +48,9 @@ public class IOTService extends Service {
 
     @Override
     public void onCreate() {
-        isRunning = true;
-        mqtt = new MqttUtil("10.59.23.45", "1883", "/#", false);
-        mqtt.connectToBroker();
-        System.out.println("*************************************RUNNING*************************************");
+    }
+
+    private void setMqttProperties(MqttUtil mqtt) {
     }
 
     @Override
@@ -63,8 +62,26 @@ public class IOTService extends Service {
 
     public void setContext(Context ctx) {
         this.ctx = ctx;
+
+        String hostname = PreferenceManager.getDefaultSharedPreferences(ctx).getString("pref_broker_ip", null);
+        String port     = PreferenceManager.getDefaultSharedPreferences(ctx).getString("pref_broker_port", null);
+        String topic    = PreferenceManager.getDefaultSharedPreferences(ctx).getString("pref_broker_topic", null);
+        Boolean ssl      = PreferenceManager.getDefaultSharedPreferences(ctx).getBoolean("pref_broker_ssl", false);
+
+        isRunning = true;
+        setMqttProperties(mqtt);
+        mqtt = new MqttUtil(hostname,
+                port,
+                topic,
+                ssl);
+        mqtt.connectToBroker();
+
+        System.out.println("*************************************RUNNING*************************************");
+        System.out.println("*************************************" + port + "*************************************");
+
         //String test = ctx.getSharedPreferences("pref_broker_ip", MODE_PRIVATE).getString("pref_broker_ip", null);
         //SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
+
     }
 
     public boolean isRunning() {
