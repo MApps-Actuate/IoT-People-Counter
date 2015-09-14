@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             MyLocalBinder binder = (MyLocalBinder) service;
             myService = binder.getService();
             isBound = true;
+            myService.setContext(getApplicationContext());
             showTime();
         }
 
