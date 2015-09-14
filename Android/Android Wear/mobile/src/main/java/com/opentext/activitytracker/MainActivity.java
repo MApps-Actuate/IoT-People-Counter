@@ -7,11 +7,13 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -54,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
             MyLocalBinder binder = (MyLocalBinder) service;
             myService = binder.getService();
             isBound = true;
-
             showTime();
         }
 
@@ -62,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
             isBound = false;
         }
     };
+
+    public void sendNotification(String title, String message) {
+        Intent viewIntent = new Intent(this, ThreasholdActivity.class);
+
+        PendingIntent viewPendingIntent =
+                PendingIntent.getActivity(this, 0, viewIntent, 0);
+
+    }
 
     @Override
     public void onDestroy() {
@@ -159,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
