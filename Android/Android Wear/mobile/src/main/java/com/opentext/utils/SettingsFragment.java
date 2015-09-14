@@ -3,7 +3,7 @@ package com.opentext.utils;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
-import com.opentext.otiotservice.R;
+import com.opentext.otiotwear.R;
 
 /**
  * Created by kclark on 9/5/2015.
