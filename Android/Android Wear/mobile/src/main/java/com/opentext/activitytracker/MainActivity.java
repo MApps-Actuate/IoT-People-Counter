@@ -120,8 +120,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, IOTService.class);
         bindService(intent, myConnection, Context.BIND_AUTO_CREATE);
 
-        button = (Button) findViewById(R.id.button2);
-
         CookieManager.getInstance().setAcceptCookie(true);
 
         WebView mWebView = (WebView) findViewById(R.id.webView);
@@ -131,51 +129,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
 
         mWebView.setWebViewClient(new WebViewClient());
-        //mWebView.loadDataWithBaseURL(getString(R.string.default_landing_val), getString(R.string.default_landing_val), "text/html", "UTF-8", "");
         mWebView.loadUrl(getString(R.string.default_landing_val));
-
-        /*
-        Intent open_activity_intent = new Intent(this, ThreasholdActivity.class);
-        open_activity_intent.putExtra(NOTIFICATION_ID, notification_id);
-        PendingIntent pending_intent = PendingIntent.getActivity(this, 0, open_activity_intent, PendingIntent.FLAG_CANCEL_CURRENT);
-
-        notification_builder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.messenger_bubble_small_blue)
-                .setContentTitle("title")
-                .setContentText("content")
-                .setDefaults(Notification.DEFAULT_ALL)
-                .setAutoCancel(true)
-                .setContentIntent(pending_intent);
-
-        notification_manager = NotificationManagerCompat.from(this);
-        */
-        //int notificationId = 001;
-
-// Build intent for notification content
-        Intent viewIntent = new Intent(this, ThreasholdActivity.class);
-        PendingIntent viewPendingIntent =
-                PendingIntent.getActivity(this, 0, viewIntent, 0);
-
-        notification_builder =
-                new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.messenger_bubble_small_blue)
-                        .setContentTitle("TITLE")
-                        .setContentIntent(viewPendingIntent);
-// Get an instance of the NotificationManager service
-        notification_manager =
-                NotificationManagerCompat.from(this);
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-// Build the notification and issues it with notification manager.
-                notification_manager.notify(1, notification_builder.build());
-            }
-        });
     }
 
     @Override

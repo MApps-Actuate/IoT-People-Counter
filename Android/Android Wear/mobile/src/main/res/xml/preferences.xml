@@ -26,7 +26,7 @@
         <EditTextPreference
             android:key="pref_broker_port"
             android:title="@string/pref_title_broker_port"
-            android:defaultValue="3306"
+            android:defaultValue="1883"
             android:persistent="true"/>
 
         <EditTextPreference
