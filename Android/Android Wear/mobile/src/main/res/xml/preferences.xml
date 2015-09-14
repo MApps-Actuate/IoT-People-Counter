@@ -126,4 +126,10 @@
         android:title="@string/pref_title_watch_category"
         android:persistent="false">
     </PreferenceScreen>
+
+    <CheckBoxPreference
+        android:key="pref_demo_mode"
+        android:title="@string/pref_title_demo_mode"
+        android:defaultValue="true"
+        android:persistent="true"/>
 </PreferenceScreen>

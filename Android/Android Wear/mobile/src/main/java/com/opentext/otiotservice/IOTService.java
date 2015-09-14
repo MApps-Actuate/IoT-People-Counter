@@ -14,6 +14,8 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 
+import java.util.logging.*;
+
 import com.opentext.activitytracker.MainActivity;
 import com.opentext.activitytracker.SettingsActivity;
 
@@ -66,22 +68,22 @@ public class IOTService extends Service {
         String hostname = PreferenceManager.getDefaultSharedPreferences(ctx).getString("pref_broker_ip", null);
         String port     = PreferenceManager.getDefaultSharedPreferences(ctx).getString("pref_broker_port", null);
         String topic    = PreferenceManager.getDefaultSharedPreferences(ctx).getString("pref_broker_topic", null);
-        Boolean ssl      = PreferenceManager.getDefaultSharedPreferences(ctx).getBoolean("pref_broker_ssl", false);
+        Boolean ssl     = PreferenceManager.getDefaultSharedPreferences(ctx).getBoolean("pref_broker_ssl", false);
 
         isRunning = true;
-        setMqttProperties(mqtt);
-        mqtt = new MqttUtil(hostname,
-                port,
-                topic,
-                ssl);
-        mqtt.connectToBroker();
 
-        System.out.println("*************************************RUNNING*************************************");
-        System.out.println("*************************************" + port + "*************************************");
+        Boolean demoMode = PreferenceManager.getDefaultSharedPreferences(ctx).getBoolean("pref_demo_mode", true);
 
-        //String test = ctx.getSharedPreferences("pref_broker_ip", MODE_PRIVATE).getString("pref_broker_ip", null);
-        //SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
-
+        if(demoMode) {
+            new Thread(new MqttUtil()).start(); // Fake timed notification
+        }else{
+            setMqttProperties(mqtt);
+            mqtt = new MqttUtil(hostname,
+                    port,
+                    topic,
+                    ssl);
+            mqtt.connectToBroker();
+        }
     }
 
     public boolean isRunning() {
@@ -93,21 +95,30 @@ public class IOTService extends Service {
         return mStartMode;
     }
 
-    public String getTime() {
-        SimpleDateFormat dateformat =
-                new SimpleDateFormat("HH:mm:ss MM/dd/yyyy", Locale.US);
-        return (dateformat.format(new Date()));
-    }
-
     public class MyLocalBinder extends Binder {
         public IOTService getService() {
             return IOTService.this;
         }
     }
 
-    public class MqttUtil extends IOTService implements MqttCallback {
+    public class MqttUtil extends IOTService implements MqttCallback, Runnable {
         MqttClient mqttClient;
         MqttPersistable mqttPersistable;
+
+        public MqttUtil() {
+            // Fake mqtt for backup
+        }
+
+        public void run() {
+            while (true) {
+                try {
+                    sendNotification("Fake Timed Notification");
+                    Thread.sleep(900000);
+                } catch (InterruptedException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        }
 
         private String  mqttHostname = null;
         private String  mqttPort     = null;
@@ -127,7 +138,6 @@ public class IOTService extends Service {
 
         public void connectToBroker() {
             String mqttBrokerURL;
-
             // Generate the connection string
             generateConnectionString();
 
