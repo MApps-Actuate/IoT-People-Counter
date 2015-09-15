@@ -6,7 +6,9 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-feature    android:name="android.hardware.type.watch" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <meta-data
@@ -26,8 +28,9 @@
         <service android:name=".IOTService" />
 
         <activity
-            android:name="com.opentext.activitytracker.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:name="com.opentext.activitytracker.LoginActivity"
+            android:label="@string/title_activity_main"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,7 +46,8 @@
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat" />
-        <activity android:name="com.opentext.activitytracker.GooglePlusActivity" >
+        <activity android:name="com.opentext.activitytracker.GooglePlusActivity"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="com.opentext.peoplecounter.GooglePlusActivity" />
 
@@ -59,7 +63,8 @@
         </activity>
         <activity
             android:name="com.opentext.activitytracker.FacebookConnectActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="com.opentext.peoplecounter.FacebookConnectActivity" />
 
@@ -80,10 +85,25 @@
             android:name=".google_plus"
             android:label="@string/title_activity_google_plus" >
         </activity>
-
         <activity
             android:name=".ThreasholdActivity"
             android:label="@string/title_activity_threashold" >
+        </activity>
+        <activity
+            android:name="com.opentext.activitytracker.FacebookShare"
+            android:label="@string/title_activity_facebook_share" >
+        </activity>
+        <activity
+            android:name="com.opentext.activitytracker.TwitterShare"
+            android:label="@string/title_activity_twitter_share" >
+        </activity>
+        <activity
+            android:name="com.opentext.activitytracker.GPlusShare"
+            android:label="@string/title_activity_gplus_share" >
+        </activity>
+        <activity
+            android:name="com.opentext.activitytracker.MainActivity"
+            android:label="@string/title_activity_login" >
         </activity>
     </application>
 

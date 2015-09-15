@@ -83,6 +83,7 @@ public class FacebookConnectActivity extends FragmentActivity {
                 String id = result.getPostId();
                 String alertMessage = getString(R.string.successfully_posted_post, id);
                 showResult(title, alertMessage);
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
         }
 

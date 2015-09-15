@@ -17,6 +17,11 @@
 
     <string name="pref_title_demo_mode">Demo Mode</string>
 
+    <string name="fb_share">Facebook Share</string>
+    <string name="gplus_share">G+ Share</string>
+    <string name="twitter_share">Twitter Share</string>
+
+    <string name="share_fb">Share on Facebook</string>
     <string name="facebook_app_name">HelloFBSample</string>
     <string name="cancelled">Cancelled</string>
     <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
@@ -74,4 +79,8 @@
     <string name="desc_google_icon">Google Logo</string>
     <string name="title_activity_twitter">twitter</string>
     <string name="title_activity_threashold">ThreasholdActivity</string>
+    <string name="title_activity_facebook_share">FacebookShare</string>
+    <string name="title_activity_twitter_share">TwitterShare</string>
+    <string name="title_activity_gplus_share">GPlusShare</string>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>

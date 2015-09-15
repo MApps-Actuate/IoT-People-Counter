@@ -30,6 +30,10 @@ import android.widget.Button;
 
 import com.facebook.appevents.AppEventsLogger;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.wearable.MessageApi;
+import com.google.android.gms.wearable.Node;
+import com.google.android.gms.wearable.NodeApi;
+import com.google.android.gms.wearable.Wearable;
 import com.opentext.otiotwear.IOTService;
 import com.opentext.otiotwear.IOTService.MyLocalBinder;
 import com.opentext.otiotwear.R;
@@ -39,14 +43,14 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks {
     private GoogleApiClient mApiClient;
     private IOTService myService;
     private Button button;
     private int notification_id = 1;
     private final String NOTIFICATION_ID = "notification_id";
     boolean isBound = false;
-
+    private static final String START_ACTIVITY = "/start_activity";
     private NotificationCompat.Builder notification_builder;
     private NotificationManagerCompat notification_manager;
 
@@ -57,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
             myService = binder.getService();
             isBound = true;
             myService.setContext(getApplicationContext());
+            initGoogleApiClient();
             showTime();
         }
 
@@ -73,6 +78,36 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void initGoogleApiClient() {
+        mApiClient = new GoogleApiClient.Builder(this)
+                .addApi(Wearable.API)
+                .build();
+
+        mApiClient.connect();
+    }
+
+    @Override
+    public void onConnected(Bundle bundle) {
+        sendMessage(START_ACTIVITY, "TESTING!");
+    }
+
+    @Override
+    public void onConnectionSuspended(int reason) {
+    }
+
+    private void sendMessage(final String path, final String text) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                NodeApi.GetConnectedNodesResult nodes = Wearable.NodeApi.getConnectedNodes(mApiClient).await();
+
+                for(Node node:nodes.getNodes()) {
+                    MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(mApiClient, node.getId(), path, text.getBytes()).await();
+                }
+            }
+        });
+    }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -83,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
         if(myService != null) {
             unbindService(myConnection);
         }
+
+        mApiClient.disconnect();
     }
 
     public void showTime() {

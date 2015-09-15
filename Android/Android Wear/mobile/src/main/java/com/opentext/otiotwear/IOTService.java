@@ -11,6 +11,11 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 
+import com.opentext.activitytracker.FacebookConnectActivity;
+import com.opentext.activitytracker.FacebookShare;
+import com.opentext.activitytracker.GPlusShare;
+import com.opentext.activitytracker.TwitterShare;
+
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;
@@ -152,11 +157,49 @@ public class IOTService extends Service {
             PendingIntent viewPendingIntent =
                     PendingIntent.getActivity(ctx, 0, viewIntent, 0);
 
+            // Create an intent for the reply action
+            Intent fbActionIntent = new Intent(ctx, FacebookConnectActivity.class);
+            Intent gpActionIntent = new Intent(ctx, GPlusShare.class);
+            Intent twActionIntent = new Intent(ctx, TwitterShare.class);
+
+
+            PendingIntent fbPendingIntent =
+                    PendingIntent.getActivity(ctx, 0, fbActionIntent,
+                            PendingIntent.FLAG_UPDATE_CURRENT);
+
+            PendingIntent gpPendingIntent =
+                    PendingIntent.getActivity(ctx, 0, gpActionIntent,
+                            PendingIntent.FLAG_UPDATE_CURRENT);
+
+            PendingIntent twPendingIntent =
+                    PendingIntent.getActivity(ctx, 0, twActionIntent,
+                            PendingIntent.FLAG_UPDATE_CURRENT);
+
+            // Create the actions
+            NotificationCompat.Action facebookShare =
+                    new NotificationCompat.Action.Builder(R.drawable.messenger_bubble_small_blue,
+                            "Share on Facebook", fbPendingIntent)
+                            .build();
+
+            NotificationCompat.Action gplusShare =
+                    new NotificationCompat.Action.Builder(R.drawable.messenger_bubble_small_blue,
+                            "Share on G+", gpPendingIntent)
+                            .build();
+
+            NotificationCompat.Action twitterShare =
+                    new NotificationCompat.Action.Builder(R.drawable.messenger_bubble_small_blue,
+                            "Share on Twitter", twPendingIntent)
+                            .build();
+
             notification_builder =
                     new NotificationCompat.Builder(ctx)
                             .setSmallIcon(R.drawable.messenger_bubble_small_blue)
                             .setContentTitle(title)
-                            .setContentIntent(viewPendingIntent);
+                            .setContentIntent(viewPendingIntent)
+                            .extend(new NotificationCompat.WearableExtender()
+                                    .addAction(facebookShare)
+                                    .addAction(gplusShare)
+                                    .addAction(twitterShare));
 
             notification_manager =
                     NotificationManagerCompat.from(ctx);

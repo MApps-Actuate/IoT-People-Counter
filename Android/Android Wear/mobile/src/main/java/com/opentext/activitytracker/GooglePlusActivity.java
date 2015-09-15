@@ -155,6 +155,13 @@ public class GooglePlusActivity extends android.support.v7.app.AppCompatActivity
 
         // Show the signed-in UI
         updateUI(true);
+        Bundle b = getIntent().getExtras();
+
+        if(getIntent().hasExtra("Activity")) {
+            startActivity(new Intent(this, MainActivity.class));
+        }else{
+
+        }
     }
 
     @Override

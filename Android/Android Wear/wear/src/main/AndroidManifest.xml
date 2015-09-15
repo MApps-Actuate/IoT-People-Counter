@@ -18,6 +18,12 @@
             android:name="com.google.android.wearable"
             android:required="false" />
 
+        <service android:name=".utils.WearableListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER"/>
+            </intent-filter>
+        </service>
+
         <activity
             android:name=".Wear"
             android:label="@string/title_activity_wear"
