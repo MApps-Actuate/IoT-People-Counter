@@ -15,6 +15,8 @@
     <string name="jsapi">&lt;script type=\'text/javascript\' language=\'JavaScript\' src=\'http://ihub1.krisbox.org:8700/iportal/jsapi\'&gt;&lt;/script&gt;&lt;script type=\'text/javascript\'&gt;actuate.load(\'viewer\');var reqOps = new actuate.RequestOptions( );reqOps.setVolume(\'krisbox.org\');reqOps.setCustomParameters({});actuate.initialize( \'http://ihub1.krisbox.org:8700/iportal/\',reqOps==undefined?null:reqOps, null,null,myInit );function myInit(){viewer1 = new actuate.Viewer( \'container1\' );viewer1.setReportDesign(\'/Home/SampleUser/Reports/Design Examples/BreadCrumbs DIV.rptdesign;1\');var options = new actuate.viewer.UIOptions( );viewer1.setUIOptions( options );viewer1.submit();}&lt;/script&gt;&lt;div id=\'container1\' style=\'border-width: 0px; border-style: solid;\'&gt;&lt;/div&gt;</string>
     <string name="pref_sync">Pepole Counter Preferences</string>
 
+    <string name="pref_title_demo_mode">Demo Mode</string>
+
     <string name="facebook_app_name">HelloFBSample</string>
     <string name="cancelled">Cancelled</string>
     <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>

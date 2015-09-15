@@ -16,7 +16,7 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.plus.Plus;
-import com.opentext.otiotservice.R;
+import com.opentext.otiotwear.R;
 
 /**
  * Created by kclark on 9/7/2015.

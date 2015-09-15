@@ -8,12 +8,12 @@ android {
         applicationId "com.opentext.activitytracker"
         minSdkVersion 14
         targetSdkVersion 23
-        versionCode 1
-        versionName ".01-Alpha"
+        versionCode 5
+        versionName ".05-Alpha"
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -21,17 +21,14 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    wearApp project(':wear')
-    compile 'com.android.support:appcompat-v7:+'
-    compile "com.android.support:support-v4:+"
+    compile 'com.google.android.support:wearable:+'
     compile 'com.google.android.gms:play-services-wearable:+'
-    compile 'com.google.android.gms:play-services:+'
+    compile 'com.android.support:support-v4:+'
     compile 'com.android.support:appcompat-v7:+'
+    compile 'com.google.android.gms:play-services:+'
     compile "com.android.support:support-v4:+"
     compile 'com.facebook.android:facebook-android-sdk:+'
     compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:+'
 
-
-    compile 'com.google.android.support:wearable:+'
-    compile "com.google.android.support:wearable:+"
+    wearApp project(':wear')
 }

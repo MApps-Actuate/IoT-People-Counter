@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.opentext.otiotservice.R;
+import com.opentext.otiotwear.R;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
