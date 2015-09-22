@@ -38,14 +38,16 @@
             <property name="marginTop">40pt</property>
             <property name="textAlign">center</property>
             <property name="canShrink">false</property>
-            <property name="height">5.072916666666667in</property>
+            <property name="height">5.8125in</property>
             <property name="width">5.46875in</property>
-            <column id="5"/>
+            <column id="5">
+                <property name="width">300px</property>
+            </column>
             <column id="6">
-                <property name="width">0.4166666666666667in</property>
+                <property name="width">50px</property>
             </column>
             <column id="7">
-                <property name="width">2.3958333333333335in</property>
+                <property name="width">250px</property>
             </column>
             <row id="8">
                 <property name="height">2.3645833333333335in</property>
@@ -53,16 +55,16 @@
                     <property name="fontFamily">"Raleway"</property>
                     <property name="borderBottomColor">#FFFFFF</property>
                     <property name="borderBottomStyle">solid</property>
-                    <property name="borderBottomWidth">10px</property>
+                    <property name="borderBottomWidth">5px</property>
                     <property name="borderLeftColor">#FFFFFF</property>
                     <property name="borderLeftStyle">solid</property>
-                    <property name="borderLeftWidth">10px</property>
+                    <property name="borderLeftWidth">5px</property>
                     <property name="borderRightColor">#FFFFFF</property>
                     <property name="borderRightStyle">solid</property>
-                    <property name="borderRightWidth">10px</property>
+                    <property name="borderRightWidth">5px</property>
                     <property name="borderTopColor">#FFFFFF</property>
                     <property name="borderTopStyle">solid</property>
-                    <property name="borderTopWidth">10px</property>
+                    <property name="borderTopWidth">5px</property>
                     <label id="1310">
                         <property name="fontSize">14pt</property>
                         <property name="fontWeight">normal</property>
@@ -78,13 +80,14 @@ function displayNodesCM()
 {
     var speedcm = 500;
     var nodenumcm = Math.floor((Math.random() * 9) + 1);
-    $("#countTitleCM").text("Count: " + nodenumcm);
+    $("#countTitleCM").text("Activity Count: " + nodenumcm);
     for (icm=1; icm<=nodenumcm; icm++) {
+       $("#divcm"+icm).css({ opacity: nodenumcm/10 });
        $("#divcm"+icm).fadeIn(speedcm*(nodenumcm-icm+1)).fadeOut(speedcm*(nodenumcm-icm+1));
     }
 }
 </script>
-<div id="countTitleCM" style="color:white; font-size:16px"></div>
+<div id="countTitleCM" style="color:white; font-size:16px; width:250px"></div>
 <br/><br/>
 <table style="margin:auto">
 <tr>
@@ -105,21 +108,26 @@ function displayNodesCM()
 </table>]]></text-property>
                     </text>
                 </cell>
-                <cell id="10"/>
+                <cell id="10">
+                    <text id="1424">
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div style='width:50px'/>]]></text-property>
+                    </text>
+                </cell>
                 <cell id="11">
                     <property name="fontFamily">"Raleway"</property>
                     <property name="borderBottomColor">#FFFFFF</property>
                     <property name="borderBottomStyle">solid</property>
-                    <property name="borderBottomWidth">10px</property>
+                    <property name="borderBottomWidth">5px</property>
                     <property name="borderLeftColor">#FFFFFF</property>
                     <property name="borderLeftStyle">solid</property>
-                    <property name="borderLeftWidth">10px</property>
+                    <property name="borderLeftWidth">5px</property>
                     <property name="borderRightColor">#FFFFFF</property>
                     <property name="borderRightStyle">solid</property>
-                    <property name="borderRightWidth">10px</property>
+                    <property name="borderRightWidth">5px</property>
                     <property name="borderTopColor">#FFFFFF</property>
                     <property name="borderTopStyle">solid</property>
-                    <property name="borderTopWidth">10px</property>
+                    <property name="borderTopWidth">5px</property>
                     <label id="1311">
                         <property name="fontSize">14pt</property>
                         <property name="fontWeight">normal</property>
@@ -135,13 +143,14 @@ var speedbm = 500;
 function displayNodesBM()
 {
     var nodenumbm = Math.floor((Math.random() * 9) + 1);
-    $("#countTitleBM").text("Count: " + nodenumbm);
+    $("#countTitleBM").text("Activity Count: " + nodenumbm);
     for (ibm=1; ibm<=nodenumbm; ibm++) {
+       $("#divbm"+ibm).css({ opacity: nodenumbm/10 });
        $("#divbm"+ibm).fadeIn(speedbm*(nodenumbm-ibm+1)).fadeOut(speedbm*(nodenumbm-ibm+1));
     }
 }
 </script>
-<div id="countTitleBM" style="color:white; font-size:16px"></div>
+<div id="countTitleBM" style="color:white; font-size:16px; width:250px"></div>
 <br/><br/>
 
 <table style="margin:auto">
@@ -165,7 +174,7 @@ function displayNodesBM()
                 </cell>
             </row>
             <row id="12">
-                <property name="height">0.4166666666666667in</property>
+                <property name="height">50px</property>
                 <cell id="13"/>
                 <cell id="14"/>
                 <cell id="15"/>
@@ -176,16 +185,16 @@ function displayNodesBM()
                     <property name="fontFamily">"Raleway"</property>
                     <property name="borderBottomColor">#FFFFFF</property>
                     <property name="borderBottomStyle">solid</property>
-                    <property name="borderBottomWidth">10px</property>
+                    <property name="borderBottomWidth">5px</property>
                     <property name="borderLeftColor">#FFFFFF</property>
                     <property name="borderLeftStyle">solid</property>
-                    <property name="borderLeftWidth">10px</property>
+                    <property name="borderLeftWidth">5px</property>
                     <property name="borderRightColor">#FFFFFF</property>
                     <property name="borderRightStyle">solid</property>
-                    <property name="borderRightWidth">10px</property>
+                    <property name="borderRightWidth">5px</property>
                     <property name="borderTopColor">#FFFFFF</property>
                     <property name="borderTopStyle">solid</property>
-                    <property name="borderTopWidth">10px</property>
+                    <property name="borderTopWidth">5px</property>
                     <label id="1309">
                         <property name="fontSize">14pt</property>
                         <property name="fontWeight">normal</property>
@@ -201,8 +210,9 @@ function displayNodesRL()
 {
     var speedrl = 500;
     var nodenumrl = Math.floor((Math.random() * 9) + 1);
-    $("#countTitleRL").text("Count: " + nodenumrl);
+    $("#countTitleRL").text("Activity Count: " + nodenumrl);
     for (irl=1; irl<=nodenumrl; irl++) {
+       $("#divrl"+irl).css({ opacity: nodenumrl/10 });
        $("#divrl"+irl).fadeIn(speedrl*(nodenumrl-irl+1)).fadeOut(speedrl*(nodenumrl-irl+1));
     }
 }
@@ -231,7 +241,16 @@ function displayNodesRL()
                 </cell>
                 <cell id="18"/>
                 <cell id="19">
-                    <property name="verticalAlign">bottom</property>
+                    <text id="1419">
+                        <property name="contentType">html</property>
+                        <text-property name="content"><![CDATA[<div id='chart12344' style='width:250px'></div>]]></text-property>
+                    </text>
+                </cell>
+            </row>
+            <row id="1420">
+                <property name="height">0.5625in</property>
+                <cell id="1421">
+                    <property name="fontFamily">"Raleway"</property>
                     <text id="1413">
                         <property name="contentType">html</property>
                         <text-property name="content"><![CDATA[<script>
@@ -246,9 +265,35 @@ function displayNodesAll()
     displayNodesRL();
 }
 </script>
-
-<button id="btnall">Click to show activity</button>]]></text-property>
+<button id='btnall' style='width:100px; height:50px; background-color:#0079C1; color:#0079C1; border:none'>Click</button>]]></text-property>
                     </text>
+                </cell>
+                <cell id="1422"/>
+                <cell id="1423">
+                    <property name="verticalAlign">bottom</property>
+                    <extended-item extensionName="HTMLControl" id="1414">
+                        <method name="clientOnCreate"><![CDATA[	var config = {
+			target:'#chart12344',
+			face:'myModern',
+			width:300,
+			height:250,
+			TZOffset:{
+				hours:0
+			}
+		}
+
+var callback = function() {
+	
+	d3clock(config);
+
+}
+
+head.load('http://10.59.23.45:8700/ActivityTracker/js/d3.min.js', 'http://10.59.23.45:8700/ActivityTracker/js/d3clock.js',
+		callback);
+]]></method>
+                        <property name="height">2.1458333333333335in</property>
+                        <property name="width">100%</property>
+                    </extended-item>
                 </cell>
             </row>
         </grid>
