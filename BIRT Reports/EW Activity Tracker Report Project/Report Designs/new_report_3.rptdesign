@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+    <property name="units">in</property>
+    <property name="theme">ActivityTracker.Activity Tracker</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Report Libraries/ActivityTracker.rptlibrary</property>
+            <property name="namespace">ActivityTracker</property>
+        </structure>
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="IoT Server MySQL DS" id="5"
+ extends="ActivityTracker.IoT Server MySQL DS"/>
+    </data-sources>
+    <page-setup>
+        <simple-master-page name="ActivityTrackerSimpleMasterPage" id="6" extends="ActivityTracker.ActivityTrackerSimpleMasterPage">
+            <property name="orientation">auto</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label name="ATLabel" id="8" extends="ActivityTracker.ATLabel">
+            <text-property name="text">Test 1 works!</text-property>
+        </label>
+        <text name="ATText" id="9" extends="ActivityTracker.ATText">
+            <property name="contentType">auto</property>
+            <text-property name="content"><![CDATA[Test 2 works too!]]></text-property>
+        </text>
+    </body>
+</report>

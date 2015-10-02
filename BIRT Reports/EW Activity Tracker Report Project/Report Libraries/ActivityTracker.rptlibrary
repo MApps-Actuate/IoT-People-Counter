@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+    <property name="units">in</property>
+    <property name="theme">Activity Tracker</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">/ThemesReportItems31.rptlibrary</property>
+            <property name="namespace">ThemesReportItems31</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="IoT Server MySQL DS" id="28">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://10.59.23.45:3306/people_counter?useCursorFetch=true&amp;defaultFetchSize=2000</property>
+            <property name="odaUser">skynet</property>
+        </oda-data-source>
+    </data-sources>
+    <themes>
+        <theme name="Activity Tracker" id="29">
+            <styles>
+                <style name="ActivityTrackerStyle" id="30">
+                    <property name="fontFamily">"Raleway"</property>
+                    <property name="fontSize">14pt</property>
+                    <property name="color">#FFFFFF</property>
+                    <property name="borderBottomColor">#FFFFFF</property>
+                    <property name="borderBottomStyle">none</property>
+                    <property name="borderLeftColor">#FFFFFF</property>
+                    <property name="borderRightColor">#FFFFFF</property>
+                    <property name="borderTopColor">#FFFFFF</property>
+                    <property name="borderTopStyle">none</property>
+                </style>
+                <style name="ActivityTrackerCustomFontStyle" id="33">
+                    <property name="fontFamily">"fontcustom"</property>
+                    <property name="fontSize">48pt</property>
+                    <property name="color">#FFFFFF</property>
+                </style>
+            </styles>
+        </theme>
+    </themes>
+    <components>
+        <label name="ATLabel" id="31">
+            <property name="style">ActivityTrackerStyle</property>
+        </label>
+        <text name="ATText" id="32">
+            <property name="style">ActivityTrackerStyle</property>
+        </text>
+    </components>
+    <page-setup>
+        <simple-master-page name="ActivityTrackerSimpleMasterPage" id="3">
+            <property name="orientation">landscape</property>
+            <property name="backgroundColor">#0079C1</property>
+            <property name="showHeaderOnFirst">false</property>
+            <property name="showFooterOnLast">false</property>
+        </simple-master-page>
+    </page-setup>
+</library>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.actuate.istudio.analysis.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.actuate.istudio.analysis.model="http:///com.actuate.istudio.analysis.model.ecore" name="Activity Tracker Report Project">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptLibrary" name="ActivityTracker.rptlibrary" path="/Activity Tracker Report Project/Report Libraries/ActivityTracker.rptlibrary" reports="//@files.1 //@files.2"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="new_report_2.rptdesign" path="/Activity Tracker Report Project/Report Designs/new_report_2.rptdesign" libraries="//@files.0"/>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="new_report_3.rptdesign" path="/Activity Tracker Report Project/Report Designs/new_report_3.rptdesign" libraries="//@files.0"/>
+</com.actuate.istudio.analysis.model:Project>
