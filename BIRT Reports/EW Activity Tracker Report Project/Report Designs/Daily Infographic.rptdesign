@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Report Libraries/ActivityTracker.rptlibrary</property>
+            <property name="namespace">ActivityTracker</property>
+        </structure>
+    </list-property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Local MySQL DS" id="28">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://169.254.70.34:3306/people_counter?useCursorFetch=true&amp;defaultFetchSize=2000</property>
+            <property name="odaUser">root</property>
+            <encrypted-property name="odaPassword" encryptionID="jce">10e521fdf32454a9</encrypted-property>
+        </oda-data-source>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="IoT Server MySQL DS" id="1563"
+ extends="ActivityTracker.IoT Server MySQL DS"/>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Local MySQL DS" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">totalpeoplecount</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">totalpeoplecount</text-property>
+                    <text-property name="heading">totalpeoplecount</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">theEventTime</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">theEventTime</text-property>
+                    <text-property name="heading">theEventTime</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">node</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">node</text-property>
+                    <text-property name="heading">node</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">totalpeoplecount</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">theEventTime</property>
+                        <property name="dataType">date</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">node</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">IoT Server MySQL DS</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">totalpeoplecount</property>
+                    <property name="nativeName">totalpeoplecount</property>
+                    <property name="dataType">decimal</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">theEventTime</property>
+                    <property name="nativeName">theEventTime</property>
+                    <property name="dataType">date</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">node</property>
+                    <property name="nativeName">node</property>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[SELECT SUM(peoplecount) as totalpeoplecount, DATE(event_time) as theEventTime, node
+FROM iot_people_counter
+WHERE iot_people_counter.event_time BETWEEN DATE_ADD(CURDATE(), INTERVAL -1 day) AND DATE_ADD(CURDATE(), INTERVAL 1 day)
+GROUP BY DATE(event_time), node]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>node</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>15</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>node</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>node</design:label>
+            <design:formattingHints>
+              <design:displaySize>15</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>event_time</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>19</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>event_time</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>event_time</design:label>
+            <design:formattingHints>
+              <design:displaySize>19</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>peoplecount</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>4</design:nativeDataTypeCode>
+            <design:precision>11</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>peoplecount</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>peoplecount</design:label>
+            <design:formattingHints>
+              <design:displaySize>11</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <themes>
+        <report-item-theme type="Table" name="default-table" id="777">
+            <styles>
+                <style name="table" id="896">
+                    <property name="fontFamily">"Verdana"</property>
+                    <property name="fontSize">8pt</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-detail-cell" id="918">
+                    <property name="backgroundColor">#FFFFFF</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-header-cell" id="919">
+                    <property name="backgroundColor">#EDEEF3</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-group-header-cell" id="920">
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-group-footer-cell" id="921">
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+                <style name="table-footer-cell" id="922">
+                    <property name="backgroundColor">#EDEEF3</property>
+                    <property name="fontWeight">bold</property>
+                    <property name="color">#666666</property>
+                    <property name="borderBottomColor">#DADADA</property>
+                    <property name="borderBottomStyle">solid</property>
+                    <property name="borderBottomWidth">1px</property>
+                    <property name="borderLeftColor">#DADADA</property>
+                    <property name="borderLeftStyle">solid</property>
+                    <property name="borderLeftWidth">1px</property>
+                    <property name="borderRightColor">#DADADA</property>
+                    <property name="borderRightStyle">solid</property>
+                    <property name="borderRightWidth">1px</property>
+                    <property name="borderTopColor">#DADADA</property>
+                    <property name="borderTopStyle">solid</property>
+                    <property name="borderTopWidth">1px</property>
+                </style>
+            </styles>
+        </report-item-theme>
+    </themes>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">us-legal</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0.25in</property>
+            <property name="leftMargin">0.25in</property>
+            <property name="bottomMargin">0in</property>
+            <property name="rightMargin">0.25in</property>
+            <property name="backgroundColor">#0079C1</property>
+            <property name="height">8.5in</property>
+            <property name="width">11in</property>
+            <property name="showHeaderOnFirst">true</property>
+            <property name="showFooterOnLast">false</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="8">
+            <property name="fontFamily">"Calibri Light"</property>
+            <property name="fontSize">12%</property>
+            <property name="textAlign">center</property>
+            <column id="444"/>
+            <row id="1407">
+                <property name="fontSize">8pt</property>
+                <property name="verticalAlign">bottom</property>
+                <property name="height">0.5520833333333334in</property>
+                <cell id="1408">
+                    <property name="paddingLeft">1pt</property>
+                    <property name="paddingBottom">1pt</property>
+                    <property name="paddingRight">1pt</property>
+                    <property name="textAlign">center</property>
+                    <label id="1409">
+                        <property name="fontFamily">"Raleway"</property>
+                        <property name="fontSize">24pt</property>
+                        <property name="color">#FFFFFF</property>
+                        <text-property name="text">Today's Location Event Activity</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="1293">
+                <property name="fontSize">8pt</property>
+                <property name="verticalAlign">middle</property>
+                <cell id="1294">
+                    <property name="paddingLeft">1pt</property>
+                    <property name="paddingRight">1pt</property>
+                    <property name="textAlign">center</property>
+                    <grid id="1370">
+                        <property name="fontFamily">"Raleway"</property>
+                        <property name="fontSize">24pt</property>
+                        <property name="width">3.3645833333333335in</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">xls</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                            <structure>
+                                <property name="format">xlsx</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <expression name="bookmark" type="javascript">"meters"</expression>
+                        <column id="1371"/>
+                        <column id="1372"/>
+                        <column id="1373"/>
+                        <row id="1374">
+                            <cell id="1375">
+                                <table id="1306">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">__ac_group_collapse_level</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="width">1.53in</property>
+                                    <property name="dataSet">Local MySQL DS</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">node</property>
+                                            <text-property name="displayName">node</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["node"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">theEventTime</property>
+                                            <text-property name="displayName">theEventTime</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["theEventTime"]</expression>
+                                            <property name="dataType">date-time</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">totalpeoplecount</property>
+                                            <text-property name="displayName">totalpeoplecount</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["totalpeoplecount"]</expression>
+                                            <property name="dataType">integer</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Aggregation</property>
+                                            <property name="dataType">float</property>
+                                            <simple-property-list name="aggregateOn">
+                                                <value>node1</value>
+                                            </simple-property-list>
+                                            <property name="aggregateFunction">LAST</property>
+                                            <list-property name="arguments">
+                                                <structure>
+                                                    <property name="name">Expression</property>
+                                                    <expression name="value" type="javascript">row["totalpeoplecount"]</expression>
+                                                </structure>
+                                            </list-property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <list-property name="filter">
+                                        <structure>
+                                            <property name="operator">eq</property>
+                                            <expression name="expr" type="javascript">row["node"]</expression>
+                                            <simple-property-list name="value1">
+                                                <value type="javascript">"OT9000-3"</value>
+                                            </simple-property-list>
+                                            <property name="updateAggregation">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <column id="1323">
+                                        <property name="width">1.53in</property>
+                                    </column>
+                                    <header>
+                                        <row id="1417">
+                                            <cell id="1418">
+                                                <label id="1419">
+                                                    <property name="fontFamily">"fontcustom"</property>
+                                                    <property name="fontSize">48pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text"></text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="1307">
+                                            <cell id="1308">
+                                                <label id="1309">
+                                                    <property name="fontSize">14pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text">Breakouts</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                    </header>
+                                    <group id="1381">
+                                        <property name="groupName">node1</property>
+                                        <expression name="keyExpr" type="javascript">row["node"]</expression>
+                                        <property name="hideDetail">false</property>
+                                        <header>
+                                            <row id="1382">
+                                                <cell id="1383">
+                                                    <data id="1461">
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="color">#FFFFFF</property>
+                                                        <property name="resultSetColumn">Aggregation</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </header>
+                                    </group>
+                                </table>
+                            </cell>
+                            <cell id="1377">
+                                <table id="1647">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">__ac_group_collapse_level</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="width">1.53in</property>
+                                    <property name="dataSet">Local MySQL DS</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">node</property>
+                                            <text-property name="displayName">node</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["node"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">theEventTime</property>
+                                            <text-property name="displayName">theEventTime</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["theEventTime"]</expression>
+                                            <property name="dataType">date-time</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">totalpeoplecount</property>
+                                            <text-property name="displayName">totalpeoplecount</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["totalpeoplecount"]</expression>
+                                            <property name="dataType">integer</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Aggregation</property>
+                                            <property name="dataType">float</property>
+                                            <simple-property-list name="aggregateOn">
+                                                <value>node2</value>
+                                            </simple-property-list>
+                                            <property name="aggregateFunction">LAST</property>
+                                            <list-property name="arguments">
+                                                <structure>
+                                                    <property name="name">Expression</property>
+                                                    <expression name="value" type="javascript">row["totalpeoplecount"]</expression>
+                                                </structure>
+                                            </list-property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <list-property name="filter">
+                                        <structure>
+                                            <property name="operator">eq</property>
+                                            <expression name="expr" type="javascript">row["node"]</expression>
+                                            <simple-property-list name="value1">
+                                                <value type="javascript">"OT9000-1"</value>
+                                            </simple-property-list>
+                                            <property name="updateAggregation">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <column id="1658">
+                                        <property name="width">1.53in</property>
+                                    </column>
+                                    <header>
+                                        <row id="1648">
+                                            <cell id="1649">
+                                                <label id="1650">
+                                                    <property name="fontFamily">"fontcustom"</property>
+                                                    <property name="fontSize">48pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text"></text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="1651">
+                                            <cell id="1652">
+                                                <label id="1653">
+                                                    <property name="fontSize">14pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text">Exhibits</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                    </header>
+                                    <group id="1654">
+                                        <property name="groupName">node2</property>
+                                        <expression name="keyExpr" type="javascript">row["node"]</expression>
+                                        <property name="hideDetail">false</property>
+                                        <header>
+                                            <row id="1655">
+                                                <cell id="1656">
+                                                    <data id="1657">
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="color">#FFFFFF</property>
+                                                        <property name="resultSetColumn">Aggregation</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </header>
+                                    </group>
+                                </table>
+                            </cell>
+                            <cell id="1379">
+                                <table id="1389">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">__ac_group_collapse_level</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="width">1.53in</property>
+                                    <property name="dataSet">Local MySQL DS</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">node</property>
+                                            <text-property name="displayName">node</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["node"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">theEventTime</property>
+                                            <text-property name="displayName">theEventTime</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["theEventTime"]</expression>
+                                            <property name="dataType">date-time</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">totalpeoplecount</property>
+                                            <text-property name="displayName">totalpeoplecount</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["totalpeoplecount"]</expression>
+                                            <property name="dataType">integer</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Aggregation</property>
+                                            <property name="dataType">float</property>
+                                            <simple-property-list name="aggregateOn">
+                                                <value>node2</value>
+                                            </simple-property-list>
+                                            <property name="aggregateFunction">LAST</property>
+                                            <list-property name="arguments">
+                                                <structure>
+                                                    <property name="name">Expression</property>
+                                                    <expression name="value" type="javascript">row["totalpeoplecount"]</expression>
+                                                </structure>
+                                            </list-property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <list-property name="filter">
+                                        <structure>
+                                            <property name="operator">eq</property>
+                                            <expression name="expr" type="javascript">row["node"]</expression>
+                                            <simple-property-list name="value1">
+                                                <value type="javascript">"OT9000-2"</value>
+                                            </simple-property-list>
+                                            <property name="updateAggregation">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <column id="1397">
+                                        <property name="width">1.53in</property>
+                                    </column>
+                                    <header>
+                                        <row id="1420">
+                                            <cell id="1421">
+                                                <label id="1422">
+                                                    <property name="fontFamily">"fontcustom"</property>
+                                                    <property name="fontSize">48pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text"></text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="1390">
+                                            <cell id="1391">
+                                                <label id="1392">
+                                                    <property name="fontSize">14pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text">Developer Lab</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                    </header>
+                                    <group id="1393">
+                                        <property name="groupName">node2</property>
+                                        <expression name="keyExpr" type="javascript">row["node"]</expression>
+                                        <property name="hideDetail">false</property>
+                                        <header>
+                                            <row id="1394">
+                                                <cell id="1395">
+                                                    <data id="1463">
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="color">#FFFFFF</property>
+                                                        <property name="resultSetColumn">Aggregation</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </header>
+                                    </group>
+                                </table>
+                            </cell>
+                        </row>
+                        <row id="1671">
+                            <property name="height">20px</property>
+                            <cell id="1672"/>
+                            <cell id="1673"/>
+                            <cell id="1674"/>
+                        </row>
+                        <row id="1564">
+                            <cell id="1565">
+                                <table id="1580">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">__ac_group_collapse_level</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="width">1.53in</property>
+                                    <property name="dataSet">Local MySQL DS</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">node</property>
+                                            <text-property name="displayName">node</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["node"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">theEventTime</property>
+                                            <text-property name="displayName">theEventTime</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["theEventTime"]</expression>
+                                            <property name="dataType">date-time</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">totalpeoplecount</property>
+                                            <text-property name="displayName">totalpeoplecount</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["totalpeoplecount"]</expression>
+                                            <property name="dataType">integer</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Aggregation</property>
+                                            <property name="dataType">float</property>
+                                            <simple-property-list name="aggregateOn">
+                                                <value>node2</value>
+                                            </simple-property-list>
+                                            <property name="aggregateFunction">LAST</property>
+                                            <list-property name="arguments">
+                                                <structure>
+                                                    <property name="name">Expression</property>
+                                                    <expression name="value" type="javascript">row["totalpeoplecount"]</expression>
+                                                </structure>
+                                            </list-property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <list-property name="filter">
+                                        <structure>
+                                            <property name="operator">eq</property>
+                                            <expression name="expr" type="javascript">row["node"]</expression>
+                                            <simple-property-list name="value1">
+                                                <value type="javascript">"OT9000-1"</value>
+                                            </simple-property-list>
+                                            <property name="updateAggregation">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <column id="1591">
+                                        <property name="width">1.53in</property>
+                                    </column>
+                                    <header>
+                                        <row id="1581">
+                                            <cell id="1582">
+                                                <label id="1583">
+                                                    <property name="fontFamily">"fontcustom"</property>
+                                                    <property name="fontSize">48pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text"></text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="1584">
+                                            <cell id="1585">
+                                                <label id="1586">
+                                                    <property name="fontSize">14pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text">Digital Disruption</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                    </header>
+                                    <group id="1587">
+                                        <property name="groupName">node2</property>
+                                        <expression name="keyExpr" type="javascript">row["node"]</expression>
+                                        <property name="hideDetail">false</property>
+                                        <header>
+                                            <row id="1588">
+                                                <cell id="1589">
+                                                    <data id="1590">
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="color">#FFFFFF</property>
+                                                        <property name="resultSetColumn">Aggregation</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </header>
+                                    </group>
+                                </table>
+                            </cell>
+                            <cell id="1566">
+                                <table id="1592">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">__ac_group_collapse_level</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="width">1.53in</property>
+                                    <property name="dataSet">Local MySQL DS</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">node</property>
+                                            <text-property name="displayName">node</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["node"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">theEventTime</property>
+                                            <text-property name="displayName">theEventTime</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["theEventTime"]</expression>
+                                            <property name="dataType">date-time</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">totalpeoplecount</property>
+                                            <text-property name="displayName">totalpeoplecount</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["totalpeoplecount"]</expression>
+                                            <property name="dataType">integer</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Aggregation</property>
+                                            <property name="dataType">float</property>
+                                            <simple-property-list name="aggregateOn">
+                                                <value>node3</value>
+                                            </simple-property-list>
+                                            <property name="aggregateFunction">LAST</property>
+                                            <list-property name="arguments">
+                                                <structure>
+                                                    <property name="name">Expression</property>
+                                                    <expression name="value" type="javascript">row["totalpeoplecount"]</expression>
+                                                </structure>
+                                            </list-property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <list-property name="filter">
+                                        <structure>
+                                            <property name="operator">eq</property>
+                                            <expression name="expr" type="javascript">row["node"]</expression>
+                                            <simple-property-list name="value1">
+                                                <value type="javascript">"OT9000-2"</value>
+                                            </simple-property-list>
+                                            <property name="updateAggregation">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <column id="1603">
+                                        <property name="width">1.53in</property>
+                                    </column>
+                                    <header>
+                                        <row id="1593">
+                                            <cell id="1594">
+                                                <label id="1595">
+                                                    <property name="fontFamily">"fontcustom"</property>
+                                                    <property name="fontSize">48pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text"></text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="1596">
+                                            <cell id="1597">
+                                                <label id="1598">
+                                                    <property name="fontSize">14pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text">Heroes Lounge</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                    </header>
+                                    <group id="1599">
+                                        <property name="groupName">node3</property>
+                                        <expression name="keyExpr" type="javascript">row["node"]</expression>
+                                        <property name="hideDetail">false</property>
+                                        <header>
+                                            <row id="1600">
+                                                <cell id="1601">
+                                                    <data id="1602">
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="color">#FFFFFF</property>
+                                                        <property name="resultSetColumn">Aggregation</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </header>
+                                    </group>
+                                </table>
+                            </cell>
+                            <cell id="1567">
+                                <table id="1635">
+                                    <list-property name="userProperties">
+                                        <structure>
+                                            <property name="name">__ac_group_collapse_level</property>
+                                            <property name="type">string</property>
+                                        </structure>
+                                    </list-property>
+                                    <property name="width">1.53in</property>
+                                    <property name="dataSet">Local MySQL DS</property>
+                                    <list-property name="boundDataColumns">
+                                        <structure>
+                                            <property name="name">node</property>
+                                            <text-property name="displayName">node</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["node"]</expression>
+                                            <property name="dataType">string</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">theEventTime</property>
+                                            <text-property name="displayName">theEventTime</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["theEventTime"]</expression>
+                                            <property name="dataType">date-time</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">totalpeoplecount</property>
+                                            <text-property name="displayName">totalpeoplecount</text-property>
+                                            <expression name="expression" type="javascript">dataSetRow["totalpeoplecount"]</expression>
+                                            <property name="dataType">integer</property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                        <structure>
+                                            <property name="name">Aggregation</property>
+                                            <property name="dataType">float</property>
+                                            <simple-property-list name="aggregateOn">
+                                                <value>node1</value>
+                                            </simple-property-list>
+                                            <property name="aggregateFunction">LAST</property>
+                                            <list-property name="arguments">
+                                                <structure>
+                                                    <property name="name">Expression</property>
+                                                    <expression name="value" type="javascript">row["totalpeoplecount"]</expression>
+                                                </structure>
+                                            </list-property>
+                                            <property name="allowExport">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <list-property name="filter">
+                                        <structure>
+                                            <property name="operator">eq</property>
+                                            <expression name="expr" type="javascript">row["node"]</expression>
+                                            <simple-property-list name="value1">
+                                                <value type="javascript">"OT9000-3"</value>
+                                            </simple-property-list>
+                                            <property name="updateAggregation">true</property>
+                                        </structure>
+                                    </list-property>
+                                    <column id="1646">
+                                        <property name="width">1.53in</property>
+                                    </column>
+                                    <header>
+                                        <row id="1636">
+                                            <cell id="1637">
+                                                <label id="1638">
+                                                    <property name="fontFamily">"fontcustom"</property>
+                                                    <property name="fontSize">48pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text"></text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                        <row id="1639">
+                                            <cell id="1640">
+                                                <label id="1641">
+                                                    <property name="fontSize">14pt</property>
+                                                    <property name="fontWeight">normal</property>
+                                                    <property name="color">#FFFFFF</property>
+                                                    <text-property name="text">Cafe/Lounge</text-property>
+                                                </label>
+                                            </cell>
+                                        </row>
+                                    </header>
+                                    <group id="1642">
+                                        <property name="groupName">node1</property>
+                                        <expression name="keyExpr" type="javascript">row["node"]</expression>
+                                        <property name="hideDetail">false</property>
+                                        <header>
+                                            <row id="1643">
+                                                <cell id="1644">
+                                                    <data id="1645">
+                                                        <property name="fontWeight">bold</property>
+                                                        <property name="color">#FFFFFF</property>
+                                                        <property name="resultSetColumn">Aggregation</property>
+                                                    </data>
+                                                </cell>
+                                            </row>
+                                        </header>
+                                    </group>
+                                </table>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+            <row id="1290">
+                <property name="fontSize">8pt</property>
+                <property name="verticalAlign">middle</property>
+                <property name="height">0.84375in</property>
+                <cell id="1291">
+                    <property name="paddingLeft">1pt</property>
+                    <property name="paddingRight">1pt</property>
+                    <property name="textAlign">center</property>
+                    <property name="verticalAlign">bottom</property>
+                    <label id="1292">
+                        <property name="fontFamily">"Raleway"</property>
+                        <property name="fontSize">24pt</property>
+                        <property name="color">#FFFFFF</property>
+                        <text-property name="text">Insights You Can Use</text-property>
+                    </label>
+                </cell>
+            </row>
+            <row id="420">
+                <property name="fontSize">8pt</property>
+                <property name="verticalAlign">middle</property>
+                <cell id="441">
+                    <property name="paddingLeft">1pt</property>
+                    <property name="paddingRight">1pt</property>
+                    <property name="textAlign">center</property>
+                    <grid id="1219">
+                        <property name="fontFamily">"Raleway"</property>
+                        <property name="width">6.8125in</property>
+                        <list-property name="visibility">
+                            <structure>
+                                <property name="format">xls</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                            <structure>
+                                <property name="format">xlsx</property>
+                                <expression name="valueExpr" type="javascript">true</expression>
+                            </structure>
+                        </list-property>
+                        <expression name="bookmark" type="javascript">"meters"</expression>
+                        <column id="1220">
+                            <property name="width">0.5416666666666666in</property>
+                        </column>
+                        <column id="1221">
+                            <property name="width">2.4479166666666665in</property>
+                        </column>
+                        <column id="186">
+                            <property name="width">3.75in</property>
+                        </column>
+                        <row id="1222">
+                            <cell id="1223">
+                                <label id="1545">
+                                    <property name="fontFamily">"fontcustom"</property>
+                                    <property name="fontSize">48pt</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <text-property name="text"></text-property>
+                                </label>
+                            </cell>
+                            <cell id="1225">
+                                <property name="verticalAlign">middle</property>
+                                <label id="1547">
+                                    <property name="fontSize">14pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
+                                    <text-property name="text">Hardest Time to Find a Seat at Heroes Lounge</text-property>
+                                </label>
+                            </cell>
+                            <cell id="184">
+                                <property name="verticalAlign">middle</property>
+                                <label id="1548">
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
+                                    <text-property name="text">11:00 and 2:00</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="1549">
+                            <cell id="1550">
+                                <label id="1557">
+                                    <property name="fontFamily">"fontcustom"</property>
+                                    <property name="fontSize">48pt</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <text-property name="text"></text-property>
+                                </label>
+                            </cell>
+                            <cell id="1551">
+                                <property name="verticalAlign">middle</property>
+                                <label id="1558">
+                                    <property name="fontSize">14pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
+                                    <text-property name="text">Best Time to Visit Exhibits</text-property>
+                                </label>
+                            </cell>
+                            <cell id="1552">
+                                <property name="verticalAlign">middle</property>
+                                <label id="1559">
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
+                                    <text-property name="text">10:00-11:00 and 2:00-3:00</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                        <row id="1553">
+                            <cell id="1554">
+                                <label id="1560">
+                                    <property name="fontFamily">"fontcustom"</property>
+                                    <property name="fontSize">48pt</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <text-property name="text"></text-property>
+                                </label>
+                            </cell>
+                            <cell id="1555">
+                                <property name="verticalAlign">middle</property>
+                                <label id="1561">
+                                    <property name="fontSize">14pt</property>
+                                    <property name="fontWeight">normal</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
+                                    <text-property name="text">Busiest Break Times</text-property>
+                                </label>
+                            </cell>
+                            <cell id="1556">
+                                <property name="verticalAlign">middle</property>
+                                <label id="1562">
+                                    <property name="fontSize">18pt</property>
+                                    <property name="fontWeight">bold</property>
+                                    <property name="color">#FFFFFF</property>
+                                    <property name="textAlign">right</property>
+                                    <text-property name="text">10:00 and 2:00</text-property>
+                                </label>
+                            </cell>
+                        </row>
+                    </grid>
+                </cell>
+            </row>
+        </grid>
+    </body>
+</report>
