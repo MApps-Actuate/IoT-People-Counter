@@ -314,7 +314,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                         <property name="fontFamily">"Raleway"</property>
                         <property name="fontSize">24pt</property>
                         <property name="color">#FFFFFF</property>
-                        <text-property name="text">Today's Location Event Activity</text-property>
+                        <text-property name="text">Today's Location Activity</text-property>
                     </label>
                 </cell>
             </row>
@@ -395,7 +395,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                             <property name="operator">eq</property>
                                             <expression name="expr" type="javascript">row["node"]</expression>
                                             <simple-property-list name="value1">
-                                                <value type="javascript">"OT9000-3"</value>
+                                                <value type="javascript">"OT9000-6"</value>
                                             </simple-property-list>
                                             <property name="updateAggregation">true</property>
                                         </structure>
@@ -495,7 +495,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                             <property name="operator">eq</property>
                                             <expression name="expr" type="javascript">row["node"]</expression>
                                             <simple-property-list name="value1">
-                                                <value type="javascript">"OT9000-1"</value>
+                                                <value type="javascript">"OT9000-4"</value>
                                             </simple-property-list>
                                             <property name="updateAggregation">true</property>
                                         </structure>
@@ -521,7 +521,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                                     <property name="fontSize">14pt</property>
                                                     <property name="fontWeight">normal</property>
                                                     <property name="color">#FFFFFF</property>
-                                                    <text-property name="text">Exhibits</text-property>
+                                                    <text-property name="text">Exhibit Zone 1</text-property>
                                                 </label>
                                             </cell>
                                         </row>
@@ -595,7 +595,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                             <property name="operator">eq</property>
                                             <expression name="expr" type="javascript">row["node"]</expression>
                                             <simple-property-list name="value1">
-                                                <value type="javascript">"OT9000-2"</value>
+                                                <value type="javascript">"OT9000-5"</value>
                                             </simple-property-list>
                                             <property name="updateAggregation">true</property>
                                         </structure>
@@ -829,7 +829,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                                     <property name="fontSize">14pt</property>
                                                     <property name="fontWeight">normal</property>
                                                     <property name="color">#FFFFFF</property>
-                                                    <text-property name="text">Heroes Lounge</text-property>
+                                                    <text-property name="text">Exhibit Zone 2</text-property>
                                                 </label>
                                             </cell>
                                         </row>
