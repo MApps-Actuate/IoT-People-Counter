@@ -282,16 +282,16 @@ GROUP BY DATE(event_time), node]]></xml-property>
     </themes>
     <page-setup>
         <simple-master-page name="Simple MasterPage" id="2">
-            <property name="type">us-legal</property>
+            <property name="type">custom</property>
             <property name="orientation">landscape</property>
             <property name="topMargin">0.25in</property>
             <property name="leftMargin">0.25in</property>
             <property name="bottomMargin">0in</property>
             <property name="rightMargin">0.25in</property>
             <property name="backgroundColor">#0079C1</property>
-            <property name="height">8.5in</property>
-            <property name="width">11in</property>
-            <property name="showHeaderOnFirst">true</property>
+            <property name="height">668px</property>
+            <property name="width">855px</property>
+            <property name="showHeaderOnFirst">false</property>
             <property name="showFooterOnLast">false</property>
         </simple-master-page>
     </page-setup>
@@ -959,7 +959,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
             <row id="1290">
                 <property name="fontSize">8pt</property>
                 <property name="verticalAlign">middle</property>
-                <property name="height">0.84375in</property>
+                <property name="height">0.6770833333333334in</property>
                 <cell id="1291">
                     <property name="paddingLeft">1pt</property>
                     <property name="paddingRight">1pt</property>
@@ -982,6 +982,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                     <property name="textAlign">center</property>
                     <grid id="1219">
                         <property name="fontFamily">"Raleway"</property>
+                        <property name="height">2.3229166666666665in</property>
                         <property name="width">6.8125in</property>
                         <list-property name="visibility">
                             <structure>
@@ -1007,7 +1008,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                             <cell id="1223">
                                 <label id="1545">
                                     <property name="fontFamily">"fontcustom"</property>
-                                    <property name="fontSize">48pt</property>
+                                    <property name="fontSize">40pt</property>
                                     <property name="color">#FFFFFF</property>
                                     <text-property name="text"></text-property>
                                 </label>
@@ -1037,7 +1038,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                             <cell id="1550">
                                 <label id="1557">
                                     <property name="fontFamily">"fontcustom"</property>
-                                    <property name="fontSize">48pt</property>
+                                    <property name="fontSize">40pt</property>
                                     <property name="color">#FFFFFF</property>
                                     <text-property name="text"></text-property>
                                 </label>
@@ -1067,7 +1068,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                             <cell id="1554">
                                 <label id="1560">
                                     <property name="fontFamily">"fontcustom"</property>
-                                    <property name="fontSize">48pt</property>
+                                    <property name="fontSize">40pt</property>
                                     <property name="color">#FFFFFF</property>
                                     <text-property name="text"></text-property>
                                 </label>
@@ -1094,6 +1095,16 @@ GROUP BY DATE(event_time), node]]></xml-property>
                             </cell>
                         </row>
                     </grid>
+                </cell>
+            </row>
+            <row id="1675">
+                <property name="fontSize">8pt</property>
+                <property name="verticalAlign">middle</property>
+                <property name="height">0.5in</property>
+                <cell id="1676">
+                    <property name="paddingLeft">1pt</property>
+                    <property name="paddingRight">1pt</property>
+                    <property name="textAlign">center</property>
                 </cell>
             </row>
         </grid>
