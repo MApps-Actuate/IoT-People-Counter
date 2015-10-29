@@ -138,7 +138,6 @@ function onConnectionLost(responseObject) {
         <text id="1447">
             <property name="contentType">html</property>
             <text-property name="content"><![CDATA[<script>
-var factor = 20;
 var n1x = 343, n1y = 335;
 $("#circle1").css({ "position":"absolute", "left":n1x, "top":n1y, "width":"0px", "height":"0px", "border":"1px solid #8AD2E7", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#8AD2E7" });
 
@@ -185,12 +184,41 @@ function changeSize(circNum, newSize) {
      if (circNum === 5) { nx = n5x; ny = n5y; labText = "Developer Lab ("; }
      if (circNum === 6) { nx = n6x; ny = n6y; labText = "Breakout Area ("; }
      var idCirc = '#circle' + circNum;
-     var newX = nx - (newSize*factor/2);
-     var newY = ny - (newSize*factor/2);
-	 $(idCirc).animate( { height:newSize*factor, width:newSize*factor, left:newX, top:newY }, "slow" );
+     var theFactor = getFactor(newSize);
+     var newX = nx - (newSize*theFactor/2);
+     var newY = ny - (newSize*theFactor/2);
+	 $(idCirc).animate( { height:newSize*theFactor, width:newSize*theFactor, left:newX, top:newY }, "slow" );
 	 
 	 var idLab = '#label' + circNum;
 	 $(idLab).text(labText + newSize + ")");
+}
+
+var values = [];
+var factor = 20;
+var count = 0;
+
+function getFactor(newSize) {
+   // Add newSize to array
+   values.push(newSize);
+   // Only allow 24 values
+   if (values.length > 24) values.shift();
+   
+   // Find highest value in array if every 12th call
+   if (count > 12) {
+      count = 0;
+      var values2 = [];
+      values2 = values2.concat(values);
+      values2.sort(function(a, b){return b-a});
+      // Calculate new factor based on max value to control bubble size
+      var max = values2[0];
+      if (max > 99) max = 99; // Limit to less than 100 for math not to be negative or zero
+      factor = 20 * (1 - (max / 100)); // Set factor to percent of 20 (20 is biggest factor to fit correctly)
+      if (factor < 1) factor = 1;
+      console.log("max is " + max + ", factor is " + factor);
+   }
+   console.log("count is " + count + " factor is " + factor);
+   count++;
+   return factor;
 }
 
 </script>
@@ -229,21 +257,22 @@ $(document).ready(function(){
 
 function displayNodesAll()
 {
-    var nodenum = Math.floor((Math.random() * 9) + 1);
+	var upperNum = 100;
+    var nodenum = Math.floor((Math.random() * upperNum) + 1);
     changeSize(1,nodenum);
-    nodenum = Math.floor((Math.random() * 9) + 1);
+    nodenum = Math.floor((Math.random() * upperNum) + 1);
     changeSize(2,nodenum);
-    nodenum = Math.floor((Math.random() * 9) + 1);
+    nodenum = Math.floor((Math.random() * upperNum) + 1);
     changeSize(3,nodenum);
-    nodenum = Math.floor((Math.random() * 9) + 1);
+    nodenum = Math.floor((Math.random() * upperNum) + 1);
     changeSize(4,nodenum);
-    nodenum = Math.floor((Math.random() * 9) + 1);
+    nodenum = Math.floor((Math.random() * upperNum) + 1);
     changeSize(5,nodenum);
-    nodenum = Math.floor((Math.random() * 9) + 1);
+    nodenum = Math.floor((Math.random() * upperNum) + 1);
     changeSize(6,nodenum);
 }
 </script>
-<button id='btnall' style='width:100px; height:50px; background-color:#FFFFFF; color:#000000; border:none'>Click</button>]]></text-property>
+<button id='btnall' style='width:100px; height:50px; background-color:#0079C1; color:#0079C1; border:none'>Simulate</button>]]></text-property>
         </text>
     </body>
 </report>
