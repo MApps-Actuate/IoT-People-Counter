@@ -521,7 +521,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                                     <property name="fontSize">14pt</property>
                                                     <property name="fontWeight">normal</property>
                                                     <property name="color">#FFFFFF</property>
-                                                    <text-property name="text">Exhibit Zone 1</text-property>
+                                                    <text-property name="text">Exhibits North</text-property>
                                                 </label>
                                             </cell>
                                         </row>
@@ -803,7 +803,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                             <property name="operator">eq</property>
                                             <expression name="expr" type="javascript">row["node"]</expression>
                                             <simple-property-list name="value1">
-                                                <value type="javascript">"OT9000-2"</value>
+                                                <value type="javascript">"OT9000-3"</value>
                                             </simple-property-list>
                                             <property name="updateAggregation">true</property>
                                         </structure>
@@ -829,7 +829,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                                     <property name="fontSize">14pt</property>
                                                     <property name="fontWeight">normal</property>
                                                     <property name="color">#FFFFFF</property>
-                                                    <text-property name="text">Exhibit Zone 2</text-property>
+                                                    <text-property name="text">Exhibits South</text-property>
                                                 </label>
                                             </cell>
                                         </row>
@@ -903,7 +903,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                             <property name="operator">eq</property>
                                             <expression name="expr" type="javascript">row["node"]</expression>
                                             <simple-property-list name="value1">
-                                                <value type="javascript">"OT9000-3"</value>
+                                                <value type="javascript">"OT9000-2"</value>
                                             </simple-property-list>
                                             <property name="updateAggregation">true</property>
                                         </structure>
@@ -1020,7 +1020,7 @@ GROUP BY DATE(event_time), node]]></xml-property>
                                     <property name="fontWeight">normal</property>
                                     <property name="color">#FFFFFF</property>
                                     <property name="textAlign">right</property>
-                                    <text-property name="text">Hardest Time to Find a Seat at Heroes Lounge</text-property>
+                                    <text-property name="text">Hardest Time to Find a Seat at Cafe/Lounge</text-property>
                                 </label>
                             </cell>
                             <cell id="184">

@@ -138,49 +138,51 @@ function onConnectionLost(responseObject) {
         <text id="1447">
             <property name="contentType">html</property>
             <text-property name="content"><![CDATA[<script>
-var n1x = 343, n1y = 335;
+$("#title1").css({ "position":"absolute", "left":15, "top":15, "width":"365px", "height":"50px", "border":"1px solid #0079C1", "background-color":"#0079C1", "color":"white", "font-family":"raleway,arial", "font-size":"28px", "padding-left":"10px", "padding-top":"10px" });
+
+var n1x = 336, n1y = 326;
 $("#circle1").css({ "position":"absolute", "left":n1x, "top":n1y, "width":"0px", "height":"0px", "border":"1px solid #8AD2E7", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#8AD2E7" });
 
-var n2x = 488, n2y = 370;
+var n2x = 538, n2y = 379;
 $("#circle2").css({ "position":"absolute", "left":n2x, "top":n2y, "width":"0px", "height":"0px", "border":"1px solid #99BADD", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#99BADD" });
 
-var n3x = 696, n3y = 406;
+var n3x = 695, n3y = 345;
 $("#circle3").css({ "position":"absolute", "left":n3x, "top":n3y, "width":"0px", "height":"0px", "border":"1px solid #6A8AC7", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#6A8AC7" });
 
-var n4x = 586, n4y = 193;
+var n4x = 502, n4y = 203;
 $("#circle4").css({ "position":"absolute", "left":n4x, "top":n4y, "width":"0px", "height":"0px", "border":"1px solid #2B3282", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#2B3282" });
 
-var n5x = 149, n5y = 571;
+var n5x = 165, n5y = 503;
 $("#circle5").css({ "position":"absolute", "left":n5x, "top":n5y, "width":"0px", "height":"0px", "border":"1px solid #26387A", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#26387A" });
 
-var n6x = 148, n6y = 194;
+var n6x = 165, n6y = 202;
 $("#circle6").css({ "position":"absolute", "left":n6x, "top":n6y, "width":"0px", "height":"0px", "border":"1px solid #1E2C59", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#1E2C59" });
 
-var l1x = 218, l1y = 233;
+var l1x = 212, l1y = 245;
 $("#label1").css({ "position":"absolute", "left":l1x, "top":l1y, "width":"250px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
 
-var l2x = 391, l2y = 279;
+var l2x = 441, l2y = 309;
 $("#label2").css({ "position":"absolute", "left":l2x, "top":l2y, "width":"195px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
 
-var l3x = 609, l3y = 317;
+var l3x = 608, l3y = 253;
 $("#label3").css({ "position":"absolute", "left":l3x, "top":l3y, "width":"175px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
 
-var l4x = 499, l4y = 93;
+var l4x = 416, l4y = 123;
 $("#label4").css({ "position":"absolute", "left":l4x, "top":l4y, "width":"175px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
 
-var l5x = 62, l5y = 471;
+var l5x = 78, l5y = 424;
 $("#label5").css({ "position":"absolute", "left":l5x, "top":l5y, "width":"175px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
 
-var l6x = 61, l6y = 93;
+var l6x = 78, l6y = 122;
 $("#label6").css({ "position":"absolute", "left":l6x, "top":l6y, "width":"175px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
 
 
 function changeSize(circNum, newSize) {
      var nx = 0, ny = 0; labText = "Zone";
      if (circNum === 1) { nx = n1x; ny = n1y; labText = "Digital Disruption Zone (";}
-     if (circNum === 2) { nx = n2x; ny = n2y; labText = "Heroes Lounge ("; }
-     if (circNum === 3) { nx = n3x; ny = n3y; labText = "Cafe/Lounge ("; }
-     if (circNum === 4) { nx = n4x; ny = n4y; labText = "Exhibit Zone ("; }
+     if (circNum === 2) { nx = n2x; ny = n2y; labText = "Cafe/Lounge ("; }
+     if (circNum === 3) { nx = n3x; ny = n3y; labText = "Exhibits South ("; }
+     if (circNum === 4) { nx = n4x; ny = n4y; labText = "Exhibits North ("; }
      if (circNum === 5) { nx = n5x; ny = n5y; labText = "Developer Lab ("; }
      if (circNum === 6) { nx = n6x; ny = n6y; labText = "Breakout Area ("; }
      var idCirc = '#circle' + circNum;
@@ -194,7 +196,8 @@ function changeSize(circNum, newSize) {
 }
 
 var values = [];
-var factor = 20;
+var initFactor = 8;
+var factor = initFactor;
 var count = 0;
 
 function getFactor(newSize) {
@@ -212,17 +215,16 @@ function getFactor(newSize) {
       // Calculate new factor based on max value to control bubble size
       var max = values2[0];
       if (max > 99) max = 99; // Limit to less than 100 for math not to be negative or zero
-      factor = 20 * (1 - (max / 100)); // Set factor to percent of 20 (20 is biggest factor to fit correctly)
+      factor = initFactor * (1 - (max / 100)); // Set factor to percent of initFactor
       if (factor < 1) factor = 1;
-      console.log("max is " + max + ", factor is " + factor);
+      //console.log("max is " + max + ", factor is " + factor);
    }
-   console.log("count is " + count + " factor is " + factor);
    count++;
    return factor;
 }
 
 </script>
-
+<div id="title1">Real-time Location Activity</div>
 <div id="circle1"></div>
 <div id="circle2"></div>
 <div id="circle3"></div>
@@ -230,9 +232,9 @@ function getFactor(newSize) {
 <div id="circle5"></div>
 <div id="circle6"></div>
 <div id="label1">Digital Disruption Zone</div>
-<div id="label2">Heroes Lounge</div>
-<div id="label3">Cafe/Lounge</div>
-<div id="label4">Exhibit Zone</div>
+<div id="label2">Cafe/Lounge</div>
+<div id="label3">Exhibits South</div>
+<div id="label4">Exhibits North</div>
 <div id="label5">Developer Lab</div>
 <div id="label6">Breakout Area</div>]]></text-property>
         </text>
@@ -257,7 +259,7 @@ $(document).ready(function(){
 
 function displayNodesAll()
 {
-	var upperNum = 100;
+	var upperNum = 30;
     var nodenum = Math.floor((Math.random() * upperNum) + 1);
     changeSize(1,nodenum);
     nodenum = Math.floor((Math.random() * upperNum) + 1);
