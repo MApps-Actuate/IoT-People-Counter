@@ -51,7 +51,6 @@ function onMessageArrived(message) {
             try {
 				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
 				changeSize(1,Number(obj.peopleCount));
-				changeSize(4,Number(obj.peopleCount));
             }catch(err){
             	console.log(err);
             }
@@ -59,7 +58,6 @@ function onMessageArrived(message) {
             try {
 				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
 				changeSize(2,Number(obj.peopleCount));
-				changeSize(5,Number(obj.peopleCount));
             }catch(err){
             	console.log(err);
             }
@@ -67,7 +65,6 @@ function onMessageArrived(message) {
             try {
 				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
 				changeSize(3,Number(obj.peopleCount));
-				changeSize(6,Number(obj.peopleCount));
             }catch(err){
             	console.log(err);
             }
