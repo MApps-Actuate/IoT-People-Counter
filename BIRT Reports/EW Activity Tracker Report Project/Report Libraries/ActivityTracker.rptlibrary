@@ -28,7 +28,7 @@
                 </ex-property>
             </list-property>
             <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
-            <property name="odaURL">jdbc:mysql://10.59.23.45:3306/people_counter?useCursorFetch=true&amp;defaultFetchSize=2000</property>
+            <property name="odaURL">jdbc:mysql://10.59.23.56:3306/people_counter?useCursorFetch=true&amp;defaultFetchSize=2000</property>
             <property name="odaUser">skynet</property>
         </oda-data-source>
     </data-sources>

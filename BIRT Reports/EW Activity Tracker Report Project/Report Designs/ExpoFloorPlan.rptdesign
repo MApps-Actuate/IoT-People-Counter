@@ -2,7 +2,7 @@
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
     <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
     <property name="units">in</property>
-    <method name="clientInitialize"><![CDATA[var host     = "10.59.23.45"; // CHANGE ME WHEN DEPLOYED
+    <method name="clientInitialize"><![CDATA[var host     = "10.59.23.56"; // CHANGE ME WHEN DEPLOYED (San Mateo 10.59.23.56
 var port     = 9001;
 var clientID = "BIRT"  + Math.floor(Math.random() * 1000000) + 1;
 var client;
@@ -193,7 +193,7 @@ function changeSize(circNum, newSize) {
 }
 
 var values = [];
-var initFactor = 8;
+var initFactor = 25;
 var factor = initFactor;
 var count = 0;
 
@@ -256,7 +256,7 @@ $(document).ready(function(){
 
 function displayNodesAll()
 {
-	var upperNum = 30;
+	var upperNum = 8;
     var nodenum = Math.floor((Math.random() * upperNum) + 1);
     changeSize(1,nodenum);
     nodenum = Math.floor((Math.random() * upperNum) + 1);

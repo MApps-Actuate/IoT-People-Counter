@@ -1,0 +1,74 @@
+<html>
+<head>
+<style>
+body {
+    background-color: #0079C1;
+	width: 1800px;
+	height: 700px;
+} 
+
+.report1 {
+	width: 855px;
+	height: 700px;
+}
+
+.report2 {
+	position: relative;
+	width: 855px;
+	height: 700px;
+}
+</style>
+<script type="text/javascript" language="JavaScript" src="http://10.59.23.45:8700/iportal/jsapi"></script>
+<script>
+function acload () {
+	debugger;
+	actuate.load("viewer");
+	reqOps = new actuate.RequestOptions( );
+	reqOps.setRepositoryType(actuate.RequestOptions.REPOSITORY_ENCYCLOPEDIA);
+	reqOps.setVolumeProfile( "Default Volume" );
+	actuate.initialize("http://10.59.23.45:8700/iportal", reqOps, "Administrator", "", afterInit); 
+};
+
+function afterInit() {
+	var viewer1 = new actuate.Viewer("container1");
+	viewer1.setReportName("/Applications/EW Activity Tracker Report Project/Report Designs/ExpoFloorPlan.rptdesign");
+
+	viewer1.setContentMargin(0);
+	viewer1.setWidth(855);
+	viewer1.setHeight(668);
+
+	var uiOpts = new actuate.viewer.UIOptions();
+	uiOpts.enableToolBar(false);
+	viewer1.setUIOptions(uiOpts);
+
+	viewer1.submit();
+
+	var viewer2 = new actuate.Viewer("container2");
+	viewer2.setReportName("/Applications/EW Activity Tracker Report Project/Report Designs/Daily Infographic.rptdesign");
+
+	viewer2.setContentMargin(0);
+	viewer2.setWidth(855);
+	viewer2.setHeight(668);
+
+	var uiOpts = new actuate.viewer.UIOptions();
+	uiOpts.enableToolBar(false);
+	viewer2.setUIOptions(uiOpts);
+
+	viewer2.submit();
+};
+</script>
+</head>
+<body onload="acload()">
+<table>
+  <tr>
+     <td>
+       <div id="container1" class="report1"></div>
+     </td>
+	 <td>
+       <div id="container2" class="report2"></div>
+	 </td>
+  </tr>
+</table>
+
+</body>
+</html>
