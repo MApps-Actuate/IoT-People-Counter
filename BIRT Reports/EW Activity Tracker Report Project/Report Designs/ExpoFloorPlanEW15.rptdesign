@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201601291629 Build &lt;@BUILD@></property>
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v20150206-1039 Build &lt;4.2.3.v20150206-1039></property>
     <property name="units">in</property>
-    <method name="clientInitialize"><![CDATA[var host     = "10.59.23.51"; // CHANGE ME WHEN DEPLOYED (San Mateo 10.59.23.51
+    <method name="clientInitialize"><![CDATA[var host     = "10.59.23.56"; // CHANGE ME WHEN DEPLOYED (San Mateo 10.59.23.56
 var port     = 9001;
 var clientID = "BIRT"  + Math.floor(Math.random() * 1000000) + 1;
 var client;
@@ -54,7 +54,6 @@ function onMessageArrived(message) {
             }catch(err){
             	console.log(err);
             }
-/*
         }else if(key == 'OT9000-2'){
             try {
 				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
@@ -62,32 +61,31 @@ function onMessageArrived(message) {
             }catch(err){
             	console.log(err);
             }
-*/
         }else if(key == 'OT9000-3'){
-            try {
-				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
-				changeSize(2,Number(obj.peopleCount));
-            }catch(err){
-            	console.log(err);
-            }
-        }else if(key == 'OT9000-4'){
             try {
 				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
 				changeSize(3,Number(obj.peopleCount));
             }catch(err){
             	console.log(err);
             }
-        }else if(key == 'OT9000-5'){
+        }else if(key == 'OT9000-4'){
             try {
 				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
 				changeSize(4,Number(obj.peopleCount));
             }catch(err){
             	console.log(err);
             }
-        }else if(key == 'OT9000-6'){
+        }else if(key == 'OT9000-5'){
             try {
 				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
 				changeSize(5,Number(obj.peopleCount));
+            }catch(err){
+            	console.log(err);
+            }
+        }else if(key == 'OT9000-6'){
+            try {
+				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
+				changeSize(6,Number(obj.peopleCount));
             }catch(err){
             	console.log(err);
             }
@@ -139,43 +137,51 @@ function onConnectionLost(responseObject) {
             <text-property name="content"><![CDATA[<script>
 $("#title1").css({ "position":"absolute", "left":15, "top":15, "width":"365px", "height":"50px", "border":"1px solid #0079C1", "background-color":"#0079C1", "color":"white", "font-family":"raleway,arial", "font-size":"28px", "padding-left":"10px", "padding-top":"10px" });
 
-var n1x = 305, n1y = 347;
-$("#circle1").css({ "position":"absolute", "left":n1x, "top":n1y, "width":"0px", "height":"0px", "border":"1px solid #ff843d", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#ff843d" });
+var n1x = 336, n1y = 326;
+$("#circle1").css({ "position":"absolute", "left":n1x, "top":n1y, "width":"0px", "height":"0px", "border":"1px solid #8AD2E7", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#8AD2E7" });
 
-var n2x = 387, n2y = 243;
-$("#circle2").css({ "position":"absolute", "left":n2x, "top":n2y, "width":"0px", "height":"0px", "border":"1px solid #a800c2", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#a800c2" });
+var n2x = 538, n2y = 379;
+$("#circle2").css({ "position":"absolute", "left":n2x, "top":n2y, "width":"0px", "height":"0px", "border":"1px solid #99BADD", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#99BADD" });
 
-var n3x = 556, n3y = 319;
-$("#circle3").css({ "position":"absolute", "left":n3x, "top":n3y, "width":"0px", "height":"0px", "border":"1px solid #1ac200", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#1ac200" });
+var n3x = 695, n3y = 345;
+$("#circle3").css({ "position":"absolute", "left":n3x, "top":n3y, "width":"0px", "height":"0px", "border":"1px solid #6A8AC7", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#6A8AC7" });
 
-var n4x = 704, n4y = 493;
-$("#circle4").css({ "position":"absolute", "left":n4x, "top":n4y, "width":"0px", "height":"0px", "border":"1px solid #3db8ff", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#3db8ff" });
+var n4x = 502, n4y = 203;
+$("#circle4").css({ "position":"absolute", "left":n4x, "top":n4y, "width":"0px", "height":"0px", "border":"1px solid #2B3282", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#2B3282" });
 
-var n5x = 525, n5y = 578;
-$("#circle5").css({ "position":"absolute", "left":n5x, "top":n5y, "width":"0px", "height":"0px", "border":"1px solid #c2a800", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#c2a800" });
+var n5x = 165, n5y = 503;
+$("#circle5").css({ "position":"absolute", "left":n5x, "top":n5y, "width":"0px", "height":"0px", "border":"1px solid #26387A", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#26387A" });
 
-var l1x = 50, l1y = 444;
-$("#label1").css({ "position":"absolute", "left":l1x, "top":l1y, "width":"195px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+var n6x = 165, n6y = 202;
+$("#circle6").css({ "position":"absolute", "left":n6x, "top":n6y, "width":"0px", "height":"0px", "border":"1px solid #1E2C59", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#1E2C59" });
 
-var l2x = 300, l2y = 125;
-$("#label2").css({ "position":"absolute", "left":l2x, "top":l2y, "width":"170px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+var l1x = 212, l1y = 245;
+$("#label1").css({ "position":"absolute", "left":l1x, "top":l1y, "width":"250px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
 
-var l3x = 525, l3y = 210;
-$("#label3").css({ "position":"absolute", "left":l3x, "top":l3y, "width":"195px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+var l2x = 441, l2y = 309;
+$("#label2").css({ "position":"absolute", "left":l2x, "top":l2y, "width":"195px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
 
-var l4x = 640, l4y = 400;
+var l3x = 608, l3y = 253;
+$("#label3").css({ "position":"absolute", "left":l3x, "top":l3y, "width":"175px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+
+var l4x = 416, l4y = 123;
 $("#label4").css({ "position":"absolute", "left":l4x, "top":l4y, "width":"175px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
 
-var l5x = 230, l5y = 580;
+var l5x = 78, l5y = 424;
 $("#label5").css({ "position":"absolute", "left":l5x, "top":l5y, "width":"175px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+
+var l6x = 78, l6y = 122;
+$("#label6").css({ "position":"absolute", "left":l6x, "top":l6y, "width":"175px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+
 
 function changeSize(circNum, newSize) {
      var nx = 0, ny = 0; labText = "Zone";
-     if (circNum === 1) { nx = n1x; ny = n1y; labText = "Analytics Theatre (";}
+     if (circNum === 1) { nx = n1x; ny = n1y; labText = "Digital Disruption Zone (";}
      if (circNum === 2) { nx = n2x; ny = n2y; labText = "Cafe/Lounge ("; }
-     if (circNum === 3) { nx = n3x; ny = n3y; labText = "Information Desk ("; }
-     if (circNum === 4) { nx = n4x; ny = n4y; labText = "Innovation Lab ("; }
+     if (circNum === 3) { nx = n3x; ny = n3y; labText = "Exhibits South ("; }
+     if (circNum === 4) { nx = n4x; ny = n4y; labText = "Exhibits North ("; }
      if (circNum === 5) { nx = n5x; ny = n5y; labText = "Developer Lab ("; }
+     if (circNum === 6) { nx = n6x; ny = n6y; labText = "Breakout Area ("; }
      var idCirc = '#circle' + circNum;
      var theFactor = getFactor(newSize);
      var newX = nx - (newSize*theFactor/2);
@@ -221,12 +227,13 @@ function getFactor(newSize) {
 <div id="circle3"></div>
 <div id="circle4"></div>
 <div id="circle5"></div>
-<div id="label1">Analytics Theatre</div>
+<div id="circle6"></div>
+<div id="label1">Digital Disruption Zone</div>
 <div id="label2">Cafe/Lounge</div>
-<div id="label3">Information Desk</div>
-<div id="label4">Innovation Lab</div>
+<div id="label3">Exhibits South</div>
+<div id="label4">Exhibits North</div>
 <div id="label5">Developer Lab</div>
-]]></text-property>
+<div id="label6">Breakout Area</div>]]></text-property>
         </text>
         <image id="1448">
             <property name="height">668px</property>
@@ -260,6 +267,8 @@ function displayNodesAll()
     changeSize(4,nodenum);
     nodenum = Math.floor((Math.random() * upperNum) + 1);
     changeSize(5,nodenum);
+    nodenum = Math.floor((Math.random() * upperNum) + 1);
+    changeSize(6,nodenum);
 }
 </script>
 <button id='btnall' style='width:100px; height:50px; background-color:#0079C1; color:#0079C1; border:none'>Simulate</button>]]></text-property>
