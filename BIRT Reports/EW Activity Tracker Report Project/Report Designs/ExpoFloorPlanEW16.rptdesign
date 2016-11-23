@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.6.0.v201601291629 Build &lt;@BUILD@></property>
+    <property name="units">in</property>
+    <method name="clientInitialize"><![CDATA[var host     = "172.21.32.21"; // CHANGE ME WHEN DEPLOYED (San Mateo 10.59.23.51
+var port     = 9001;
+var clientID = "BIRT"  + Math.floor(Math.random() * 1000000) + 1;
+var client;
+var mqtt     = host + ":8700/iot/js/mqttws31.js";
+var hashmap  = new Object();
+
+$(document).ready(function() {
+	$.getScript( "http://" + host + ":8700/iot/js/mqttws31.js", function( data, textStatus, jqxhr ) {
+  		console.log( "Load was performed." );
+
+  		try {
+			client = new Paho.MQTT.Client(host, port, clientID);
+
+		    client.onConnectionLost = onConnectionLost;
+	    	client.onMessageArrived = onMessageArrived;
+
+			console.log('DONE');
+
+		    client.connect({
+   	    		onSuccess: onConnect
+		    });
+  		}catch(err){
+  			console.log(err.message);
+  		}
+	});
+});
+
+function onConnect() {
+	console.log(new Date() + ': Connected to ' + host);
+	client.subscribe("/beat/#");
+}
+
+function onMessageArrived(message) {
+	//console.log(new Date() + ': Message Arrived! ' + message.payloadString);
+	//$('#testDiv').html(message.payloadString);
+
+    // Parse node and counts from message
+    var obj = jQuery.parseJSON( message.payloadString );
+    // {"node":"OT9000-1","timestamp":1234,"ip";"192.168.2.1","peopleCount":4}
+
+	var key = obj.node;
+	//console.log("key is " + key);
+	
+        if(key == 'OT9000-1') {
+            //
+            try {
+				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
+				changeSize(1,Number(obj.peopleCount));
+            }catch(err){
+            	console.log(err);
+            }
+/*
+        }else if(key == 'OT9000-2'){
+            try {
+				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
+				changeSize(2,Number(obj.peopleCount));
+            }catch(err){
+            	console.log(err);
+            }
+*/
+        }else if(key == 'OT9000-3'){
+            try {
+				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
+				changeSize(2,Number(obj.peopleCount));
+            }catch(err){
+            	console.log(err);
+            }
+        }else if(key == 'OT9000-4'){
+            try {
+				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
+				changeSize(3,Number(obj.peopleCount));
+            }catch(err){
+            	console.log(err);
+            }
+        }else if(key == 'OT9000-5'){
+            try {
+				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
+				changeSize(4,Number(obj.peopleCount));
+            }catch(err){
+            	console.log(err);
+            }
+        }else if(key == 'OT9000-6'){
+            try {
+				//console.log('key is ' + key + ' count is ' + obj.peopleCount);
+				changeSize(5,Number(obj.peopleCount));
+            }catch(err){
+            	console.log(err);
+            }
+        }
+	//console.log('onMessageArrived end');
+}
+
+function onConnectionLost(responseObject) {
+	console.log(new Date() + ': Connection Lost!');
+}]]></method>
+    <property name="theme">ThemesReportItems31.Modern</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <list-property name="libraries">
+        <structure>
+            <property name="fileName">Report Libraries/ActivityTracker.rptlibrary</property>
+            <property name="namespace">ActivityTracker</property>
+        </structure>
+    </list-property>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="type">custom</property>
+            <property name="orientation">landscape</property>
+            <property name="topMargin">0px</property>
+            <property name="leftMargin">0in</property>
+            <property name="bottomMargin">0in</property>
+            <property name="rightMargin">0in</property>
+            <property name="backgroundAttachment">fixed</property>
+            <property name="backgroundColor">#0079C1</property>
+            <property name="backgroundRepeat">no-repeat</property>
+            <property name="marginTop">0pt</property>
+            <property name="paddingTop">0pt</property>
+            <property name="paddingLeft">0pt</property>
+            <property name="paddingBottom">0pt</property>
+            <property name="paddingRight">0pt</property>
+            <property name="height">698px</property>
+            <property name="width">855px</property>
+            <property name="showHeaderOnFirst">false</property>
+            <property name="showFooterOnLast">false</property>
+            <property name="headerHeight">0in</property>
+            <property name="footerHeight">0in</property>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <text id="1447">
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<script>
+$("#title1").css({ "position":"absolute", "left":15, "top":15, "width":"365px", "height":"50px", "border":"1px solid #0079C1", "background-color":"#0079C1", "color":"white", "font-family":"raleway,arial", "font-size":"28px", "padding-left":"10px", "padding-top":"10px" });
+
+var n1x = 305, n1y = 347;
+$("#circle1").css({ "position":"absolute", "left":n1x, "top":n1y, "width":"0px", "height":"0px", "border":"1px solid #ff843d", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#ff843d" });
+
+var n2x = 387, n2y = 243;
+$("#circle2").css({ "position":"absolute", "left":n2x, "top":n2y, "width":"0px", "height":"0px", "border":"1px solid #a800c2", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#a800c2" });
+
+var n3x = 556, n3y = 319;
+$("#circle3").css({ "position":"absolute", "left":n3x, "top":n3y, "width":"0px", "height":"0px", "border":"1px solid #1ac200", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#1ac200" });
+
+var n4x = 704, n4y = 493;
+$("#circle4").css({ "position":"absolute", "left":n4x, "top":n4y, "width":"0px", "height":"0px", "border":"1px solid #3db8ff", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#3db8ff" });
+
+var n5x = 525, n5y = 578;
+$("#circle5").css({ "position":"absolute", "left":n5x, "top":n5y, "width":"0px", "height":"0px", "border":"1px solid #c2a800", "border-radius":"50%", "-moz-border-radius": "50%", "-webkit-border-radius": "50%", "background-color":"#c2a800" });
+
+var l1x = 50, l1y = 444;
+$("#label1").css({ "position":"absolute", "left":l1x, "top":l1y, "width":"195px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+
+var l2x = 300, l2y = 125;
+$("#label2").css({ "position":"absolute", "left":l2x, "top":l2y, "width":"170px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+
+var l3x = 525, l3y = 210;
+$("#label3").css({ "position":"absolute", "left":l3x, "top":l3y, "width":"195px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+
+var l4x = 640, l4y = 400;
+$("#label4").css({ "position":"absolute", "left":l4x, "top":l4y, "width":"175px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+
+var l5x = 230, l5y = 580;
+$("#label5").css({ "position":"absolute", "left":l5x, "top":l5y, "width":"175px", "height":"30px", "color":"#FFFFFF", "background-color":"#000000", "font-family":"raleway,arial", "font-size":"18px", "padding-left":"5px", "padding-top":"5px" });
+
+function changeSize(circNum, newSize) {
+     var nx = 0, ny = 0; labText = "Zone";
+     if (circNum === 1) { nx = n1x; ny = n1y; labText = "Analytics Theatre (";}
+     if (circNum === 2) { nx = n2x; ny = n2y; labText = "Cafe/Lounge ("; }
+     if (circNum === 3) { nx = n3x; ny = n3y; labText = "Information Desk ("; }
+     if (circNum === 4) { nx = n4x; ny = n4y; labText = "Innovation Lab ("; }
+     if (circNum === 5) { nx = n5x; ny = n5y; labText = "Developer Lab ("; }
+     var idCirc = '#circle' + circNum;
+     var theFactor = getFactor(newSize);
+     var newX = nx - (newSize*theFactor/2);
+     var newY = ny - (newSize*theFactor/2);
+	 $(idCirc).animate( { height:newSize*theFactor, width:newSize*theFactor, left:newX, top:newY }, "slow" );
+	 
+	 var idLab = '#label' + circNum;
+	 $(idLab).text(labText + newSize + ")");
+}
+
+var values = [];
+var initFactor = 25;
+var factor = initFactor;
+var count = 0;
+
+function getFactor(newSize) {
+   // Add newSize to array
+   values.push(newSize);
+   // Only allow 24 values
+   if (values.length > 24) values.shift();
+   
+   // Find highest value in array if every 12th call
+   if (count > 12) {
+      count = 0;
+      var values2 = [];
+      values2 = values2.concat(values);
+      values2.sort(function(a, b){return b-a});
+      // Calculate new factor based on max value to control bubble size
+      var max = values2[0];
+      if (max > 99) max = 99; // Limit to less than 100 for math not to be negative or zero
+      factor = initFactor * (1 - (max / 100)); // Set factor to percent of initFactor
+      if (factor < 1) factor = 1;
+      //console.log("max is " + max + ", factor is " + factor);
+   }
+   count++;
+   return factor;
+}
+
+</script>
+<div id="title1">Real-time Location Activity</div>
+<div id="circle1"></div>
+<div id="circle2"></div>
+<div id="circle3"></div>
+<div id="circle4"></div>
+<div id="circle5"></div>
+<div id="label1">Analytics Theatre</div>
+<div id="label2">Cafe/Lounge</div>
+<div id="label3">Information Desk</div>
+<div id="label4">Innovation Lab</div>
+<div id="label5">Developer Lab</div>
+]]></text-property>
+        </text>
+        <image id="1448">
+            <property name="height">668px</property>
+            <property name="width">855px</property>
+            <property name="zIndex">5</property>
+            <property name="source">file</property>
+            <expression name="uri" type="constant">Report Designs/ExpoLayoutFinal.png</expression>
+        </image>
+        <text id="1413">
+            <property name="paddingTop">0pt</property>
+            <property name="paddingLeft">0pt</property>
+            <property name="paddingBottom">0pt</property>
+            <property name="paddingRight">0pt</property>
+            <property name="contentType">html</property>
+            <text-property name="content"><![CDATA[<script>
+$(document).ready(function(){
+    $("#btnall").click(displayNodesAll);
+    $("#btnall").touchend(displayNodesAll);
+});
+
+function displayNodesAll()
+{
+	var upperNum = 8;
+    var nodenum = Math.floor((Math.random() * upperNum) + 1);
+    changeSize(1,nodenum);
+    nodenum = Math.floor((Math.random() * upperNum) + 1);
+    changeSize(2,nodenum);
+    nodenum = Math.floor((Math.random() * upperNum) + 1);
+    changeSize(3,nodenum);
+    nodenum = Math.floor((Math.random() * upperNum) + 1);
+    changeSize(4,nodenum);
+    nodenum = Math.floor((Math.random() * upperNum) + 1);
+    changeSize(5,nodenum);
+}
+</script>
+<button id='btnall' style='width:100px; height:50px; background-color:#0079C1; color:#0079C1; border:none'>Simulate</button>]]></text-property>
+        </text>
+    </body>
+</report>
